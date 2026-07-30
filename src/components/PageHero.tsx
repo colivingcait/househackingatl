@@ -18,7 +18,7 @@ export default function PageHero({
         <DoorMark className="h-10 w-8 text-clay-400" />
         <div>
           {eyebrow && (
-            <p className="font-display text-sm font-semibold uppercase tracking-wide text-clay-400">
+            <p className="text-sm font-semibold uppercase tracking-wide text-clay-400">
               {eyebrow}
             </p>
           )}

@@ -52,7 +52,7 @@ export default function MeetupsPage() {
                   className="flex items-center justify-between px-6 py-4"
                 >
                   <span className="text-pine-800">{block.label}</span>
-                  <span className="font-display text-sm font-semibold text-pine-600">
+                  <span className="text-sm font-semibold text-pine-600">
                     {block.time}
                   </span>
                 </li>
@@ -81,7 +81,7 @@ export default function MeetupsPage() {
       {/* Women's meetup */}
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
         <div className="rounded-2xl border border-pine-200 bg-white p-8">
-          <p className="font-display text-sm font-semibold uppercase tracking-wide text-clay-600">
+          <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">
             A related, separate group
           </p>
           <h2 className="mt-2 font-display text-xl font-bold text-pine-900">

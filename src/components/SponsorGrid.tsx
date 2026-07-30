@@ -29,7 +29,7 @@ export default function SponsorGrid() {
     <div className="flex flex-col gap-10">
       {anchorPartners.length > 0 && (
         <div>
-          <h3 className="font-display text-sm font-semibold uppercase tracking-wide text-pine-600">
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-pine-600">
             Anchor Partners
           </h3>
           <div className="mt-4 grid grid-cols-2 gap-6 sm:grid-cols-3">
@@ -39,7 +39,7 @@ export default function SponsorGrid() {
                 href={partner.url || "#"}
                 className="flex items-center justify-center rounded-xl border border-pine-100 bg-white p-6"
               >
-                <span className="font-display font-medium text-pine-800">
+                <span className="font-medium text-pine-800">
                   {partner.name}
                 </span>
               </Link>
@@ -50,7 +50,7 @@ export default function SponsorGrid() {
 
       {eventSponsors.length > 0 && (
         <div>
-          <h3 className="font-display text-sm font-semibold uppercase tracking-wide text-pine-600">
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-pine-600">
             This Month&apos;s Event Sponsor
           </h3>
           <div className="mt-4 grid grid-cols-2 gap-6 sm:grid-cols-3">
@@ -60,7 +60,7 @@ export default function SponsorGrid() {
                 href={sponsor.url || "#"}
                 className="flex items-center justify-center rounded-xl border border-pine-100 bg-white p-6"
               >
-                <span className="font-display font-medium text-pine-800">
+                <span className="font-medium text-pine-800">
                   {sponsor.name}
                 </span>
               </Link>

@@ -8,15 +8,15 @@ export default function MeetupScheduleTable() {
       <table className="w-full text-left text-sm">
         <thead className="bg-pine-50 text-pine-700">
           <tr>
-            <th className="px-4 py-3 font-display font-semibold">Month</th>
-            <th className="px-4 py-3 font-display font-semibold">Topic</th>
-            <th className="hidden px-4 py-3 font-display font-semibold sm:table-cell">
+            <th className="px-4 py-3 font-semibold">Month</th>
+            <th className="px-4 py-3 font-semibold">Topic</th>
+            <th className="hidden px-4 py-3 font-semibold sm:table-cell">
               Category
             </th>
-            <th className="hidden px-4 py-3 font-display font-semibold md:table-cell">
+            <th className="hidden px-4 py-3 font-semibold md:table-cell">
               Speaker
             </th>
-            <th className="px-4 py-3 font-display font-semibold">
+            <th className="px-4 py-3 font-semibold">
               <span className="sr-only">Register</span>
             </th>
           </tr>

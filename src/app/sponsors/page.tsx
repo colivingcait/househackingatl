@@ -39,7 +39,7 @@ export default function SponsorsPage() {
                 key={tier.name}
                 className="rounded-2xl border border-pine-200 bg-white p-8"
               >
-                <p className="font-display text-sm font-semibold uppercase tracking-wide text-clay-600">
+                <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">
                   {tier.cadence}
                 </p>
                 <h3 className="mt-1 font-display text-xl font-bold text-pine-900">

@@ -112,7 +112,7 @@ export default function WhatIsHouseHackingPage() {
       {/* House stacking */}
       <section id="house-stacking" className="bg-pine-900 py-16 text-white sm:py-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <p className="font-display text-sm font-semibold uppercase tracking-wide text-clay-400">
+          <p className="text-sm font-semibold uppercase tracking-wide text-clay-400">
             The long game
           </p>
           <h2 className="mt-2 font-display text-2xl font-bold sm:text-3xl">

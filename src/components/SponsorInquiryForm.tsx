@@ -82,7 +82,7 @@ export default function SponsorInquiryForm() {
       />
       <button
         type="submit"
-        className="mt-1 rounded-full bg-clay-600 px-6 py-2.5 font-display text-sm font-semibold text-white transition-colors hover:bg-clay-700"
+        className="mt-1 rounded-full bg-clay-600 px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-clay-700"
       >
         Send inquiry
       </button>

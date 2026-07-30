@@ -41,7 +41,7 @@ export default function Home() {
           </div>
 
           <div className="rounded-2xl border border-pine-700 bg-pine-800/60 p-6">
-            <p className="font-display text-sm font-semibold uppercase tracking-wide text-clay-400">
+            <p className="text-sm font-semibold uppercase tracking-wide text-clay-400">
               Next Meetup
             </p>
             <p className="mt-2 font-display text-2xl font-bold">
@@ -68,7 +68,7 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
           <div>
-            <p className="font-display text-sm font-semibold uppercase tracking-wide text-clay-600">
+            <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">
               The idea
             </p>
             <h2 className="mt-2 font-display text-2xl font-bold text-pine-900 sm:text-3xl">
@@ -112,7 +112,7 @@ export default function Home() {
       <section className="bg-pine-50 py-16 sm:py-20">
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:items-center">
           <div>
-            <p className="font-display text-sm font-semibold uppercase tracking-wide text-clay-600">
+            <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">
               Straight to your inbox
             </p>
             <h2 className="mt-2 font-display text-2xl font-bold text-pine-900 sm:text-3xl">
@@ -131,7 +131,7 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
           <div>
-            <p className="font-display text-sm font-semibold uppercase tracking-wide text-clay-600">
+            <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">
               Community
             </p>
             <h2 className="mt-2 font-display text-2xl font-bold text-pine-900 sm:text-3xl">
@@ -165,7 +165,7 @@ export default function Home() {
       <section className="bg-pine-50 py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mb-8">
-            <p className="font-display text-sm font-semibold uppercase tracking-wide text-clay-600">
+            <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">
               With thanks to
             </p>
             <h2 className="mt-2 font-display text-2xl font-bold text-pine-900 sm:text-3xl">

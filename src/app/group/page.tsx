@@ -82,7 +82,7 @@ export default function GroupPage() {
           <ul className="mt-6 flex flex-col gap-4">
             {guidelines.map((item, i) => (
               <li key={item} className="flex items-start gap-4">
-                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-pine-800 font-display text-sm font-semibold text-white">
+                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-pine-800 text-sm font-semibold text-white">
                   {i + 1}
                 </span>
                 <span className="pt-0.5 text-pine-800">{item}</span>

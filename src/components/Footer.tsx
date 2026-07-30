@@ -43,7 +43,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="font-display text-sm font-semibold uppercase tracking-wide text-pine-400">
+            <p className="text-sm font-semibold uppercase tracking-wide text-pine-400">
               Explore
             </p>
             <ul className="mt-3 flex flex-col gap-2 text-sm">
@@ -58,7 +58,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="font-display text-sm font-semibold uppercase tracking-wide text-pine-400">
+            <p className="text-sm font-semibold uppercase tracking-wide text-pine-400">
               Elsewhere
             </p>
             <ul className="mt-3 flex flex-col gap-2 text-sm">
