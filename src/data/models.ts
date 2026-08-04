@@ -25,5 +25,6 @@ export const houseHackModels = [
     short: "A backyard cottage or garage conversion, rented out.",
     description:
       "A backyard cottage, garage conversion, or accessory dwelling unit becomes a separate rental — or becomes your own unit while you rent out the main house.",
+    image: "/images/models/adu-detached-unit.jpg",
   },
 ];

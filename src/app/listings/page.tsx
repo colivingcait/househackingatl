@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "A look at what house hacking looks like in practice around the Atlanta metro, courtesy of Rooms for Rent ATL.",
 };
 
-// NEEDS CAITLYN: more photos to round this out — 3 of 6 tiles are real,
+// NEEDS CAITLYN: more photos to round this out — 4 of 6 tiles are real,
 // the rest are placeholders sized to drop photos in without a layout
 // change. Privacy rule: never publish a property address, and never
 // publish location detail more specific than "Atlanta metro" for her own
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const tiles = [
   { label: "Rent by the room", span: "sm:row-span-2", image: "/images/models/rent-by-the-room.jpg" },
   { label: "Basement conversion", span: "", image: "/images/models/basement-conversion.jpg" },
-  { label: "Backyard ADU", span: "" },
+  { label: "Backyard ADU", span: "", image: "/images/models/adu-detached-unit.jpg" },
   { label: "Small multifamily", span: "sm:row-span-2", image: "/images/hero-house.jpg" },
   { label: "Shared common space", span: "" },
   { label: "One side of a duplex", span: "" },
