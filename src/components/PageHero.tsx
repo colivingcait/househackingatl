@@ -24,12 +24,16 @@ export default function PageHero({
         style={{ objectPosition: "62% 62%" }}
       />
       <div
-        className="absolute inset-0 bg-gradient-to-r from-sage-900/88 via-sage-800/65 to-sage-700/30"
+        className="absolute inset-0"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, rgba(23,24,16,0.92), rgba(36,38,30,0.88) 55%, rgba(36,38,30,0.75))",
+        }}
         aria-hidden="true"
       />
       <div className="relative mx-auto flex max-w-6xl flex-col gap-6 px-4 py-16 sm:px-6 sm:py-20">
         <DoorMark className="h-10 w-8 text-clay-400" />
-        <div>
+        <div style={{ textShadow: "0 2px 16px rgba(0,0,0,0.6)" }}>
           {eyebrow && (
             <p className="text-sm font-semibold uppercase tracking-wide text-clay-300">
               {eyebrow}
