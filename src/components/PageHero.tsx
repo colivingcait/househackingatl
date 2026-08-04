@@ -21,10 +21,10 @@ export default function PageHero({
         fill
         sizes="100vw"
         className="object-cover"
-        style={{ objectPosition: "35% 55%" }}
+        style={{ objectPosition: "62% 62%" }}
       />
       <div
-        className="absolute inset-0 bg-gradient-to-r from-sage-900/92 via-sage-800/80 to-sage-700/55"
+        className="absolute inset-0 bg-gradient-to-r from-sage-900/88 via-sage-800/65 to-sage-700/30"
         aria-hidden="true"
       />
       <div className="relative mx-auto flex max-w-6xl flex-col gap-6 px-4 py-16 sm:px-6 sm:py-20">

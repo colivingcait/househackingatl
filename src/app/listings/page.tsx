@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import CtaButton from "@/components/CtaButton";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
@@ -11,16 +12,16 @@ export const metadata: Metadata = {
     "A look at what house hacking looks like in practice around the Atlanta metro, courtesy of Rooms for Rent ATL.",
 };
 
-// NEEDS CAITLYN: 3–6 photos to feature here. Sized as a real gallery grid
-// (varied tile sizes) so photos can drop in without a layout change.
-// Privacy rule: never publish a property address, and never publish
-// location detail more specific than "Atlanta metro" for her own
+// NEEDS CAITLYN: more photos to round this out — 3 of 6 tiles are real,
+// the rest are placeholders sized to drop photos in without a layout
+// change. Privacy rule: never publish a property address, and never
+// publish location detail more specific than "Atlanta metro" for her own
 // properties.
 const tiles = [
-  { label: "Rent by the room", span: "sm:row-span-2" },
-  { label: "Basement conversion", span: "" },
+  { label: "Rent by the room", span: "sm:row-span-2", image: "/images/models/rent-by-the-room.jpg" },
+  { label: "Basement conversion", span: "", image: "/images/models/basement-conversion.jpg" },
   { label: "Backyard ADU", span: "" },
-  { label: "Small multifamily", span: "sm:row-span-2" },
+  { label: "Small multifamily", span: "sm:row-span-2", image: "/images/hero-house.jpg" },
   { label: "Shared common space", span: "" },
   { label: "One side of a duplex", span: "" },
 ];
@@ -48,7 +49,21 @@ export default function ListingsPage() {
         <div className="grid grid-cols-2 gap-4 sm:auto-rows-[12rem] sm:grid-cols-3">
           {tiles.map((tile, i) => (
             <FadeIn key={tile.label} delay={i * 0.05} className={`group ${tile.span}`}>
-              <PhotoPlaceholder label={tile.label} className="h-full w-full" />
+              {tile.image ? (
+                <div className="relative h-full w-full overflow-hidden rounded-2xl">
+                  <Image
+                    src={tile.image}
+                    alt=""
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <span className="absolute bottom-3 left-3 rounded-full bg-white/80 px-3 py-1 text-xs font-medium text-pine-700 backdrop-blur">
+                    {tile.label}
+                  </span>
+                </div>
+              ) : (
+                <PhotoPlaceholder label={tile.label} className="h-full w-full" />
+              )}
             </FadeIn>
           ))}
         </div>

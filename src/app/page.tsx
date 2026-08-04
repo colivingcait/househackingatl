@@ -109,7 +109,21 @@ export default function Home() {
             {houseHackModels.map((model, i) => (
               <FadeIn key={model.name} delay={0.1 + i * 0.08} className="group">
                 <Link href="/what-is-house-hacking" className="block">
-                  <PhotoPlaceholder label={model.name} className="aspect-[4/3] w-full" />
+                  {model.image ? (
+                    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl">
+                      <Image
+                        src={model.image}
+                        alt=""
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <span className="absolute bottom-3 left-3 rounded-full bg-white/80 px-3 py-1 text-xs font-medium text-pine-700 backdrop-blur">
+                        {model.name}
+                      </span>
+                    </div>
+                  ) : (
+                    <PhotoPlaceholder label={model.name} className="aspect-[4/3] w-full" />
+                  )}
                   <p className="mt-3 text-sm text-pine-700">{model.short}</p>
                 </Link>
               </FadeIn>
