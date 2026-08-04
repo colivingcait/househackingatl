@@ -27,6 +27,15 @@ const config: Config = {
           900: "#1f3732",
           950: "#0f1e1b",
         },
+        // Sage — sampled from the front doors in the homepage hero photo.
+        // Used only for the hero's photo overlay tint.
+        sage: {
+          300: "#b9bca8",
+          400: "#a3a690",
+          500: "#8d907c",
+          600: "#6e715f",
+          700: "#565947",
+        },
         // Warm clay/terracotta — the "door" color. Used for CTAs and the
         // door motif so it feels warm and inviting rather than a hard sell.
         clay: {
@@ -46,8 +55,25 @@ const config: Config = {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
         display: ["var(--font-fraunces)", "Georgia", "serif"],
       },
+      typography: ({ theme }: { theme: (path: string) => string }) => ({
+        pine: {
+          css: {
+            "--tw-prose-body": theme("colors.pine[800]"),
+            "--tw-prose-headings": theme("colors.pine[900]"),
+            "--tw-prose-links": theme("colors.clay[600]"),
+            "--tw-prose-bold": theme("colors.pine[900]"),
+            "--tw-prose-bullets": theme("colors.clay[400]"),
+            "--tw-prose-quotes": theme("colors.pine[900]"),
+            "--tw-prose-quote-borders": theme("colors.clay[300]"),
+            "--tw-prose-hr": theme("colors.pine[200]"),
+            a: { fontWeight: "600", textDecoration: "none" },
+            "a:hover": { textDecoration: "underline" },
+            "h2, h3": { fontFamily: "var(--font-fraunces), Georgia, serif" },
+          },
+        },
+      }),
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
 export default config;

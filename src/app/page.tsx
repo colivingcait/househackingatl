@@ -6,8 +6,8 @@ import KitSignupForm from "@/components/KitSignupForm";
 import SponsorGrid from "@/components/SponsorGrid";
 import FadeIn from "@/components/FadeIn";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
-import { meetupSchedule } from "@/data/meetups";
 import { houseHackModels } from "@/data/models";
+import { getAllPosts } from "@/lib/blog";
 import { kit, links, meetup, siteConfig } from "@/lib/site-config";
 
 const stats = [
@@ -16,8 +16,16 @@ const stats = [
   { value: "4", label: "ways to house hack — see below" },
 ];
 
+function formatDate(date: string) {
+  return new Date(date).toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+}
+
 export default function Home() {
-  const nextEvent = meetupSchedule[0];
+  const latestPosts = getAllPosts().slice(0, 3);
 
   return (
     <>
@@ -30,12 +38,13 @@ export default function Home() {
           priority
           sizes="100vw"
           className="object-cover"
+          style={{ objectPosition: "62% 62%" }}
         />
         <div
-          className="absolute inset-0 bg-gradient-to-r from-pine-950 via-pine-950/85 to-pine-950/40"
+          className="absolute inset-0 bg-gradient-to-r from-sage-700/70 via-sage-600/40 to-sage-500/10"
           aria-hidden="true"
         />
-        <div className="relative mx-auto max-w-6xl px-4 pb-28 pt-16 sm:px-6 sm:pb-32 sm:pt-24">
+        <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-16 sm:px-6 sm:pb-20 sm:pt-24">
           <FadeIn>
             <DoorMark className="h-12 w-9 text-clay-400" />
           </FadeIn>
@@ -68,39 +77,10 @@ export default function Home() {
             </div>
           </FadeIn>
         </div>
-
-        {/* Next meetup — a ticket-style card overlapping the hero edge */}
-        <FadeIn
-          delay={0.4}
-          className="relative mx-4 -mb-16 max-w-sm rounded-2xl bg-white p-6 text-pine-900 shadow-xl transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:-mb-20"
-        >
-          <div className="flex items-center justify-between">
-            <p className="text-xs font-semibold uppercase tracking-wide text-clay-600">
-              Next Meetup
-            </p>
-            <p className="text-xs text-pine-500">{meetup.cadenceLabel}</p>
-          </div>
-          <p className="mt-2 font-display text-2xl font-bold">{nextEvent.month}</p>
-          <p className="text-pine-700">{nextEvent.topic}</p>
-          <div className="my-4 border-t border-dashed border-pine-200" />
-          <div className="flex items-center justify-between gap-4">
-            <p className="text-sm text-pine-500">
-              {meetup.venue.name} · {meetup.sizeLabel}
-            </p>
-            <CtaButton
-              href={nextEvent.eventbriteUrl || meetup.eventbriteOrganizerUrl || "/meetups"}
-              variant="primary"
-              external={Boolean(nextEvent.eventbriteUrl || meetup.eventbriteOrganizerUrl)}
-              className="!px-4 !py-2 !text-xs shrink-0"
-            >
-              Register
-            </CtaButton>
-          </div>
-        </FadeIn>
       </section>
 
       {/* Stat strip */}
-      <section className="border-b border-pine-100 bg-white pb-10 pt-24 sm:pt-28">
+      <section className="border-b border-pine-100 bg-white py-10">
         <div className="mx-auto grid max-w-5xl grid-cols-1 divide-y divide-pine-100 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
           {stats.map((stat, i) => (
             <FadeIn key={stat.label} delay={i * 0.1} className="px-6 py-6 text-center sm:py-0">
@@ -160,6 +140,52 @@ export default function Home() {
           </Link>
         </FadeIn>
       </section>
+
+      {/* Latest from the blog */}
+      {latestPosts.length > 0 && (
+        <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
+          <FadeIn className="mb-8 flex items-end justify-between">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">
+                From the blog
+              </p>
+              <h2 className="mt-2 font-display text-3xl font-bold text-pine-900">
+                Latest posts
+              </h2>
+            </div>
+            <Link
+              href="/blog"
+              className="hidden text-sm font-semibold text-clay-600 hover:text-clay-700 sm:block"
+            >
+              View all →
+            </Link>
+          </FadeIn>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+            {latestPosts.map((post, i) => (
+              <FadeIn key={post.slug} delay={0.1 + i * 0.08} className="group">
+                <Link href={`/blog/${post.slug}`} className="block">
+                  {post.coverImage ? (
+                    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl">
+                      <Image
+                        src={post.coverImage}
+                        alt=""
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                  ) : (
+                    <PhotoPlaceholder label={post.title} className="aspect-[4/3] w-full" />
+                  )}
+                  <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-clay-600">
+                    {formatDate(post.date)}
+                  </p>
+                  <p className="mt-1 text-sm font-semibold text-pine-900">{post.title}</p>
+                </Link>
+              </FadeIn>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Listing alerts */}
       <section className="py-16 sm:py-20">

@@ -1,9 +1,11 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site-config";
+import { getAllPosts } from "@/lib/blog";
 
 const routes = [
   "",
   "/what-is-house-hacking",
+  "/blog",
   "/meetups",
   "/group",
   "/listings",
@@ -13,8 +15,13 @@ const routes = [
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = `https://${siteConfig.domain}`;
-  return routes.map((route) => ({
+  const staticRoutes = routes.map((route) => ({
     url: `${base}${route}`,
     lastModified: new Date(),
   }));
+  const postRoutes = getAllPosts().map((post) => ({
+    url: `${base}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+  }));
+  return [...staticRoutes, ...postRoutes];
 }
