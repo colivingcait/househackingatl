@@ -52,10 +52,6 @@ export default function ListingsPage() {
             </FadeIn>
           ))}
         </div>
-        <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-pine-500">
-          Addresses and identifying location details are never published
-          here — Atlanta metro is as specific as it gets.
-        </p>
       </section>
     </>
   );

@@ -1,6 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 import DoorMark from "@/components/DoorMark";
-import DoorGraphic from "@/components/DoorGraphic";
 import CtaButton from "@/components/CtaButton";
 import KitSignupForm from "@/components/KitSignupForm";
 import SponsorGrid from "@/components/SponsorGrid";
@@ -23,7 +23,18 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-pine-950 text-white">
-        <DoorGraphic className="pointer-events-none absolute right-0 top-0 h-[26rem] w-auto opacity-80 sm:right-8 sm:h-[30rem] md:right-16" />
+        <Image
+          src="/images/hero-house.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-pine-950 via-pine-950/85 to-pine-950/40"
+          aria-hidden="true"
+        />
         <div className="relative mx-auto max-w-6xl px-4 pb-28 pt-16 sm:px-6 sm:pb-32 sm:pt-24">
           <FadeIn>
             <DoorMark className="h-12 w-9 text-clay-400" />
