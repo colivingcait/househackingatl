@@ -31,23 +31,33 @@ need real values before the site should go live to the public.
 
 ## Accounts / credentials (all in `src/lib/site-config.ts` + env vars)
 
-- [ ] **Kit form IDs** — `NEXT_PUBLIC_KIT_LISTING_ALERTS_FORM_ID` and
-      `NEXT_PUBLIC_KIT_NEWSLETTER_FORM_ID` (see `.env.example`). These are
+- [ ] **Kit form IDs** — `NEXT_PUBLIC_KIT_LISTING_ALERTS_FORM_ID`,
+      `NEXT_PUBLIC_KIT_NEWSLETTER_FORM_ID`, and
+      `NEXT_PUBLIC_KIT_RESOURCES_FORM_ID` (see `.env.example`). These are
       the public numeric form IDs from Kit → Grow → Landing Pages & Forms
       → (form) → Embed — **not** the private API key, nothing secret is
       needed for the signup forms themselves to work.
       - In Kit, set each form's automation to tag new subscribers:
         - Listing alerts form → `hh-site` + `listing-alerts`
         - Newsletter form → `hh-site`
-      - Both forms collect first name + email; the listing-alerts form
-        also collects a price range and target areas as custom fields —
-        confirm those field keys exist in your Kit account
-        (`price_range`, `target_areas`) or tell me the actual keys so I
-        can match them.
-      - Before launch: submit a test entry through both forms in staging
-        and confirm the subscriber shows up correctly tagged in Kit — the
-        POST endpoint/field names were built from Kit's documented
-        conventions but I haven't tested against your live account.
+        - Resources (guide downloads) form → `hh-site` + `resource-download`
+      - All three forms collect first name + email; the listing-alerts
+        form also collects a price range and target areas, and the
+        resources form sends a `fields[resource]` value naming which
+        guide was requested — confirm those field keys exist in your Kit
+        account (`price_range`, `target_areas`, `resource`) or tell me
+        the actual keys so I can match them.
+      - Before launch: submit a test entry through all three forms in
+        staging and confirm the subscriber shows up correctly tagged in
+        Kit — the POST endpoint/field names were built from Kit's
+        documented conventions but I haven't tested against your live
+        account.
+- [ ] **Free guides** (`/resources`) — five PDFs are live at
+      `public/downloads/`: House Hacking One Page, Which House Hack Fits
+      You, The Four Numbers Worksheet, Property Walkthrough Checklist,
+      and Before Anyone Moves In. All gated behind the Kit resources form
+      above. Send more whenever you have them and I'll add them the same
+      way.
 - [ ] **Eventbrite organizer URL** — `links.eventbriteOrganizer` /
       `meetup.eventbriteOrganizerUrl`. Individual events can also get their
       own link via `eventbriteUrl` on each entry in `src/data/meetups.ts`.

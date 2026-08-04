@@ -10,24 +10,24 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-pine-100 bg-[var(--background)]/95 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
-        <Link href="/" className="font-display text-lg font-bold text-pine-900">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
+        <Link href="/" className="shrink-0 font-display text-lg font-bold text-pine-900">
           House Hacking Atlanta
         </Link>
 
-        <nav className="hidden items-center gap-6 lg:flex">
+        <nav className="hidden items-center gap-5 lg:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-pine-800 hover:text-clay-600"
+              className="whitespace-nowrap text-sm font-medium text-pine-800 hover:text-clay-600"
             >
               {link.label}
             </Link>
           ))}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden shrink-0 lg:block">
           <CtaButton href="/#get-listings" variant="primary">
             Get Listings
           </CtaButton>

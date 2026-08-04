@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import CtaButton from "@/components/CtaButton";
 import KitSignupForm from "@/components/KitSignupForm";
@@ -64,6 +65,12 @@ export default function WhatIsHouseHackingPage() {
               </div>
             ))}
           </div>
+          <Link
+            href="/resources"
+            className="mt-8 inline-flex items-center gap-1 text-sm font-semibold text-clay-600 hover:text-clay-700"
+          >
+            Get the free worksheet to run these numbers yourself →
+          </Link>
         </div>
       </section>
 

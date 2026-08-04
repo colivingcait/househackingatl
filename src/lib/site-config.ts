@@ -64,18 +64,23 @@ export const links = {
  * (form) > Embed > Embed code (the value looks like a short alphanumeric
  * string, e.g. "a1b2c3").
  *
- * Two distinct forms per the brief:
+ * Three distinct forms per the brief:
  *  - listingAlerts: the primary offer (new house-hack listings)
  *  - newsletter: general newsletter / meetup reminders
+ *  - resources: gated guide/checklist downloads (see src/data/resources.ts)
  *
  * Tagging happens inside Kit's form configuration — tag any signup from
  * this site `hh-site`, tag listing-alert signups `listing-alerts`
- * additionally, and use `hh-researching` / `hh-looking` / `hh-under-contract`
- * / `hh-owner` for stage where captured.
+ * additionally, tag resource-download signups `resource-download`, and use
+ * `hh-researching` / `hh-looking` / `hh-under-contract` / `hh-owner` for
+ * stage where captured. Each resource submission also sends a
+ * `fields[resource]` value naming which guide was requested, since one
+ * form/tag covers all five.
  */
 export const kit = {
   listingAlertsFormId: process.env.NEXT_PUBLIC_KIT_LISTING_ALERTS_FORM_ID || "",
   newsletterFormId: process.env.NEXT_PUBLIC_KIT_NEWSLETTER_FORM_ID || "",
+  resourcesFormId: process.env.NEXT_PUBLIC_KIT_RESOURCES_FORM_ID || "",
 };
 
 /**

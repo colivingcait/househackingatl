@@ -5,6 +5,7 @@ import { getAllPosts } from "@/lib/blog";
 const routes = [
   "",
   "/what-is-house-hacking",
+  "/resources",
   "/blog",
   "/meetups",
   "/group",

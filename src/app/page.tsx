@@ -7,6 +7,7 @@ import SponsorGrid from "@/components/SponsorGrid";
 import FadeIn from "@/components/FadeIn";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
 import { houseHackModels } from "@/data/models";
+import { resources } from "@/data/resources";
 import { getAllPosts } from "@/lib/blog";
 import { kit, links, siteConfig } from "@/lib/site-config";
 
@@ -139,6 +140,50 @@ export default function Home() {
             </Link>
           </FadeIn>
         </div>
+      </section>
+
+      {/* Free guides teaser */}
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
+        <FadeIn className="mb-8 flex items-end justify-between">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">
+              Free guides
+            </p>
+            <h2 className="mt-2 font-display text-3xl font-bold text-pine-900">
+              Worksheets & checklists
+            </h2>
+          </div>
+          <Link
+            href="/resources"
+            className="hidden text-sm font-semibold text-clay-600 hover:text-clay-700 sm:block"
+          >
+            See all guides →
+          </Link>
+        </FadeIn>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+          {resources.slice(0, 3).map((resource, i) => (
+            <FadeIn key={resource.slug} delay={0.1 + i * 0.08}>
+              <Link
+                href="/resources"
+                className="block rounded-2xl border border-pine-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+              >
+                <p className="text-xs font-semibold uppercase tracking-wide text-clay-600">
+                  {resource.stage}
+                </p>
+                <p className="mt-1 font-display text-lg font-semibold text-pine-900">
+                  {resource.title}
+                </p>
+                <p className="mt-2 text-sm text-pine-700">{resource.description}</p>
+              </Link>
+            </FadeIn>
+          ))}
+        </div>
+        <Link
+          href="/resources"
+          className="mt-8 inline-block text-sm font-semibold text-clay-600 hover:text-clay-700 sm:hidden"
+        >
+          See all guides →
+        </Link>
       </section>
 
       {/* House stacking — pull quote instead of another paragraph block */}
