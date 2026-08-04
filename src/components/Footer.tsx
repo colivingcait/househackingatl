@@ -11,7 +11,7 @@ function ExternalOrPlaceholder({
   label: string;
 }) {
   if (!href) {
-    return <span className="text-pine-400">{label} (link coming soon)</span>;
+    return <span className="text-sage-400">{label} (link coming soon)</span>;
   }
   return (
     <a
@@ -27,7 +27,7 @@ function ExternalOrPlaceholder({
 
 export default function Footer() {
   return (
-    <footer className="bg-pine-950 text-pine-200">
+    <footer className="bg-sage-950 text-sage-200">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-3">
           <div>
@@ -37,13 +37,13 @@ export default function Footer() {
                 House Hacking Atlanta
               </span>
             </div>
-            <p className="mt-3 max-w-xs text-sm text-pine-300">
+            <p className="mt-3 max-w-xs text-sm text-sage-300">
               {siteConfig.tagline}
             </p>
           </div>
 
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-pine-400">
+            <p className="text-sm font-semibold uppercase tracking-wide text-sage-400">
               Explore
             </p>
             <ul className="mt-3 flex flex-col gap-2 text-sm">
@@ -58,7 +58,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-pine-400">
+            <p className="text-sm font-semibold uppercase tracking-wide text-sage-400">
               Elsewhere
             </p>
             <ul className="mt-3 flex flex-col gap-2 text-sm">
@@ -84,15 +84,15 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-pine-800 pt-6">
+        <div className="mt-10 border-t border-sage-800 pt-6">
           <p
             className={`text-xs leading-relaxed ${
-              licenseDisclosure.confirmed ? "text-pine-400" : "text-clay-400"
+              licenseDisclosure.confirmed ? "text-sage-400" : "text-clay-400"
             }`}
           >
             {licenseDisclosure.text}
           </p>
-          <p className="mt-4 text-xs text-pine-500">
+          <p className="mt-4 text-xs text-sage-500">
             © {new Date().getFullYear()} House Hacking Atlanta. {siteConfig.doorMotif}
           </p>
         </div>

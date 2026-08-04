@@ -6,7 +6,7 @@ export default function MeetupScheduleTable() {
   return (
     <div className="overflow-hidden rounded-2xl border border-pine-200 bg-white">
       <table className="w-full text-left text-sm">
-        <thead className="bg-pine-50 text-pine-700">
+        <thead className="bg-sage-50 text-pine-700">
           <tr>
             <th className="px-4 py-3 font-semibold">Month</th>
             <th className="px-4 py-3 font-semibold">Topic</th>

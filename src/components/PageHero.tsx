@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Image from "next/image";
 import DoorMark from "./DoorMark";
 
 export default function PageHero({
@@ -13,12 +14,24 @@ export default function PageHero({
   children?: ReactNode;
 }) {
   return (
-    <section className="border-b border-pine-100 bg-pine-900 text-white">
-      <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-16 sm:px-6 sm:py-20">
+    <section className="relative overflow-hidden bg-sage-950 text-white">
+      <Image
+        src="/images/hero-house.jpg"
+        alt=""
+        fill
+        sizes="100vw"
+        className="object-cover"
+        style={{ objectPosition: "35% 55%" }}
+      />
+      <div
+        className="absolute inset-0 bg-gradient-to-r from-sage-900/92 via-sage-800/80 to-sage-700/55"
+        aria-hidden="true"
+      />
+      <div className="relative mx-auto flex max-w-6xl flex-col gap-6 px-4 py-16 sm:px-6 sm:py-20">
         <DoorMark className="h-10 w-8 text-clay-400" />
         <div>
           {eyebrow && (
-            <p className="text-sm font-semibold uppercase tracking-wide text-clay-400">
+            <p className="text-sm font-semibold uppercase tracking-wide text-clay-300">
               {eyebrow}
             </p>
           )}
@@ -26,7 +39,7 @@ export default function PageHero({
             {title}
           </h1>
           {subtitle && (
-            <p className="mt-4 max-w-xl text-base text-pine-100 sm:text-lg">
+            <p className="mt-4 max-w-xl text-base text-sage-100 sm:text-lg">
               {subtitle}
             </p>
           )}

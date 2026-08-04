@@ -16,9 +16,9 @@ export default function PhotoPlaceholder({
 }) {
   return (
     <div
-      className={`relative flex items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-pine-100 via-pine-50 to-clay-100 transition-transform duration-500 group-hover:scale-[1.03] ${className}`}
+      className={`relative flex items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-sage-100 via-sage-50 to-clay-100 transition-transform duration-500 group-hover:scale-[1.03] ${className}`}
     >
-      <DoorMark className="h-16 w-12 text-pine-300/70" />
+      <DoorMark className="h-16 w-12 text-sage-400/70" />
       {label && (
         <span className="absolute bottom-3 left-3 rounded-full bg-white/80 px-3 py-1 text-xs font-medium text-pine-700 backdrop-blur">
           {label}

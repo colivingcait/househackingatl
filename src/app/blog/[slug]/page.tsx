@@ -48,7 +48,7 @@ export default async function BlogPostPage({
 
   return (
     <>
-      <article className="border-b border-pine-100 bg-pine-950 text-white">
+      <article className="border-b border-pine-100 bg-sage-950 text-white">
         <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20">
           <Link
             href="/blog"
@@ -90,7 +90,7 @@ export default async function BlogPostPage({
         />
       </section>
 
-      <section className="bg-pine-50 py-16 sm:py-20">
+      <section className="bg-sage-50 py-16 sm:py-20">
         <div className="mx-auto max-w-2xl px-4 sm:px-6">
           <KitSignupForm variant="newsletter" formId={kit.newsletterFormId} />
         </div>

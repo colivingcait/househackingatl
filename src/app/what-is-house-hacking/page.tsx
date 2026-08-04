@@ -44,7 +44,7 @@ export default function WhatIsHouseHackingPage() {
       </section>
 
       {/* Four models — editorial numbered list, not another card grid */}
-      <section className="bg-pine-50 py-16 sm:py-20">
+      <section className="bg-sage-50 py-16 sm:py-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <h2 className="font-display text-2xl font-bold text-pine-900 sm:text-3xl">
             Four ways to house hack
@@ -90,7 +90,7 @@ export default function WhatIsHouseHackingPage() {
       </section>
 
       {/* House stacking */}
-      <section id="house-stacking" className="bg-pine-950 py-16 text-white sm:py-24">
+      <section id="house-stacking" className="bg-sage-950 py-16 text-white sm:py-24">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <p className="text-sm font-semibold uppercase tracking-wide text-clay-400">
             The long game

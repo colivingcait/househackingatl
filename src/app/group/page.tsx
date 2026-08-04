@@ -74,7 +74,7 @@ export default function GroupPage() {
         </div>
       </section>
 
-      <section className="bg-pine-50 py-16 sm:py-20">
+      <section className="bg-sage-50 py-16 sm:py-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <h2 className="font-display text-2xl font-bold text-pine-900">
             Group guidelines

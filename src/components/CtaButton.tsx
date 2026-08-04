@@ -6,7 +6,7 @@ type Variant = "primary" | "secondary" | "ghost";
 const variantClasses: Record<Variant, string> = {
   primary: "bg-clay-600 text-white hover:bg-clay-700",
   secondary: "bg-pine-800 text-white hover:bg-pine-900",
-  ghost: "bg-transparent text-pine-800 border border-pine-800 hover:bg-pine-50",
+  ghost: "bg-transparent text-pine-800 border border-pine-800 hover:bg-sage-50",
 };
 
 type Props = AnchorHTMLAttributes<HTMLAnchorElement> & {

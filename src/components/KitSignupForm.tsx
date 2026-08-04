@@ -35,7 +35,7 @@ export default function KitSignupForm({
 
   if (!formId) {
     return (
-      <div className="rounded-2xl border border-dashed border-pine-300 bg-pine-50 p-6">
+      <div className="rounded-2xl border border-dashed border-sage-300 bg-sage-50 p-6">
         <p className="font-display font-semibold text-pine-800">{copy.heading}</p>
         <p className="mt-1 text-sm text-pine-700">
           Signup coming soon — connect a Kit form ID to enable this.
@@ -72,7 +72,7 @@ export default function KitSignupForm({
 
   if (status === "success") {
     return (
-      <div className="rounded-2xl border border-pine-200 bg-pine-50 p-6">
+      <div className="rounded-2xl border border-pine-200 bg-sage-50 p-6">
         <p className="font-display font-semibold text-pine-800">You&apos;re in.</p>
         <p className="mt-1 text-sm text-pine-700">
           Check your inbox to confirm — that&apos;s how we know it&apos;s really you.

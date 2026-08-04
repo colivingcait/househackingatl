@@ -28,13 +28,21 @@ const config: Config = {
           950: "#0f1e1b",
         },
         // Sage — sampled from the front doors in the homepage hero photo.
-        // Used only for the hero's photo overlay tint.
+        // The site's warm neutral: light sections, dark sections, and
+        // photo-overlay tints all pull from this scale so everything reads
+        // as one palette with the hero photo, not just the hero itself.
         sage: {
+          50: "#f5f6f1",
+          100: "#e9ebe1",
+          200: "#d3d6c5",
           300: "#b9bca8",
           400: "#a3a690",
           500: "#8d907c",
           600: "#6e715f",
           700: "#565947",
+          800: "#3a3c30",
+          900: "#24261e",
+          950: "#171810",
         },
         // Warm clay/terracotta — the "door" color. Used for CTAs and the
         // door motif so it feels warm and inviting rather than a hard sell.

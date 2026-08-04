@@ -28,8 +28,8 @@ export default function Header() {
         </nav>
 
         <div className="hidden lg:block">
-          <CtaButton href="/meetups" variant="primary">
-            Next Meetup
+          <CtaButton href="/#get-listings" variant="primary">
+            Get Listings
           </CtaButton>
         </div>
 
@@ -52,15 +52,15 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="rounded-md px-2 py-3 text-sm font-medium text-pine-800 hover:bg-pine-50"
+              className="rounded-md px-2 py-3 text-sm font-medium text-pine-800 hover:bg-sage-50"
               onClick={() => setOpen(false)}
             >
               {link.label}
             </Link>
           ))}
           <div className="pt-2">
-            <CtaButton href="/meetups" variant="primary" className="w-full">
-              Next Meetup
+            <CtaButton href="/#get-listings" variant="primary" className="w-full">
+              Get Listings
             </CtaButton>
           </div>
         </nav>

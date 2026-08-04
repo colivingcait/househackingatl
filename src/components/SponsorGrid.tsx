@@ -7,7 +7,7 @@ export default function SponsorGrid() {
 
   if (!hasSponsors) {
     return (
-      <div className="rounded-2xl border border-dashed border-pine-300 bg-pine-50 p-10 text-center">
+      <div className="rounded-2xl border border-dashed border-sage-300 bg-sage-50 p-10 text-center">
         <p className="font-display text-lg font-semibold text-pine-900">
           Sponsorship opportunities available
         </p>

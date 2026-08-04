@@ -36,7 +36,7 @@ export default function AboutPage() {
       <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20">
         <FadeIn className="flex flex-col gap-6 sm:flex-row sm:items-start">
           {/* NEEDS CAITLYN: headshot */}
-          <div className="flex h-28 w-28 shrink-0 items-center justify-center rounded-full border border-dashed border-pine-300 bg-pine-50 text-xs text-pine-400">
+          <div className="flex h-28 w-28 shrink-0 items-center justify-center rounded-full border border-dashed border-sage-300 bg-sage-50 text-xs text-pine-400">
             Headshot
           </div>
           <div>
@@ -51,13 +51,13 @@ export default function AboutPage() {
           </div>
         </FadeIn>
 
-        <div className="mt-6 rounded-xl border border-pine-100 bg-pine-50 p-4 text-xs leading-relaxed text-pine-500">
+        <div className="mt-6 rounded-xl border border-pine-100 bg-sage-50 p-4 text-xs leading-relaxed text-pine-500">
           Caitlyn is a licensed Georgia real estate agent with Keller
           Williams. See the site footer for full brokerage disclosure.
         </div>
       </section>
 
-      <section className="bg-pine-50 py-16 sm:py-20">
+      <section className="bg-sage-50 py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <h2 className="font-display text-2xl font-bold text-pine-900 sm:text-3xl">
             Elsewhere
