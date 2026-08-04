@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import CtaButton from "@/components/CtaButton";
 import KitSignupForm from "@/components/KitSignupForm";
+import { houseHackModels } from "@/data/models";
 import { kit } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -9,29 +10,6 @@ export const metadata: Metadata = {
   description:
     "House hacking is living in one part of your property and renting out another — real models, owner-occupant financing, and how to run the numbers. Atlanta metro.",
 };
-
-const models = [
-  {
-    name: "Rent by the room",
-    description:
-      "You live in one bedroom of the house and rent the others, individually, to roommates. The most accessible model — works in almost any single-family home with spare bedrooms.",
-  },
-  {
-    name: "Basement or in-law conversion",
-    description:
-      "A finished basement or separate suite becomes a self-contained rental with its own entrance, while you live in the rest of the house.",
-  },
-  {
-    name: "Small multifamily (2–4 units)",
-    description:
-      "You buy a duplex, triplex, or fourplex, live in one unit, and rent the others. Owner-occupant financing still applies up to four units — this is the classic house hack.",
-  },
-  {
-    name: "ADU / detached unit",
-    description:
-      "A backyard cottage, garage conversion, or accessory dwelling unit becomes a separate rental — or becomes your own unit while you rent out the main house.",
-  },
-];
 
 export default function WhatIsHouseHackingPage() {
   return (
@@ -65,22 +43,24 @@ export default function WhatIsHouseHackingPage() {
         </p>
       </section>
 
-      {/* Four models */}
+      {/* Four models — editorial numbered list, not another card grid */}
       <section className="bg-pine-50 py-16 sm:py-20">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <h2 className="font-display text-2xl font-bold text-pine-900 sm:text-3xl">
             Four ways to house hack
           </h2>
-          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
-            {models.map((model) => (
-              <div
-                key={model.name}
-                className="rounded-2xl border border-pine-200 bg-white p-6"
-              >
-                <h3 className="font-display text-lg font-semibold text-pine-900">
-                  {model.name}
-                </h3>
-                <p className="mt-2 text-sm text-pine-700">{model.description}</p>
+          <div className="mt-8 divide-y divide-pine-200 border-t border-pine-200">
+            {houseHackModels.map((model, i) => (
+              <div key={model.name} className="flex gap-6 py-6 sm:gap-10">
+                <span className="font-display text-2xl font-medium text-clay-500 sm:text-3xl">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <h3 className="font-display text-lg font-semibold text-pine-900">
+                    {model.name}
+                  </h3>
+                  <p className="mt-1 text-sm text-pine-700">{model.description}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -110,23 +90,20 @@ export default function WhatIsHouseHackingPage() {
       </section>
 
       {/* House stacking */}
-      <section id="house-stacking" className="bg-pine-900 py-16 text-white sm:py-20">
+      <section id="house-stacking" className="bg-pine-950 py-16 text-white sm:py-24">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <p className="text-sm font-semibold uppercase tracking-wide text-clay-400">
             The long game
           </p>
-          <h2 className="mt-2 font-display text-2xl font-bold sm:text-3xl">
-            House stacking
-          </h2>
-          <p className="mt-5 text-lg text-pine-100">
+          <p className="mt-4 text-lg text-pine-100">
             House stacking is what happens after the first one. You house
             hack a property, your housing cost drops, and that gap becomes
             your savings rate. A few years in, you move out, keep it as a
             rental, and do it again.
           </p>
-          <p className="mt-4 text-lg text-pine-100">
-            The first house is hard. The second is a different conversation
-            entirely.
+          <p className="mt-8 font-display text-3xl font-medium leading-snug text-balance sm:text-4xl">
+            &ldquo;The first house is hard. The second is a different
+            conversation entirely.&rdquo;
           </p>
         </div>
       </section>

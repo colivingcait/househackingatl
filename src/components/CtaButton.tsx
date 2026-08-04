@@ -23,7 +23,7 @@ export default function CtaButton({
   children,
   ...rest
 }: Props) {
-  const classes = `inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-semibold text-sm sm:text-base transition-colors ${variantClasses[variant]} ${className}`;
+  const classes = `inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-semibold text-sm sm:text-base transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:shadow-none ${variantClasses[variant]} ${className}`;
 
   if (external) {
     return (

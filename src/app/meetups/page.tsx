@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import CtaButton from "@/components/CtaButton";
 import MeetupScheduleTable from "@/components/MeetupScheduleTable";
+import Timeline from "@/components/Timeline";
 import { meetup, womensGroup } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -45,19 +46,7 @@ export default function MeetupsPage() {
             </p>
           </div>
           <div className="lg:col-span-2">
-            <ul className="divide-y divide-pine-100 rounded-2xl border border-pine-200 bg-white">
-              {meetup.schedule.map((block) => (
-                <li
-                  key={block.label}
-                  className="flex items-center justify-between px-6 py-4"
-                >
-                  <span className="text-pine-800">{block.label}</span>
-                  <span className="text-sm font-semibold text-pine-600">
-                    {block.time}
-                  </span>
-                </li>
-              ))}
-            </ul>
+            <Timeline steps={meetup.schedule} />
           </div>
         </div>
       </section>
