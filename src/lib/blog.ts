@@ -21,6 +21,16 @@ export type Post = PostMeta & {
   contentHtml: string;
 };
 
+/**
+ * Posts are scheduled by their frontmatter `date`. A post with a future
+ * date exists in the repo but is hidden from the index, the homepage
+ * teaser, and the sitemap, and its own page 404s — until that date
+ * arrives, at which point it goes live with no redeploy needed.
+ */
+function isPublished(date: string): boolean {
+  return new Date(date).getTime() <= Date.now();
+}
+
 function listSlugs(): string[] {
   if (!fs.existsSync(BLOG_DIR)) return [];
   return fs
@@ -44,6 +54,7 @@ export function getAllPosts(): PostMeta[] {
         readingTime: readingTime(content).text,
       };
     })
+    .filter((post) => isPublished(post.date))
     .sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
@@ -53,6 +64,8 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
 
   const raw = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(raw);
+  if (!isPublished(data.date as string)) return null;
+
   const processed = await remark().use(remarkHtml).process(content);
 
   return {
