@@ -196,7 +196,7 @@ export default function Home() {
             conversation entirely.&rdquo;
           </p>
           <Link
-            href="/what-is-house-hacking#house-stacking"
+            href="/house-stacking"
             className="mt-6 inline-block text-sm font-semibold text-clay-400 hover:text-clay-300"
           >
             What house stacking looks like →

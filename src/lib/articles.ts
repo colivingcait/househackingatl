@@ -26,6 +26,17 @@ function stripLeadingSlash(slug: string): string {
   return slug.startsWith("/") ? slug.slice(1) : slug;
 }
 
+/**
+ * Every article body opens with its own "# H1", and most (not all) follow
+ * it with "*House Hacking Atlanta*" and a "---" rule. The template renders
+ * h1 and the byline itself, so both would otherwise appear twice on the
+ * page — once in the hero, once again at the top of the body.
+ */
+function stripLeadingBoilerplate(content: string): string {
+  const withoutH1 = content.replace(/^\s*#[^\n]*\n+/, "");
+  return withoutH1.replace(/^\*House Hacking Atlanta\*\n+---\n+/, "");
+}
+
 function readFrontmatter(file: string) {
   const raw = fs.readFileSync(path.join(ARTICLES_DIR, file), "utf8");
   return matter(raw);
@@ -59,7 +70,7 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
   if (!file) return null;
 
   const { data, content } = readFrontmatter(file);
-  const processed = await remark().use(remarkHtml).process(content);
+  const processed = await remark().use(remarkHtml).process(stripLeadingBoilerplate(content));
 
   return {
     slug: stripLeadingSlash(data.slug as string),
