@@ -1,4 +1,4 @@
-import { siteConfig, author, meetup } from "./site-config";
+import { siteConfig, author, meetup, links } from "./site-config";
 import type { Crumb } from "@/components/Breadcrumb";
 
 const BASE = `https://${siteConfig.domain}`;
@@ -96,7 +96,18 @@ export function localBusinessSchema() {
     image: absoluteUrl(author.photo),
     description: siteConfig.shortBlurb,
     areaServed: { "@type": "City", name: "Atlanta" },
-    sameAs: [], // NEEDS CAITLYN: sister-site URLs once confirmed (see NEEDS_CAITLYN.md)
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "101 W Ponce de Leon Ave",
+      addressLocality: "Decatur",
+      addressRegion: "GA",
+      postalCode: "30030",
+      addressCountry: "US",
+    },
+    priceRange: "$$",
+    email: author.email,
+    // telephone deliberately omitted — not published.
+    sameAs: [links.facebookGroup, links.colivingCait].filter(Boolean),
   };
 }
 

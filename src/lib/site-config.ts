@@ -28,6 +28,7 @@ export const author = {
   bio: "Atlanta REALTOR®, investor, and serial house hacker.",
   credential: "REALTOR®, Keller Williams Metro Atlanta",
   photo: "/images/caitlyn-headshot.jpg",
+  email: "cv.sellshomes@gmail.com",
 };
 
 export const meetup = {
