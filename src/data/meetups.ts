@@ -19,11 +19,6 @@ export type MeetupEvent = {
 
 export const meetupSchedule: MeetupEvent[] = [
   {
-    month: "August 2026",
-    topic: "Financing a House Hack",
-    category: "Lender",
-  },
-  {
     month: "September 2026",
     topic: "Finding the Deal",
     category: "Realtor",

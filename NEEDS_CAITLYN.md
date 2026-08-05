@@ -9,10 +9,11 @@ need real values before the site should go live to the public.
 - [ ] **House stacking definition** — drafted copy is live on
       `/what-is-house-hacking#house-stacking` per your confirmation. Flag if
       anything needs to change.
-- [ ] **Venue** — New Realm Brewing is used throughout (`src/lib/site-config.ts`
-      → `meetup.venue`), flagged as unconfirmed. Once the agreement is
-      signed, set `meetup.venue.confirmed = true` to remove the "(venue TBC)"
-      note on `/meetups`.
+- [x] **Venue** — confirmed: New Realm Brewing, 550 Sommerset Terrace NE,
+      Suite 101, Atlanta, GA (`src/lib/site-config.ts` → `meetup.venue`).
+      Live on `/meetups` and in the Event schema. **Nice to have:** the ZIP
+      code, if handy — schema.org doesn't require it, but it's a small
+      completeness improvement.
 - [ ] **Speaker names** for the topic calendar — currently render as
       "Speaker TBA" in `src/data/meetups.ts`. Fill in `speaker: "..."` as
       each is confirmed.

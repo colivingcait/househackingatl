@@ -154,6 +154,7 @@ export function meetupEventSchema({
     name: `House Hacking Atlanta: ${topic}`,
     startDate: easternIso(year, month, day, 18, 30),
     endDate: easternIso(year, month, day, 21, 0),
+    image: [DEFAULT_IMAGE],
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
     eventStatus: "https://schema.org/EventScheduled",
     location: {
@@ -161,8 +162,9 @@ export function meetupEventSchema({
       name: meetup.venue.name,
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Atlanta",
-        addressRegion: "GA",
+        streetAddress: meetup.venue.street,
+        addressLocality: meetup.venue.city,
+        addressRegion: meetup.venue.state,
       },
     },
     description: `${topic} — a house hacking meetup topic with a ${category.toLowerCase()} guest${

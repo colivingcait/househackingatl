@@ -2,8 +2,10 @@ import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
 import FadeIn from "@/components/FadeIn";
+import JsonLd from "@/components/JsonLd";
 import { author, links } from "@/lib/site-config";
 import { pageMetadata } from "@/lib/metadata";
+import { localBusinessSchema } from "@/lib/schema";
 
 export const metadata = pageMetadata({
   path: "/about",
@@ -33,6 +35,8 @@ const elsewhere = [
 export default function AboutPage() {
   return (
     <>
+      <JsonLd data={localBusinessSchema()} />
+
       <PageHero eyebrow="Who's behind this" title="About" />
 
       <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20">

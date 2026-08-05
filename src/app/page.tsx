@@ -5,11 +5,13 @@ import CtaButton from "@/components/CtaButton";
 import KitSignupForm from "@/components/KitSignupForm";
 import FadeIn from "@/components/FadeIn";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
+import JsonLd from "@/components/JsonLd";
 import { houseHackModels } from "@/data/models";
 import { resources } from "@/data/resources";
 import { hubs } from "@/data/hubs";
 import { getAllPosts } from "@/lib/blog";
 import { kit, links, siteConfig } from "@/lib/site-config";
+import { localBusinessSchema } from "@/lib/schema";
 
 function formatDate(date: string) {
   return new Date(date).toLocaleDateString("en-US", {
@@ -24,6 +26,8 @@ export default function Home() {
 
   return (
     <>
+      <JsonLd data={localBusinessSchema()} />
+
       {/* Hero */}
       <section className="relative overflow-hidden bg-sage-950 text-white">
         <Image

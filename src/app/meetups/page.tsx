@@ -1,9 +1,13 @@
 import PageHero from "@/components/PageHero";
+import Breadcrumb from "@/components/Breadcrumb";
 import CtaButton from "@/components/CtaButton";
 import MeetupScheduleTable from "@/components/MeetupScheduleTable";
 import Timeline from "@/components/Timeline";
+import JsonLd from "@/components/JsonLd";
 import { meetup, womensGroup } from "@/lib/site-config";
+import { meetupSchedule } from "@/data/meetups";
 import { pageMetadata } from "@/lib/metadata";
+import { meetupEventSchema, breadcrumbListSchema } from "@/lib/schema";
 
 export const metadata = pageMetadata({
   path: "/meetups",
@@ -13,12 +17,29 @@ export const metadata = pageMetadata({
 });
 
 export default function MeetupsPage() {
+  const breadcrumbItems = [{ label: "Home", href: "/" }, { label: "Meetups" }];
+
   return (
     <>
+      {meetupSchedule.map((event) => (
+        <JsonLd
+          key={event.month}
+          data={meetupEventSchema({
+            monthLabel: event.month,
+            topic: event.topic,
+            category: event.category,
+            speaker: event.speaker,
+            eventbriteUrl: event.eventbriteUrl,
+          })}
+        />
+      ))}
+      <JsonLd data={breadcrumbListSchema(breadcrumbItems)} />
+
       <PageHero
         eyebrow="Come as you are"
         title="The monthly meetup"
         subtitle={`${meetup.cadenceLabel}, ${meetup.venue.name}. One guest speaker, plenty of networking, ${meetup.sizeLabel}.`}
+        breadcrumb={<Breadcrumb variant="dark" items={breadcrumbItems} />}
       >
         <div>
           <CtaButton

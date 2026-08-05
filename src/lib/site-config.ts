@@ -34,11 +34,20 @@ export const meetup = {
   // Recurring cadence — shown as plain text, not derived from a date library,
   // so it reads correctly regardless of the current month.
   cadenceLabel: "Second Tuesday of every month",
+  // Single source of truth for the venue — used on the meetups page, Event
+  // schema, and Eventbrite listings. This is a public commercial venue, not
+  // one of Caitlyn's properties, so the full street address rule (privacy —
+  // see CLAUDE.md) doesn't apply here; unlike her own listings, people need
+  // to be able to find this address.
   venue: {
     name: "New Realm Brewing",
-    // NEEDS CAITLYN: venue agreement was pending — confirm before launch.
-    confirmed: false,
-    address: "Atlanta, GA", // Keep metro-level only until an exact address is approved for public listing.
+    confirmed: true,
+    street: "550 Sommerset Terrace NE, Suite 101",
+    city: "Atlanta",
+    state: "GA",
+    // NEEDS CAITLYN: ZIP code — optional for the schema/display address
+    // below, but nice to have for a fully-specified PostalAddress.
+    address: "550 Sommerset Terrace NE, Suite 101, Atlanta, GA",
   },
   schedule: [
     { label: "Doors & food ordering", time: "6:30 – 7:00 PM" },
