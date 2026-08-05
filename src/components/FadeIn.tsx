@@ -1,8 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
 
+/**
+ * CSS + IntersectionObserver fade/slide-in, replacing a prior
+ * framer-motion implementation — framer-motion's full animation engine
+ * cost far more JS than this single scroll-triggered effect needed.
+ */
 export default function FadeIn({
   children,
   delay = 0,
@@ -12,15 +17,34 @@ export default function FadeIn({
   delay?: number;
   className?: string;
 }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "-80px 0px -80px 0px" }
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.6, delay, ease: [0.21, 0.47, 0.32, 0.98] }}
-      className={className}
+    <div
+      ref={ref}
+      className={`transition duration-[600ms] ease-[cubic-bezier(0.21,0.47,0.32,0.98)] ${
+        visible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
+      } ${className}`}
+      style={{ transitionDelay: `${delay}s` }}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }

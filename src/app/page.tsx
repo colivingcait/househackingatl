@@ -31,6 +31,7 @@ export default function Home() {
           alt=""
           fill
           priority
+          quality={72}
           sizes="100vw"
           className="object-cover"
           style={{ objectPosition: "62% 62%" }}
@@ -326,8 +327,8 @@ export default function Home() {
             </CtaButton>
           </div>
           <p className="mx-auto mt-8 max-w-lg border-t border-pine-200 pt-6 text-sm text-pine-600">
-            Want to meet other investors and our lender, insurance, and
-            inspector team in person?{" "}
+            Want to meet other investors and connect with local lending,
+            insurance, and inspection professionals in person?{" "}
             <Link href="/meetups" className="font-semibold text-clay-600 hover:text-clay-700">
               See the monthly meetup →
             </Link>

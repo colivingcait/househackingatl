@@ -21,6 +21,8 @@ export default function PageHero({
         src="/images/hero-house.jpg"
         alt=""
         fill
+        priority
+        quality={65}
         sizes="100vw"
         className="object-cover"
         style={{ objectPosition: "62% 62%" }}
