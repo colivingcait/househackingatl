@@ -1,17 +1,27 @@
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
-import CtaButton from "@/components/CtaButton";
+import Breadcrumb from "@/components/Breadcrumb";
+import ConversionCta from "@/components/ConversionCta";
 import FadeIn from "@/components/FadeIn";
-import { hubs, type Hub } from "@/data/hubs";
+import type { Hub } from "@/data/hubs";
 import { getAllArticleMeta } from "@/lib/articles";
 
 export default function HubPage({ hub }: { hub: Hub }) {
   const articleMeta = new Map(getAllArticleMeta().map((a) => [a.slug, a]));
-  const otherHubs = hubs.filter((h) => h.id !== hub.id);
+  const pillarMeta = articleMeta.get(hub.pillar);
 
   return (
     <>
-      <PageHero eyebrow={hub.eyebrow} title={hub.name} />
+      <PageHero
+        eyebrow={hub.eyebrow}
+        title={hub.name}
+        breadcrumb={
+          <Breadcrumb
+            variant="dark"
+            items={[{ label: "Home", href: "/" }, { label: "Learn", href: "/learn" }, { label: hub.name }]}
+          />
+        }
+      />
 
       <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20">
         {hub.intro.map((paragraph, i) => (
@@ -19,13 +29,29 @@ export default function HubPage({ hub }: { hub: Hub }) {
             {paragraph}
           </p>
         ))}
+
+        {pillarMeta && (
+          <FadeIn>
+            <Link
+              href={`/${pillarMeta.slug}`}
+              className="mt-8 flex gap-4 rounded-xl border-l-4 border-clay-500 bg-clay-50 p-5 hover:bg-clay-100/60"
+            >
+              <div>
+                <span className="text-xs font-bold uppercase tracking-wide text-clay-700">
+                  Start here
+                </span>
+                <p className="mt-1 font-display text-lg font-semibold text-pine-900">
+                  {pillarMeta.h1}
+                </p>
+                <p className="mt-1 text-sm text-pine-700">{pillarMeta.metaDescription}</p>
+              </div>
+            </Link>
+          </FadeIn>
+        )}
       </section>
 
       {hub.sections.map((section, sIdx) => (
-        <section
-          key={section.heading ?? sIdx}
-          className={`border-t border-pine-100 py-12 sm:py-16 ${sIdx % 2 === 1 ? "bg-sage-50" : ""}`}
-        >
+        <section key={section.heading ?? sIdx} className="border-t border-pine-100 py-12 sm:py-16">
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
             {section.heading && (
               <h2 className="font-display text-xl font-bold text-pine-900 sm:text-2xl">
@@ -33,64 +59,38 @@ export default function HubPage({ hub }: { hub: Hub }) {
               </h2>
             )}
             <div className="mt-4 divide-y divide-pine-100">
-              {section.items.map((item) => {
-                const isResource = item.kind === "resource";
-                const meta = isResource ? undefined : articleMeta.get(item.slug);
-                const isPillar = item.slug === hub.pillar;
-                const href = isResource ? "/resources" : `/${item.slug}`;
-                const title = isResource
-                  ? "Before Anyone Moves In — free conversation guide"
-                  : meta?.h1 ?? item.slug;
+              {section.items
+                .filter((item) => item.slug !== hub.pillar)
+                .map((item) => {
+                  const isResource = item.kind === "resource";
+                  const meta = isResource ? undefined : articleMeta.get(item.slug);
+                  const href = isResource ? "/resources" : `/${item.slug}`;
+                  const title = isResource
+                    ? "Before Anyone Moves In — free conversation guide"
+                    : meta?.h1 ?? item.slug;
+                  const description = isResource
+                    ? "A ten-minute checklist of screening and expectations questions, free to download."
+                    : meta?.metaDescription;
 
-                return (
-                  <FadeIn key={item.slug}>
-                    <Link href={href} className="group flex items-baseline gap-3 py-4">
-                      {isPillar && (
-                        <span className="shrink-0 rounded-full bg-clay-100 px-2.5 py-0.5 text-xs font-semibold text-clay-700">
-                          Start here
+                  return (
+                    <FadeIn key={item.slug}>
+                      <Link href={href} className="group block py-4">
+                        <span className="font-display text-lg font-semibold text-pine-900 group-hover:text-clay-600">
+                          {title}
                         </span>
-                      )}
-                      <span className="font-display text-lg font-semibold text-pine-900 group-hover:text-clay-600">
-                        {title}
-                      </span>
-                    </Link>
-                  </FadeIn>
-                );
-              })}
+                        {description && (
+                          <p className="mt-1 text-sm text-pine-600">{description}</p>
+                        )}
+                      </Link>
+                    </FadeIn>
+                  );
+                })}
             </div>
           </div>
         </section>
       ))}
 
-      <section className="bg-sage-950 py-16 text-center text-white sm:py-20">
-        <FadeIn className="mx-auto max-w-lg px-4 sm:px-6">
-          <p className="text-sage-100">{hub.nextStep.description}</p>
-          <div className="mt-6">
-            <CtaButton href={hub.nextStep.href} variant="primary">
-              {hub.nextStep.label}
-            </CtaButton>
-          </div>
-        </FadeIn>
-      </section>
-
-      <section className="py-16 sm:py-20">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6">
-          <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">
-            Browse other topics
-          </p>
-          <div className="mt-4 flex flex-wrap gap-3">
-            {otherHubs.map((h) => (
-              <Link
-                key={h.id}
-                href={`/${h.id}`}
-                className="rounded-full border border-pine-200 px-4 py-2 text-sm font-medium text-pine-800 hover:border-clay-400 hover:text-clay-600"
-              >
-                {h.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ConversionCta lead={hub.nextStep.description} />
     </>
   );
 }

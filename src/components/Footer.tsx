@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { links, licenseDisclosure, siteConfig } from "@/lib/site-config";
-import { navLinks } from "@/data/nav";
+import { navLinks, secondaryLinks } from "@/data/nav";
 import DoorMark from "./DoorMark";
 
 function ExternalOrPlaceholder({
@@ -47,7 +47,7 @@ export default function Footer() {
               Explore
             </p>
             <ul className="mt-3 flex flex-col gap-2 text-sm">
-              {navLinks.map((link) => (
+              {[...navLinks, ...secondaryLinks].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="hover:text-clay-300">
                     {link.label}

@@ -19,6 +19,8 @@ export type Hub = {
   id: string;
   name: string;
   eyebrow: string;
+  /** One-line card description, used on /learn and the homepage. */
+  blurb: string;
   intro: string[];
   pillar: string;
   sections: HubSection[];
@@ -30,6 +32,7 @@ export const hubs: Hub[] = [
     id: "what-is-house-hacking",
     name: "What Is House Hacking",
     eyebrow: "Start here",
+    blurb: "The four models, and whether this is right for you.",
     intro: [
       "House hacking is living in one part of your property and renting out another. A spare bedroom. A converted basement apartment. A backyard ADU. One side of a duplex. Weekend Airbnb'ing your extra space while you're out of town. All of it counts, and the models are different enough that \"house hacking\" as a single idea can mean very different day-to-day lives.",
       "The core promise is the same across all of them: lower your housing cost while building wealth, in the same house, at the same time. For most people that's possible because of owner-occupant financing — loan programs built for someone who's going to live in the property, with down payments an investor buying the same building could never touch.",
@@ -70,6 +73,7 @@ export const hubs: Hub[] = [
     id: "finding-a-property",
     name: "Finding a Property",
     eyebrow: "Hub",
+    blurb: "What makes a property actually work — and where it pencils out in Atlanta.",
     intro: [
       "Not every house is a house hack. Some floor plans give you real separation and privacy for a resident; others technically \"could\" work but will make both of you miserable. This hub is about recognizing the difference before you're under contract, not after.",
       "That starts with what actually makes a property work — sightlines, entrances, sound, and the systems that get complicated once someone else is living there — and extends into decisions like duplex versus single-family, whether to buy more house than you'd otherwise choose on purpose, and how much renovation budget to plan for if a space needs work before it's rentable.",
@@ -101,6 +105,7 @@ export const hubs: Hub[] = [
     id: "financing",
     name: "Financing",
     eyebrow: "Hub",
+    blurb: "Owner-occupant loans, lender questions, and qualifying with rental income.",
     intro: [
       "Owner-occupant financing is the mechanism that makes house hacking possible for most people — loan programs built for someone who's going to live in the property, with down payments as low as roughly 3–5%, against the 15–25%+ an investor would need to put down on the same building. It's the single biggest reason this works better as a first move than jumping straight into buying a standalone rental.",
       "This hub covers the practical side: what to actually ask a lender before you fall in love with a property, how rental income from the space you're planning to rent gets counted toward qualifying, and loan-specific paths like FHA 203k for a property that needs work built into the purchase.",
@@ -130,6 +135,7 @@ export const hubs: Hub[] = [
     id: "running-the-numbers",
     name: "Running the Numbers",
     eyebrow: "Hub",
+    blurb: "The four numbers to run before you buy, and how real estate actually pays.",
     intro: [
       "The most expensive mistake in house hacking isn't buying a bad house — it's buying a fine house on numbers you never actually ran. This hub is the twenty-minute habit that prevents that: what it really costs to own a property, what a space will realistically rent for, what that leaves as your effective housing cost, and what happens to the numbers after you eventually move out.",
       "It also covers how real estate actually builds wealth beyond the monthly cash flow number most people fixate on — appreciation, debt paydown, and the tax pieces that show up elsewhere on this site. Cash flow matters, but it isn't everything, and treating it as the only number that counts causes people to walk away from deals that were actually strong.",
@@ -167,6 +173,7 @@ export const hubs: Hub[] = [
     id: "being-a-landlord",
     name: "Being a Landlord",
     eyebrow: "Hub",
+    blurb: "Screening, leases, day-to-day, and what to do when something goes wrong.",
     intro: [
       "This is the largest hub on the site, because operating a house hack is where most of the real, ongoing work actually happens — and it's the part almost nobody researches before closing. Buying the property is one decision. Screening well, setting up a fair lease, handling a maintenance request at 9pm, and knowing what to do when a housemate situation goes sideways are dozens of smaller ones, made continuously.",
       "The articles below are grouped by where you are: getting oriented if this is your first time doing anything like it, finding and screening the person who's going to live near you, setting the lease and systems up correctly from day one, the actual day-to-day of sharing a home, and — because it happens — what to do when something goes wrong. A short section on turnover closes the loop for when a resident moves out and it's time to do it again.",
@@ -240,6 +247,7 @@ export const hubs: Hub[] = [
     id: "rental-strategies",
     name: "Rental Strategies",
     eyebrow: "Hub",
+    blurb: "Furnished, mid-term, short-term — ways to rent beyond a standard lease.",
     intro: [
       "Long-term, unfurnished, one lease at a time isn't the only way to rent out a space — and depending on your property and your tolerance for turnover, it might not be the best one. This hub covers the other models: furnished versus unfurnished, mid-term rentals for people relocating for work, and short-term stays through a platform like Airbnb.",
       "Each comes with real tradeoffs. Furnished spaces and mid-term stays can command more per month but come with more setup cost and more turnover. Renting to travel nurses or corporate relocations can mean steadier, more qualified residents than the open market, but a narrower pool. A basement or accessory space run as a short-term rental behaves nothing like a long-term lease, for better and worse.",
@@ -269,6 +277,7 @@ export const hubs: Hub[] = [
     id: "money-and-taxes",
     name: "Money & Taxes",
     eyebrow: "Hub",
+    blurb: "Depreciation, deductions, and what changes when you sell. Not advice — a map.",
     intro: [
       "Real estate is treated differently by the tax code than most other income — not as a loophole, but as a deliberate set of policy choices about housing. This hub is an overview of the concepts worth understanding: depreciation, what's deductible, how the primary-residence rules interact with a property you're partly renting out, and what changes at the moment you sell or move out.",
       "A house hack sits in a genuinely interesting position for tax purposes, because part of the property is your home and part is a rental — which means some of this gets allocated between the two rather than falling cleanly on one side. That allocation is exactly why record-keeping matters more here than in a straightforward rental.",
@@ -301,6 +310,7 @@ export const hubs: Hub[] = [
     id: "your-situation",
     name: "Your Situation & The Long Game",
     eyebrow: "Hub",
+    blurb: "Buying with a partner, on one income, or thinking about the next property.",
     intro: [
       "There's no single house hacker. This hub is for the parts of the decision that depend on who you are and what your life actually looks like — buying with a partner and agreeing on the parts that get messy if you don't talk about them first, doing this with kids in the house, multigenerational setups, making it work on one income, and how the calculus tends to shift by age and life stage.",
       "It's also where the long game lives. The first house hack is the hard one — the second is a different conversation entirely, because now you have a track record, some equity, and a much clearer sense of what you actually want out of the next property. This section covers what a realistic first year looks like month by month, what \"house stacking\" means as you go from one property to two, and — just as importantly — how to know when to stop adding properties rather than treating more as automatically better.",

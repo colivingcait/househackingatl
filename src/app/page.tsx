@@ -7,6 +7,7 @@ import FadeIn from "@/components/FadeIn";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
 import { houseHackModels } from "@/data/models";
 import { resources } from "@/data/resources";
+import { hubs } from "@/data/hubs";
 import { getAllPosts } from "@/lib/blog";
 import { kit, links, siteConfig } from "@/lib/site-config";
 
@@ -139,6 +140,47 @@ export default function Home() {
             </Link>
           </FadeIn>
         </div>
+      </section>
+
+      {/* The library — 8 hub cards, the entry point into all 83 articles */}
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
+        <FadeIn className="mb-8 flex items-end justify-between">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">
+              Learn
+            </p>
+            <h2 className="mt-2 max-w-lg font-display text-3xl font-bold text-pine-900 sm:text-4xl">
+              Everything we know, organized by topic
+            </h2>
+          </div>
+          <Link
+            href="/learn"
+            className="hidden text-sm font-semibold text-clay-600 hover:text-clay-700 sm:block"
+          >
+            See the full library →
+          </Link>
+        </FadeIn>
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {hubs.map((hub, i) => (
+            <FadeIn key={hub.id} delay={0.1 + i * 0.05}>
+              <Link
+                href={`/${hub.id}`}
+                className="block h-full rounded-2xl border border-pine-200 bg-white p-5 transition-shadow hover:shadow-md"
+              >
+                <h3 className="font-display text-base font-semibold text-pine-900">
+                  {hub.name}
+                </h3>
+                <p className="mt-2 text-sm text-pine-700">{hub.blurb}</p>
+              </Link>
+            </FadeIn>
+          ))}
+        </div>
+        <Link
+          href="/learn"
+          className="mt-8 inline-block text-sm font-semibold text-clay-600 hover:text-clay-700 sm:hidden"
+        >
+          See the full library →
+        </Link>
       </section>
 
       {/* Free guides teaser */}

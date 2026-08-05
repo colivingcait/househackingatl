@@ -6,6 +6,7 @@ import { hubs } from "@/data/hubs";
 
 const routes = [
   "",
+  "/learn",
   "/resources",
   "/blog",
   "/meetups",

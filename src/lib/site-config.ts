@@ -16,6 +16,19 @@ export const siteConfig = {
     "House hacking in the Atlanta metro — living in one part of your property and renting out another. Real numbers, real deals, real support. Live for less. Build more wealth. Every door is an opportunity.",
 };
 
+/**
+ * Author box shown on every article — the trust signal for a stranger
+ * arriving from search who's never seen this site before. NEEDS CAITLYN:
+ * headshot (photo left blank until then; the author box shows a
+ * placeholder circle).
+ */
+export const author = {
+  name: "Caitlyn",
+  bio: "Atlanta-based realtor, investor, and serial house hacker.",
+  credential: "Licensed Georgia Real Estate Agent, Keller Williams Realty",
+  photo: "",
+};
+
 export const meetup = {
   // Recurring cadence — shown as plain text, not derived from a date library,
   // so it reads correctly regardless of the current month.

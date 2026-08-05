@@ -6,11 +6,13 @@ export default function PageHero({
   eyebrow,
   title,
   subtitle,
+  breadcrumb,
   children,
 }: {
   eyebrow?: string;
   title: string;
   subtitle?: string;
+  breadcrumb?: ReactNode;
   children?: ReactNode;
 }) {
   return (
@@ -32,6 +34,7 @@ export default function PageHero({
         aria-hidden="true"
       />
       <div className="relative mx-auto flex max-w-6xl flex-col gap-6 px-4 py-16 sm:px-6 sm:py-20">
+        {breadcrumb && <div style={{ textShadow: "0 1px 10px rgba(0,0,0,0.6)" }}>{breadcrumb}</div>}
         <DoorMark className="h-10 w-8 text-clay-400" />
         <div style={{ textShadow: "0 2px 16px rgba(0,0,0,0.6)" }}>
           {eyebrow && (

@@ -4,6 +4,8 @@ export type Resource = {
   stage: string;
   description: string;
   file: string;
+  /** Article slug (no leading slash) to embed this download inline in, per BUILD-SPEC.md §8. */
+  articleSlug?: string;
 };
 
 export const resources: Resource[] = [
@@ -30,6 +32,7 @@ export const resources: Resource[] = [
     description:
       "Run these on any property in twenty minutes. Fillable worksheet for cost to own, realistic rent, effective housing cost, and the move-out math.",
     file: "/downloads/four-numbers-worksheet.pdf",
+    articleSlug: "four-numbers-house-hack",
   },
   {
     slug: "walkthrough-checklist",
@@ -38,6 +41,7 @@ export const resources: Resource[] = [
     description:
       "Print one per property. Sightlines, entrances, sound, bathrooms, systems to photograph — everything that's easy to miss in person.",
     file: "/downloads/property-walkthrough-checklist.pdf",
+    articleSlug: "house-hack-walkthrough",
   },
   {
     slug: "before-anyone-moves-in",

@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FacebookPixel from "@/components/FacebookPixel";
 import { siteConfig } from "@/lib/site-config";
+import { getSearchIndex } from "@/lib/search";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -46,11 +47,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const searchIndex = getSearchIndex();
   return (
     <html lang="en">
       <body className={`${inter.variable} ${fraunces.variable} font-sans antialiased`}>
         <FacebookPixel />
-        <Header />
+        <Header searchIndex={searchIndex} />
         <main>{children}</main>
         <Footer />
       </body>
