@@ -60,8 +60,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        display: ["var(--font-fraunces)", "Georgia", "serif"],
+        sans: ["var(--font-body)", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "Georgia", "serif"],
       },
       typography: ({ theme }: { theme: (path: string) => string }) => ({
         pine: {
@@ -76,7 +76,7 @@ const config: Config = {
             "--tw-prose-hr": theme("colors.pine[200]"),
             a: { fontWeight: "600", textDecoration: "none" },
             "a:hover": { textDecoration: "underline" },
-            "h2, h3": { fontFamily: "var(--font-fraunces), Georgia, serif" },
+            "h2, h3": { fontFamily: "var(--font-display), Georgia, serif" },
             // Disclaimer / callout blocks (e.g. "I am not your CPA"). These
             // carry real compliance weight, so they need to read as a
             // distinct warning box, not muted decorative italic quote text.

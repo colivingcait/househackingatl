@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Fraunces } from "next/font/google";
+import { Source_Sans_3, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -7,17 +7,18 @@ import FacebookPixel from "@/components/FacebookPixel";
 import { siteConfig } from "@/lib/site-config";
 import { getSearchIndex } from "@/lib/search";
 
-const inter = Inter({
+const sourceSans = Source_Sans_3({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-body",
   display: "swap",
 });
 
-const fraunces = Fraunces({
+const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
-  variable: "--font-fraunces",
+  weight: ["400", "700"],
+  variable: "--font-display",
   display: "swap",
-  axes: ["opsz"],
 });
 
 export const metadata: Metadata = {
@@ -50,7 +51,7 @@ export default function RootLayout({
   const searchIndex = getSearchIndex();
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${fraunces.variable} font-sans antialiased`}>
+      <body className={`${sourceSans.variable} ${libreBaskerville.variable} font-sans antialiased`}>
         <FacebookPixel />
         <Header searchIndex={searchIndex} />
         <main>{children}</main>

@@ -23,7 +23,7 @@ export default function HubPage({ hub }: { hub: Hub }) {
         }
       />
 
-      <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20">
+      <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20">
         {hub.intro.map((paragraph, i) => (
           <p key={i} className={`text-lg text-pine-800 ${i > 0 ? "mt-4" : ""}`}>
             {paragraph}
@@ -52,7 +52,7 @@ export default function HubPage({ hub }: { hub: Hub }) {
 
       {hub.sections.map((section, sIdx) => (
         <section key={section.heading ?? sIdx} className="border-t border-pine-100 py-12 sm:py-16">
-          <div className="mx-auto max-w-3xl px-4 sm:px-6">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6">
             {section.heading && (
               <h2 className="font-display text-xl font-bold text-pine-900 sm:text-2xl">
                 {section.heading}
