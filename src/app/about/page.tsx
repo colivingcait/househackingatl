@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
 import FadeIn from "@/components/FadeIn";
-import { links } from "@/lib/site-config";
+import { author, links } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "About",
@@ -35,10 +36,15 @@ export default function AboutPage() {
 
       <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20">
         <FadeIn className="flex flex-col gap-6 sm:flex-row sm:items-start">
-          {/* NEEDS CAITLYN: headshot */}
-          <div className="flex h-28 w-28 shrink-0 items-center justify-center rounded-full border border-dashed border-sage-300 bg-sage-50 text-xs text-pine-400">
-            Headshot
-          </div>
+          {author.photo ? (
+            <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-full">
+              <Image src={author.photo} alt={author.name} fill className="object-cover" />
+            </div>
+          ) : (
+            <div className="flex h-28 w-28 shrink-0 items-center justify-center rounded-full border border-dashed border-sage-300 bg-sage-50 text-xs text-pine-400">
+              Headshot
+            </div>
+          )}
           <div>
             <h2 className="font-display text-2xl font-bold text-pine-900">Caitlyn</h2>
             <p className="mt-3 text-lg text-pine-800">

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { author } from "@/lib/site-config";
 
 /**
@@ -8,9 +9,15 @@ import { author } from "@/lib/site-config";
 export default function AuthorBox() {
   return (
     <div className="flex gap-4 rounded-xl border border-pine-200 bg-sage-50 p-5">
-      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-dashed border-sage-300 bg-white text-[10px] text-pine-400">
-        Photo
-      </div>
+      {author.photo ? (
+        <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full">
+          <Image src={author.photo} alt={author.name} fill className="object-cover" />
+        </div>
+      ) : (
+        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-dashed border-sage-300 bg-white text-[10px] text-pine-400">
+          Photo
+        </div>
+      )}
       <div>
         <p className="font-display text-base font-semibold text-pine-900">
           <Link href="/about" className="hover:text-clay-600">

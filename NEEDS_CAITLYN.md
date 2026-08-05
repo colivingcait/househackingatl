@@ -24,8 +24,10 @@ need real values before the site should go live to the public.
       soon" placeholders. Send 3–6 photos and I'll swap them in.
       Reminder of the privacy rule already baked into the page copy: no
       property addresses, nothing more specific than "Atlanta metro."
-- [ ] **Caitlyn's bio + headshot** — `/about` has your approved intro line
-      live; the fuller bio and headshot are placeholders.
+- [x] **Headshot** — live on `/about` and in the author box on every
+      article.
+- [ ] **Fuller bio** — `/about` has your approved intro line live; the
+      longer bio is still a placeholder.
 - [ ] **Adam** — co-founder credit. Not included anywhere yet — confirm
       whether/how he should appear (About page, meetup hosting, etc.).
 

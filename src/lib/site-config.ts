@@ -18,15 +18,13 @@ export const siteConfig = {
 
 /**
  * Author box shown on every article — the trust signal for a stranger
- * arriving from search who's never seen this site before. NEEDS CAITLYN:
- * headshot (photo left blank until then; the author box shows a
- * placeholder circle).
+ * arriving from search who's never seen this site before.
  */
 export const author = {
   name: "Caitlyn",
   bio: "Atlanta-based realtor, investor, and serial house hacker.",
   credential: "Licensed Georgia Real Estate Agent, Keller Williams Realty",
-  photo: "",
+  photo: "/images/caitlyn-headshot.jpg",
 };
 
 export const meetup = {
