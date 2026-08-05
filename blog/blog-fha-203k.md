@@ -97,9 +97,3 @@ Which is another reason to talk to more than one lender. The first answer you ge
 Renovation financing lets an owner-occupant buy a property that needs work and fund the work in the same loan, on owner-occupant terms. For house hackers targeting properties with unfinished potential, it can be the thing that makes an otherwise impossible deal possible.
 
 It's more process, longer timelines, and real contractor requirements. Get honest renovation numbers first, and work with a lender who actually does these regularly.
-
----
-
-**We bring lenders in to answer these directly.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

@@ -100,9 +100,3 @@ Two things to be aware of when you lived there too.
 Walk it together before they hand over keys. Photograph the same angles. Deduct only for real damage you can document. Itemize with receipts. Return it faster than required.
 
 Do that consistently and the deposit stops being the thing that ruins the ending.
-
----
-
-**We cover the whole lifecycle every month.** House Hacking Atlanta meets the second Tuesday. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

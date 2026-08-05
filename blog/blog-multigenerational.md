@@ -87,9 +87,3 @@ Multigenerational house hacking works well when everyone treats it like an arran
 It goes badly when it's built on "we'll figure it out," which is how most families approach it, because the alternative feels transactional toward people you love.
 
 The clarity isn't cold. It's what keeps the relationship intact when circumstances change — and over the years this arrangement is meant to last, they will.
-
----
-
-**Bring the family conversation to a meetup.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

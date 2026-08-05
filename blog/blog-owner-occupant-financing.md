@@ -89,10 +89,3 @@ People agonize over whether they're ready. The more useful question is whether t
 Owner-occupancy requirements are real obligations, not technicalities. If you're buying a house to live in, live in it.
 
 Program details change and eligibility varies. Get specifics from a lender, not from a blog post — including this one. But the underlying principle holds: you get better terms for a house you live in, and nothing stops that house from also making money.
-
----
-
-**We cover financing regularly at our meetups.** House Hacking Atlanta meets the second Tuesday of every month, and we bring in people who do this work to answer questions directly. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪
-

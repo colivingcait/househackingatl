@@ -85,9 +85,3 @@ Price the rent accordingly and build a generous cushion into your numbers, becau
 For most house hacks: **include utilities with a reasonable cap, include internet, and get a smart thermostat.**
 
 It's simple to advertise, simple to administer, protects you from the extremes, and removes one of the most common sources of friction in a shared house before it starts.
-
----
-
-**Ask the room what they do.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

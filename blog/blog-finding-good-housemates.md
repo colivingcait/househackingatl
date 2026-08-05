@@ -98,10 +98,3 @@ If you're not sure, that's an answer.
 You're not looking for a friend. You're looking for someone considerate, financially stable, and honest about how they live.
 
 Find that, run the same process every time, and "luck" starts happening a lot more often.
-
----
-
-**We cover screening at our meetups.** House Hacking Atlanta meets the second Tuesday of every month — real questions, real answers, and people who've done this. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪
-

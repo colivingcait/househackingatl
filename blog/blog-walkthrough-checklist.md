@@ -93,10 +93,3 @@ The walkthrough is where you find out. Photos will tell you a house is beautiful
 Take photos of everything boring — the panel, the water heater, the crawlspace, the parking. Nobody photographs the boring parts, and those are the parts you'll want to look at again when you're deciding.
 
 And go twice if you're serious. Once during the day, once in the evening. Houses are different at 7pm than they are at noon, and so are the streets they're on.
-
----
-
-**Bring a listing and we'll talk through it.** House Hacking Atlanta meets the second Tuesday of every month — real numbers, real questions, and people at every stage of this. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪
-

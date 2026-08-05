@@ -76,10 +76,3 @@ Most properties fail at one of the first two — which is why doing this in twen
 None of this makes a deal good. Numbers tell you whether something works — not whether you want it. A property can pencil out perfectly and still be a house you'd hate living in.
 
 Run the numbers to eliminate what doesn't work. Then use your judgment on what's left.
-
----
-
-**Bring a property and we'll run it together.** House Hacking Atlanta meets the second Tuesday of every month — real numbers, real questions, and people at every stage of this. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪
-

@@ -90,9 +90,3 @@ Two things are different when you live there.
 Collect a consistent, lawful amount. Keep it separate and don't spend it. Photograph everything at move-in and get it signed.
 
 Do those three and the return conversation — which is the next post — is almost always easy.
-
----
-
-**Bring the operating questions to a meetup.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

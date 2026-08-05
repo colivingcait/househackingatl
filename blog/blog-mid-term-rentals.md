@@ -74,10 +74,3 @@ It's probably not the right fit if you're renting a bedroom in a shared house, i
 Demand for mid-term is real but it isn't uniform. It concentrates around certain employers, certain parts of a metro, and certain times of year. A space that's perfect for it in one location will sit empty in another.
 
 Before you furnish anything, find out whether the demand exists where your property is — who's hiring on contract nearby, what similar furnished spaces are getting, and how quickly they fill. The strategy is sound. Whether it's sound *for your address* is a separate question, and it's the one worth answering first.
-
----
-
-**We talk through models like this every month.** House Hacking Atlanta meets the second Tuesday — real numbers, real questions, and people running every version of this. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪
-

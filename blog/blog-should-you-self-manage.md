@@ -91,10 +91,3 @@ Most experienced operators end up somewhere in the middle. They kept the parts w
 Do it yourself. Build the five systems. Give it a year.
 
 You'll know by then whether you're someone who finds this satisfying or someone who finds it draining — and either answer is useful, because it tells you what your next property should look like.
-
----
-
-**We talk about the operating side every month.** House Hacking Atlanta meets the second Tuesday — real questions from people actually running these. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪
-

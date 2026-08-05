@@ -79,9 +79,3 @@ That's not the reason to do it. But it shows up often enough that it's worth say
 One income makes the margin thinner and the work heavier. It also makes the strategy more valuable, because the thing house hacking produces — a lower fixed cost and a monthly gap — is exactly what a single-income buyer doesn't otherwise have.
 
 Build with more cushion than you think you need. Automate everything you can. Start with the simplest model. Then let the property do what a second income would have done.
-
----
-
-**A lot of our members are doing this solo.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

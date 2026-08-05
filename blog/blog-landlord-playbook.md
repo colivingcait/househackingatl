@@ -87,9 +87,3 @@ Most of being a good landlord isn't complicated. It's consistency, documentation
 The people who find this exhausting are usually the ones improvising each decision. The ones who find it easy built the systems once and now just follow them.
 
 Build them in year one and this becomes a few hours a month for as long as you own the property.
-
----
-
-**Bring your operating questions to a meetup.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

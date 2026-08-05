@@ -105,9 +105,3 @@ Twenty minutes now, and it's the difference between a clean deposit conversation
 **No maintenance reserve.** Things break, and they break more with more people in the house.
 
 **Being vague about the shared space.** Decide whether the living room is communal or primarily yours, and say it out loud before anyone moves in.
-
----
-
-**Bring your questions to a meetup.** House Hacking Atlanta meets the second Tuesday of every month — there's always someone who did this last year. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

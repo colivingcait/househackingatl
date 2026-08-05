@@ -92,9 +92,3 @@ That's not a compromise between the two options. It's the path that gets you bot
 ## The one-line version
 
 If you have the capital and don't want to share, buy the rental. If you're starting out, the house hack is a better deal on every dimension except privacy — and it turns into the rental anyway.
-
----
-
-**Both kinds of investor are in the room.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

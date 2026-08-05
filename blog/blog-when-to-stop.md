@@ -94,10 +94,3 @@ Once a year — pick a date — ask four questions:
 If the answers are good, keep going. If they aren't, the answer isn't necessarily to sell — it's usually to stop adding and fix what you have.
 
 **Stopping isn't the opposite of building. It's what makes the building worth something.** A portfolio you can run without it running you is the actual outcome. More doors is only a proxy for that, and proxies are easy to mistake for the thing itself.
-
----
-
-**Come talk to people at every stage of this.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪
-

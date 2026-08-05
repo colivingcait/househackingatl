@@ -71,9 +71,3 @@ It's worth knowing the term exists. It is emphatically not a DIY project, and I'
 ## The one-sentence version
 
 Depreciation lets you deduct part of a building's value each year without spending cash that year — a real and meaningful benefit that's reconciled when you sell, and one whose specifics depend entirely on your situation and a professional who knows it.
-
----
-
-**We keep the finance questions on the table.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

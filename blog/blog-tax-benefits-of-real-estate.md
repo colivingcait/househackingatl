@@ -78,9 +78,3 @@ Tax treatment is a genuine and meaningful part of why real estate works. It's al
 It won't rescue a bad property. It won't turn a deal that doesn't work into one that does. And the specifics depend on your income, your other assets, your entity structure, and rules that change.
 
 Treat it as a real advantage worth understanding and worth getting professional help with — not as the reason to buy.
-
----
-
-**Bring your questions to a meetup.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

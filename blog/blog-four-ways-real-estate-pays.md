@@ -71,9 +71,3 @@ You're getting all four from a property you also live in.
 Your cash flow shows up as a lower housing cost. Your residents are paying down your loan. The property may appreciate. And some of it may be deductible in ways that a home you simply live in isn't.
 
 That combination — on a property bought with owner-occupant financing — is why the first house hack does so much more work than its monthly numbers suggest.
-
----
-
-**We run these numbers together every month.** House Hacking Atlanta meets the second Tuesday. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

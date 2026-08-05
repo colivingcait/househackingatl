@@ -79,10 +79,3 @@ If you already own, you're closer to house hacking than almost anyone reading ab
 No search. No financing. No closing costs. Just a space that isn't earning, and a decision about whether to change that.
 
 Start with what already exists. See if you like it. Everything else can follow.
-
----
-
-**A lot of our members already own.** House Hacking Atlanta meets the second Tuesday of every month, and the "I have a basement and I'm not sure what to do with it" conversation happens at every one. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪
-

@@ -114,10 +114,3 @@ Run comps on properties you have no intention of buying.
 Pick a listing a week, define the product, pull five comparables, land on a number. You'll be wrong at first. After a dozen you'll start estimating within a narrow range before you finish, and you'll stop wasting time on deals that were never going to work.
 
 That speed is the actual skill. Not the spreadsheet — the pattern recognition underneath it.
-
----
-
-**Bring your numbers and we'll pressure-test them.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪
-

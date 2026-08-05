@@ -89,9 +89,3 @@ If any one doesn't, start simple. You can always furnish a space later, once you
 A lot of house hackers end up running both — long-term in the bedrooms, mid-term in the private lower level.
 
 Different spaces, different products, one property. There's no rule that the whole house has to match.
-
----
-
-**People run both in our room.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

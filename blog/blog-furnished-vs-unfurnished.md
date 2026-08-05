@@ -79,10 +79,3 @@ Then, once you know how the house actually operates, furnish one space and compa
 The specific reasons to go furnished from day one: you're near major employers that bring people in on contract, your space has genuine privacy with its own entrance and bath, and you have furnishing capital that isn't coming out of your reserves.
 
 If all three are true, furnished is likely the stronger play. If any one of them isn't, start simple.
-
----
-
-**We talk through both models every month.** House Hacking Atlanta meets the second Tuesday — real numbers from people running each version. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪
-

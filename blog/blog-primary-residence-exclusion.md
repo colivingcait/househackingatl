@@ -74,9 +74,3 @@ Both are relatively cheap. The decisions they inform are not.
 There are meaningful provisions relating to the sale of a primary residence, they're based on how and when you used the property, and a house hack sits in the interesting overlap between home and rental.
 
 Timing is a real variable. Moving out starts a clock. Ask about it while you still have choices.
-
----
-
-**Come talk long-game planning.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

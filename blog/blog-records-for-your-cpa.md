@@ -87,9 +87,3 @@ Two reasons.
 **It preserves deductions.** Expenses you can't substantiate are expenses you may not be able to claim. The records are what turn a real cost into a supportable one.
 
 None of this takes real time in the moment. All of it is genuinely miserable retroactively. Set it up in your first month and it runs on about ten minutes a month afterward.
-
----
-
-**Bring your systems questions to a meetup.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

@@ -101,11 +101,13 @@ export default function GroupPage() {
         </div>
       </section>
 
-      <section className="py-16 sm:py-20">
-        <div className="mx-auto max-w-2xl px-4 sm:px-6">
-          <KitSignupForm variant="newsletter" formId={kit.newsletterFormId} />
-        </div>
-      </section>
+      {kit.newsletterFormId && (
+        <section className="py-16 sm:py-20">
+          <div className="mx-auto max-w-2xl px-4 sm:px-6">
+            <KitSignupForm variant="newsletter" formId={kit.newsletterFormId} />
+          </div>
+        </section>
+      )}
     </>
   );
 }

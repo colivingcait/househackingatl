@@ -83,10 +83,3 @@ Track your days vacant, turnover to turnover.
 That single number tells you whether your process is improving. It captures how fast you listed, how well you priced, how good your photos were, and how efficiently you reset the space — all in one figure you can compare over time.
 
 Most people never measure it, which is why most people never get faster at it.
-
----
-
-**Vendor recommendations get traded at every meetup.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪
-

@@ -73,10 +73,3 @@ The house hacks I've seen work best with two people are the ones where both peop
 That last part matters more than people expect. When there's a real boundary — a lower level, a separate entrance, a wing of the house — the arrangement stops feeling like a compromise and starts feeling like owning a property that happens to have someone else in it.
 
 Which is exactly what it is.
-
----
-
-**Bring your partner to a meetup.** House Hacking Atlanta meets the second Tuesday of every month, and this is a much easier decision to make when you've both heard the same conversation. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪
-

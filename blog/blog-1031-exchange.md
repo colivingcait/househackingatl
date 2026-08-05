@@ -67,9 +67,3 @@ The 1031 is a real and meaningful provision. It's also frequently invoked casual
 The version that matters to you today is simple: **there's a mechanism for deferring gain when you sell investment property and buy other investment property, it has strict deadlines, and you have to set it up before the sale closes rather than after.**
 
 That's enough to make you ask the right question at the right moment, which is the entire point.
-
----
-
-**Come talk long-game strategy.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

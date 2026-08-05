@@ -92,9 +92,3 @@ A good listing generates more inquiries, and more inquiries is not the same as a
 Run your process on everyone: application, income verification, background and rental history, a real conversation, a written lease. The listing's job is to fill the top of the funnel. Your process is what decides who actually moves in.
 
 Cast wide, screen tight. An empty room costs you one month. The wrong person costs you months.
-
----
-
-**Bring your listing and we'll look at it.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

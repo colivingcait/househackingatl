@@ -78,9 +78,3 @@ A good live-in landlord is one where a resident would say two things: *the rules
 Clarity and responsiveness. Nearly everything else people worry about is downstream of getting those two right.
 
 Do them consistently and you'll find residents stay longer, the house runs quieter, and the whole arrangement takes far less of your attention than you expected.
-
----
-
-**We talk about the operating side every month.** House Hacking Atlanta meets the second Tuesday. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

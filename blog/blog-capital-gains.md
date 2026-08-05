@@ -77,9 +77,3 @@ Those four interact, and the interaction is exactly why a house hacker should ha
 Capital gains tax applies to the gain on a sale — sale price minus your adjusted basis and costs — not to the sale price, not to your equity, and not to a refinance.
 
 How much, and whether any of it is excludable or deferrable, depends on facts specific to you. Which is exactly the kind of question a CPA should answer before you commit to anything.
-
----
-
-**We keep the money questions on the table.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

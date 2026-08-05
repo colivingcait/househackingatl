@@ -65,9 +65,3 @@ That's a genuinely strong position: the improvement pays you monthly through ren
 **Understand your ceiling before you spend.** What do comparable properties in that area actually sell for? You can't renovate past what the neighborhood supports.
 
 **Hold long enough for it to matter.** Appreciation is a long game. Transaction costs eat short-term gains, and the properties that make people money are usually the ones they kept.
-
----
-
-**We talk deals every month.** House Hacking Atlanta meets the second Tuesday. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

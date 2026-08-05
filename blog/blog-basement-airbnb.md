@@ -94,9 +94,3 @@ For a lot of house hackers, mid-term produces a comparable annual net with a fra
 A separate lower-level unit with its own entrance is a good short-term rental candidate, and short-term is the most work-intensive and most rule-dependent model available to you.
 
 Resolve the rules and the insurance first. Then run the mid-term numbers alongside it — and be honest with yourself about how much operational work you actually want.
-
----
-
-**People run every version of this in our room.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

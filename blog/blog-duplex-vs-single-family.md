@@ -91,9 +91,3 @@ Duplex if you want maximum separation, one simple lease, and the possibility of 
 Single-family if you want more options, more total income potential, and spread-out vacancy risk — at the cost of less privacy and more management.
 
 Most people should search for both and buy whichever good one shows up first.
-
----
-
-**Bring either type and we'll look at it.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

@@ -87,9 +87,3 @@ That last one is why the second property is a completely different experience. Y
 **Month 3**, when it's awkward and new and you wonder if you've made a mistake. That's where people conclude this isn't for them, two weeks before it would have felt normal.
 
 Both are survivable and both are temporary. Knowing they're coming is most of what gets you through them.
-
----
-
-**There's usually someone three months ahead of you in the room.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

@@ -73,9 +73,3 @@ There isn't a right percentage. There's a right comparison.
 If living in your house costs you meaningfully less than renting would, and you could survive a few empty months, you have a good house hack — at 50% coverage or 100%.
 
 The people who do well at this aren't the ones who hit a specific number. They're the ones who bought something they could hold, captured the gap, and did it again.
-
----
-
-**Run your numbers with us.** House Hacking Atlanta meets the second Tuesday of every month — bring a property and we'll work through it. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

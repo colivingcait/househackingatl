@@ -69,9 +69,3 @@ Screening feels cold, until you've lived with someone you didn't screen. The exp
 That's the whole job, really. Small discomfort now instead of large discomfort later.
 
 Do these three consistently and you'll avoid most of what makes people say house hacking wasn't for them.
-
----
-
-**The rest of the playbook** is in our full guide, and we cover this in person every second Tuesday. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

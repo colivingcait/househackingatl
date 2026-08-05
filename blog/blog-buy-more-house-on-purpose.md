@@ -81,10 +81,3 @@ Yes — buy more house than you need, *if* the extra space is the kind people re
 That's three conditions, and all three have to be true. People remember the first one and skip the other two.
 
 The strategy works. It just doesn't work by ignoring the reasons the standard advice exists.
-
----
-
-**We run these comparisons at every meetup.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪
-

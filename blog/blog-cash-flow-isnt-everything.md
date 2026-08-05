@@ -71,9 +71,3 @@ When you compare two properties, run the whole picture: cash flow, principal red
 Then apply the floor test — could you hold this comfortably through several empty months?
 
 If the answer's yes and the total return is strong, the fact that the monthly number is modest isn't the disqualifier a lot of people treat it as.
-
----
-
-**Bring a property and we'll look at the whole picture.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

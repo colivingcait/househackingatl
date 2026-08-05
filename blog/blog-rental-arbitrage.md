@@ -85,9 +85,3 @@ Most people spend their first year of ownership learning things that would have 
 That's a genuinely strong position to buy from — and you'll likely have a bigger down payment than you would have otherwise.
 
 Just get the permission in writing first. Everything else is fixable.
-
----
-
-**Plenty of people in our room started this way.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

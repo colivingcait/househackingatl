@@ -81,9 +81,3 @@ That's a much lower bar and it's achievable in far more markets. People talk the
 If you're here, the honest read is that this market still works. Our housing stock cooperates unusually well — sloped lots mean walk-out basements are everywhere, and the metro is large enough that price points vary widely across it.
 
 That doesn't mean every property or every area. It means the constraint is usually search criteria and financing, not the market.
-
----
-
-**Bring a listing you think doesn't work.** House Hacking Atlanta meets the second Tuesday of every month — sometimes the room sees something you didn't. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

@@ -64,7 +64,7 @@ export const links = {
   colivingCait: "https://colivingcait.com",
   atlantaWomenInvestors: "",
   roomsForRentAtl: "",
-  facebookGroup: "",
+  facebookGroup: "https://facebook.com/groups/househackingatl",
   eventbriteOrganizer: "",
 };
 
@@ -122,7 +122,6 @@ export const sponsorInquiry = {
  * as-is.
  */
 export const licenseDisclosure = {
-  text:
-    "Caitlyn Verdugo, REALTOR®, Keller Williams Metro Atlanta. [Exact broker-approved disclosure wording pending — placeholder text, not for production use.]",
+  text: "Caitlyn Verdugo, REALTOR®, Keller Williams Metro Atlanta",
   confirmed: false,
 };

@@ -93,10 +93,3 @@ This is rarer than the fear of it suggests. Most residents are fine. Most proble
 And the thing that prevents nearly all of it is the boring stuff: screening the same way every time, saying the awkward things before move-in, and addressing small things while they're still small.
 
 That's not a personality trait. It's a process, and you can just decide to run it.
-
----
-
-**These stories get shared openly at our meetups.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪
-

@@ -79,10 +79,3 @@ Walking a house, I'm asking one question the whole time: *can two people live he
 Everything else is detail. If the answer is yes, run the numbers. If it's no, the price doesn't matter — because the version of your life where you live there is worse than the spreadsheet suggests.
 
 The best house hack isn't the one with the highest projected income. It's the one you'll still be happy living in two years from now, that also happens to mostly pay for itself.
-
----
-
-**Want a second set of eyes on a specific property?** House Hacking Atlanta meets the second Tuesday of every month — bring a listing you're curious about and we'll look at it together. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪
-

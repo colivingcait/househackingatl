@@ -83,9 +83,3 @@ That's your entire search criteria. Now you can look at houses knowing which one
 Nothing here is a substitute for that conversation. Programs change, eligibility varies, and what's true for one buyer isn't true for the next. This list is what to ask, not what the answers will be.
 
 The point is to have the conversation *first*. That's the part most people get wrong, and it's free to fix.
-
----
-
-**We bring lenders in to answer these directly.** House Hacking Atlanta meets the second Tuesday of every month — free, no pitch. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

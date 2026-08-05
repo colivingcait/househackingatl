@@ -91,9 +91,3 @@ Most house hacking is uneventful. The overwhelming majority of residents are ord
 But "mostly fine" isn't a plan. The plan is: screen everyone the same way, set the house up properly, write the guest rules down, and treat your own discomfort as legitimate information rather than something to talk yourself out of.
 
 Do those things and you've addressed nearly all of what's actually addressable.
-
----
-
-**This comes up at every meetup.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

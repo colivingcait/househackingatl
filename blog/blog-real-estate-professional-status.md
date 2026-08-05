@@ -73,9 +73,3 @@ Real estate professional status is a real provision that matters significantly f
 For most house hackers, especially early on, it's not the relevant question. The relevant questions are much more basic: is the property good, are your records clean, and do you have a CPA who knows this area.
 
 If your situation evolves such that this genuinely applies, you'll be working with a professional by then anyway. That's the right time to look at it.
-
----
-
-**We keep the advanced questions welcome too.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

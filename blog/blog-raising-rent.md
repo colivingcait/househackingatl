@@ -81,9 +81,3 @@ Listen to what they actually say. Sometimes it's "I can't afford that," which is
 You have options besides holding firm or backing down: phase it over two steps, hold it flat in exchange for a longer commitment, or split the difference and revisit next year.
 
 And if they leave — that's a legitimate outcome, not a failure. You priced it, they decided. Handle the exit as well as you handled everything else, because people talk, and how you treat someone on the way out shapes who's willing to move in next.
-
----
-
-**Bring the awkward operating questions to a meetup.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

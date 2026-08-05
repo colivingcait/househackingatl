@@ -97,9 +97,3 @@ Most residents are entirely reasonable about this once it's said. Almost none of
 Assign parking, get enough trash service, keep the exterior up, and introduce yourself to your neighbors before anything goes wrong.
 
 Four things, none expensive, and together they prevent nearly all of what makes house hacking difficult from the outside.
-
----
-
-**This one comes up more than you'd think.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

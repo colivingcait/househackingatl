@@ -99,10 +99,3 @@ Furnishing costs real money up front, and it's the main reason to consider start
 But if the demand near you supports it — people relocating, on contract, in transition — furnished rents meaningfully higher, fills faster, and attracts people who are easy to live with because they're barely home.
 
 Just go in knowing it's two budgets, not one.
-
----
-
-**Ask what other operators actually buy.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪
-

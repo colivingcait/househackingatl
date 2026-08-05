@@ -85,9 +85,3 @@ Two questions before you spend anything:
 **Is there a cheaper version that captures most of the return?**
 
 If you have honest answers to both, you're ahead of most people starting a renovation.
-
----
-
-**Ask the room about contractors.** House Hacking Atlanta meets the second Tuesday of every month — vendor recommendations are one of the most valuable things traded there. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

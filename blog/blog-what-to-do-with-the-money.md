@@ -75,10 +75,3 @@ If you're still evaluating properties, add this to how you compare them: not jus
 That's the number that becomes your savings rate. It's the number that determines how long until you have options. And it's worth optimizing for at least as much as the ones that show up on a listing.
 
 Then set up the transfer on day one, before you've had a chance to get used to the extra room in the month.
-
----
-
-**We talk about the long game every month.** House Hacking Atlanta meets the second Tuesday — including people several properties in who can tell you how they funded each one. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪
-

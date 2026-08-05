@@ -83,9 +83,3 @@ Renting is the right answer for a real set of situations — short horizons, uns
 For everyone else, the arithmetic over any long horizon strongly favors owning something that partly pays for itself over paying someone else's mortgage indefinitely.
 
 The question isn't really whether buying beats renting. It's whether *your* situation supports buying right now — and if it doesn't yet, what would have to change.
-
----
-
-**Plenty of people in the room are still deciding.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

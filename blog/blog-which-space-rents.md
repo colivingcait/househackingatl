@@ -79,9 +79,3 @@ Whichever space you pick, the same thing determines what it earns: **how separat
 Separate entrance, separate bathroom, real distance from your living space. Every step toward separation moves the rent up and the friction down. Every shared element moves both the other way.
 
 That's not a reason to avoid the shared version — plenty of people rent a bedroom happily for years. It's just the frame for deciding what a space is worth before you spend anything on it.
-
----
-
-**Bring a photo of your space to a meetup.** House Hacking Atlanta meets the second Tuesday of every month, and "what should I do with this basement" is a conversation at every one. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

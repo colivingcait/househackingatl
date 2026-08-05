@@ -65,9 +65,3 @@ If your situation involves genuine shared living space, that's worth a specific 
 There is a real exemption. It's narrower than people think. It never covers advertising, it never covers race, and it may be overridden entirely by your state or city.
 
 Run the same process on everyone, document your criteria, keep your listings clean, and get actual legal advice for your actual situation. That's a better position than any exemption puts you in.
-
----
-
-**We keep the hard questions on the table.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

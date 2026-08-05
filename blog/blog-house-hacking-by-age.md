@@ -74,9 +74,3 @@ Older means more capital, less flexibility, less time.
 Those trade against each other almost exactly, which is why this works at every stage — you're just using the resource you happen to have. At 25 it's tolerance and time. At 45 it's capital and clarity.
 
 The only genuinely bad version is not starting, and that one's available at every age.
-
----
-
-**Our room spans every stage of this.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

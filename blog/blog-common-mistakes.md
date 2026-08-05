@@ -97,10 +97,3 @@ Starting small. A single room, a modest house, an unfurnished long-term lease.
 People treat this like a failure of ambition. It's the opposite — you're buying experience at the lowest possible cost, and everything you learn on a small first property makes the second one better.
 
 The modest house hack you run for five years beats the ambitious one you abandon in eight months, every time.
-
----
-
-**Come hear what other people got wrong.** House Hacking Atlanta meets the second Tuesday of every month — the lessons get shared openly, which is most of the value. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪
-

@@ -33,15 +33,10 @@ export default function KitSignupForm({
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const copy = COPY[variant];
 
+  // A broken feature should be absent, not announced — render nothing
+  // until a real Kit form ID is configured.
   if (!formId) {
-    return (
-      <div className="rounded-2xl border border-dashed border-sage-300 bg-sage-50 p-6">
-        <p className="font-display font-semibold text-pine-800">{copy.heading}</p>
-        <p className="mt-1 text-sm text-pine-700">
-          Signup coming soon — connect a Kit form ID to enable this.
-        </p>
-      </div>
-    );
+    return null;
   }
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {

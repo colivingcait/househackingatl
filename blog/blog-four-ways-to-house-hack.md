@@ -73,10 +73,3 @@ Two honest questions.
 **How much work do you want this to be?** A spare bedroom is an adjustment. A coliving house is a business. Both are legitimate — they're just not the same commitment.
 
 The best house hack is the one you'll actually stick with. A modest one you run for five years beats an ambitious one you abandon in eight months, every time.
-
----
-
-**We go deeper on this in person.** House Hacking Atlanta meets the second Tuesday of every month — real numbers, real questions, and people at every stage of this. Details at [househackingatl.com](https://househackingatl.com), or join the conversation in our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪
-

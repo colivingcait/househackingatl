@@ -88,9 +88,3 @@ For a house hacker with a private furnished space, this is frequently the best o
 Once you know how the house runs and whether you like this, you can furnish a space and test mid-term. That's a small, reversible step.
 
 Short-term is the last one to consider, not the first — because it's the most work, the most regulated, and the most likely to change your relationship with your own home.
-
----
-
-**People run all three versions in our room.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

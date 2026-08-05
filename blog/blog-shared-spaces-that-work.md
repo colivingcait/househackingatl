@@ -81,10 +81,3 @@ Assigned shelves, assigned bathrooms, assigned parking, a defined living room. N
 Houses where everyone has to be constantly considerate are exhausting. Houses where the setup already answered the question run themselves — and the residents in them stay much longer.
 
 That's what you're actually buying with a second fridge.
-
----
-
-**We talk about the operating side every month.** House Hacking Atlanta meets the second Tuesday. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪
-

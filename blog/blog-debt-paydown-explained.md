@@ -83,9 +83,3 @@ It's also why time in the market matters so much here. Debt paydown rewards *hol
 When you're evaluating a property, pull the amortization schedule and add up the principal over the hold period you're actually planning.
 
 Put that number next to your projected cash flow. For most house hacks it's the bigger of the two, and it's the one nobody put in the listing.
-
----
-
-**We run whole-picture numbers every month.** House Hacking Atlanta meets the second Tuesday. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

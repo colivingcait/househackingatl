@@ -83,10 +83,3 @@ But it's your home, not just an asset. There are good reasons to stay. Just make
 The first property is doing more work than you can see while you're in it. It's lowering your housing cost, generating a savings rate, building equity, and teaching you a skill set — all at once, all while you go about your life.
 
 You don't have to know what you're building. You have to open the first door and pay attention to what's on the other side.
-
----
-
-**Come hear how other people did it.** House Hacking Atlanta meets the second Tuesday of every month — including a panel where local house hackers walk through their real numbers. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪
-

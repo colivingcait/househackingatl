@@ -85,9 +85,3 @@ Ask: did they pay on time, would you rent to them again, and how did they leave 
 8. Decision based on the criteria you wrote down before you met anyone
 
 Keep the criteria written and apply them the same way every time. That's what makes this both effective and defensible.
-
----
-
-**Ask the room what they use.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

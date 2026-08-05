@@ -85,10 +85,3 @@ The systems are what let you be warm. When the rules are clear, written, and app
 If the numbers work and the only thing stopping you is not knowing what it feels like — this is a much smaller obstacle than it looks from outside.
 
 You'll have an awkward first week. You'll have a conversation about dishes. And then you'll likely have a house that mostly pays for itself and a life that feels basically like your life did before, except cheaper.
-
----
-
-**We talk about this in person.** House Hacking Atlanta meets the second Tuesday of every month — real numbers, real questions, and a room full of people who've been where you are. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪
-

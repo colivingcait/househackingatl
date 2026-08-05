@@ -73,9 +73,3 @@ It's the single most consequential tax moment in the life of a house hack, and i
 Depreciation on a house hack generally applies to the rental portion, based on a defensible allocation you establish with a professional and document carefully. That allocation drives much of your tax picture, it changes as your use of the property changes, and it changes completely when you move out.
 
 Set it up correctly at the start, keep clean records, and revisit it whenever the property's use changes.
-
----
-
-**Bring these questions to a meetup.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

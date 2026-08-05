@@ -79,9 +79,3 @@ Moving out converts the property entirely to a rental, changes what's deductible
 Have the conversation with your CPA months ahead. Get the property valued at conversion. Document the date. Call your insurance agent.
 
 Handled deliberately, it's one of the best moments in the whole strategy — the point where a house you lived in becomes an asset that pays for itself while you go do something else.
-
----
-
-**Come talk it through.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

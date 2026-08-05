@@ -85,10 +85,3 @@ Markets move. What penciled out two years ago may not today, and something that 
 Which is why the evaluation framework above matters more than any specific list — including this one. Learn to run it yourself and you'll be able to answer this question in any submarket, in any year, without waiting for someone to write a post about it.
 
 The mechanics don't change: housing stock with separation, a workable price-to-rent gap, real rental demand, and a price point you can finance. Every good house hack in this metro has all four.
-
----
-
-**Bring a specific area and we'll talk through it.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪
-

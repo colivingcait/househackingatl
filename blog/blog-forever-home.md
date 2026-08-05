@@ -77,9 +77,3 @@ For most first-time buyers: **no, your first house hack probably shouldn't be yo
 Not because forever homes are a bad idea, but because the first one is where you learn, and learning is cheaper on a property you're not emotionally committed to. The financing advantage renews. Your judgment improves. The house you'd choose in three years is better than the one you'd choose now.
 
 But if your life isn't set up to move — buy the one you love and make it work. A house hack you actually stick with beats an optimized one you abandon.
-
----
-
-**Talk it through with people at both stages.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

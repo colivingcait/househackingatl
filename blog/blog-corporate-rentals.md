@@ -85,9 +85,3 @@ The natural progression: start with a furnished mid-term space aimed at individu
 Companies pay reliably, book longer, and come back — but they expect a genuinely self-contained, professional, fully equipped space and a businesslike process.
 
 If your space is a private unit rather than a room in a shared house, it's worth building toward. Start with individuals, meet corporate standards anyway, and let the relationships develop.
-
----
-
-**Come talk strategy with people running different models.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

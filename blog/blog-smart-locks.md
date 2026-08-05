@@ -77,9 +77,3 @@ The framing is easy: it's how access is managed, it's how you avoid rekeying, an
 Codes instead of keys. One per person. Delete at move-out. Locks on bedroom doors too.
 
 It's the cheapest thing on the list that makes both you and your residents safer, and it removes a recurring annoyance you'd otherwise deal with forever.
-
----
-
-**Ask the room what they're using.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

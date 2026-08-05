@@ -85,9 +85,3 @@ Most of getting paid on time is setup, not enforcement.
 One platform, auto-pay, a clear date, a screening standard you actually applied, and a short message the first day something is late. Get those right and you'll rarely need anything further.
 
 The people who deal with chronic late rent are usually the ones who never established what on-time meant.
-
----
-
-**Bring the awkward questions to a meetup.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

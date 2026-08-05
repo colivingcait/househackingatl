@@ -85,10 +85,3 @@ Your only job in the first 30 days is to get one good person into one good space
 Not to optimize. Not to renovate. Not to plan the second property. One space, one resident, done properly.
 
 Everything you're excited about — the cash flow, the equity, the next house — is downstream of doing this one thing well. Do it well, and the rest of it starts working on its own.
-
----
-
-**Just closed, or about to?** House Hacking Atlanta meets the second Tuesday of every month, and there's usually someone in the room about three months ahead of you. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪
-

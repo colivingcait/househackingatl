@@ -82,9 +82,3 @@ Neither is universally better. **Knowing the difference before you shop** is wha
 Projected rental income can help you qualify on a legitimate 2–4 unit property, through an appraiser's market rent analysis. It generally doesn't work that way for renting bedrooms in a single-family home, because there's no separate unit to appraise.
 
 Ask a lender about both before you start looking. It may change what you should be shopping for.
-
----
-
-**We bring lenders in to answer this directly.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

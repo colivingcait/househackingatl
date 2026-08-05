@@ -79,10 +79,3 @@ Things will break. That's not a sign you bought a bad house or that this strateg
 The people who struggle with house hacking aren't the ones who had expensive repairs. They're the ones who didn't budget for them and experienced every one as a crisis.
 
 Reserve the money, build the list, respond quickly. Then it's just Tuesday.
-
----
-
-**Ask other operators who they use.** House Hacking Atlanta meets the second Tuesday of every month — vendor recommendations are one of the most valuable things that gets traded in the room. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪
-

@@ -77,9 +77,3 @@ A resident who feels respected — whose repairs got fixed, whose texts got answ
 A resident who's been ignored won't tell you anything until it's already too late.
 
 Being responsive and decent isn't just pleasant. It's the practical mechanism that keeps small problems from becoming legal ones.
-
----
-
-**We talk about the hard parts too.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

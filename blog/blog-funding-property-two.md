@@ -85,9 +85,3 @@ If rates are similar or lower than yours, the refinance math changes and it may 
 The most common way people fund the second property isn't a clever financing maneuver. It's that they lowered their housing cost, routed the difference somewhere on purpose, and let a few years pass.
 
 The equity options are useful and they're worth understanding. But the boring version — automate the gap, wait — is what most people who actually get to property two did.
-
----
-
-**Come talk to people several properties in.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

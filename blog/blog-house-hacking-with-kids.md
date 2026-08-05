@@ -83,9 +83,3 @@ That's not a compromise version — for a family it's usually the *right* versio
 Having kids doesn't disqualify you from this. It narrows which models make sense, and it raises the bar on screening and separation.
 
 Those are both good constraints. They push you toward the versions of house hacking that are more private, more durable, and frankly better arrangements for everyone involved.
-
----
-
-**Plenty of parents in our room.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

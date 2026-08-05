@@ -73,9 +73,3 @@ The problem isn't owning one of these. The problem is owning one and not knowing
 Run this number before you make an offer, not after. It takes ten extra minutes on top of the numbers you're already running, and it tells you what you're actually buying: a discount for a few years, or the first property in something bigger.
 
 Both are legitimate. Just know which one you signed for.
-
----
-
-**We talk about the exit as much as the entry.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

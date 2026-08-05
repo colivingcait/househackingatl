@@ -91,9 +91,3 @@ If you're missing privacy or proximity, this audience is a stretch. Everything e
 If you have a private furnished space near a major medical facility, traveling healthcare workers are one of the best resident profiles available to a house hacker — predictable, professional, rarely home, and frequently extending.
 
 Check the demand near your specific address before you commit capital to furnishing. Then make the space genuinely complete, be flexible on timing, and respond fast.
-
----
-
-**We talk through rental strategies every month.** House Hacking Atlanta meets the second Tuesday. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

@@ -67,9 +67,3 @@ Retention is the whole economics of this. A resident who renews saves you a turn
 You owe them a safe, functional, private space and prompt attention when something's wrong. They owe you rent on time and reasonable care of the property.
 
 Everything past that is what makes a house pleasant rather than merely functional — and it's the part that determines whether people stay two years or eleven months.
-
----
-
-**We cover the operating side every month.** House Hacking Atlanta meets the second Tuesday. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

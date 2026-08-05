@@ -83,10 +83,3 @@ Only if you actually want to.
 Plenty of people house hack one property, love it, and stop. You've permanently lowered your housing cost and you own an asset. That's a complete outcome, not a partial one.
 
 The second property is worth it if you found the first one satisfying rather than draining, if you have systems, and if you have reserves. If any of those three is missing, the answer is to fix it — not to add complexity on top of it.
-
----
-
-**Come talk to people a property or two ahead of you.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪
-

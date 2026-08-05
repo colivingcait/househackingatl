@@ -94,9 +94,3 @@ The allocation method, how shared spaces are treated, and how to categorize the 
 Don't think of it as hunting for deductions. Think of it as **keeping clean records of what you actually spent, with enough context that a professional can categorize it correctly.**
 
 The deductions take care of themselves if the records are good. They're nearly impossible to substantiate if they aren't.
-
----
-
-**We keep the practical questions on the table.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

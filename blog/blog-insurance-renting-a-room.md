@@ -82,9 +82,3 @@ It's the first item on my thirty-day checklist for a reason: it costs nothing, i
 Renting out part of your home may change what your policy covers. Ask your agent directly, before anyone moves in. Require renters insurance from your residents. Call again before you move out.
 
 Five minutes, twice, over the whole life of the property.
-
----
-
-**Insurance is one of our meetup topics.** House Hacking Atlanta meets the second Tuesday of every month. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪

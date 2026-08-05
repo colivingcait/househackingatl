@@ -103,10 +103,3 @@ A lease doesn't prevent conflict. It resolves ambiguity.
 The ten-minute conversation before someone moves in — going through guests, noise, the kitchen, the living room — is what actually prevents problems. The lease is where you write down what you agreed to, so that months later neither of you is relying on memory.
 
 Have the conversation. Then put it in writing. Both, not one.
-
----
-
-**We talk about the operating side every month.** House Hacking Atlanta meets the second Tuesday. Details at [househackingatl.com](https://househackingatl.com), or join our [Facebook group](https://facebook.com/groups/househackingatl).
-
-*Every door is an opportunity.* 🚪
-
