@@ -3,24 +3,31 @@ import PageHero from "@/components/PageHero";
 import Breadcrumb from "@/components/Breadcrumb";
 import ConversionCta from "@/components/ConversionCta";
 import FadeIn from "@/components/FadeIn";
+import JsonLd from "@/components/JsonLd";
 import type { Hub } from "@/data/hubs";
 import { getAllArticleMeta } from "@/lib/articles";
+import { collectionPageSchema, breadcrumbListSchema } from "@/lib/schema";
 
 export default function HubPage({ hub }: { hub: Hub }) {
   const articleMeta = new Map(getAllArticleMeta().map((a) => [a.slug, a]));
   const pillarMeta = articleMeta.get(hub.pillar);
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Learn", href: "/learn" },
+    { label: hub.name },
+  ];
 
   return (
     <>
+      <JsonLd
+        data={collectionPageSchema({ name: hub.name, description: hub.blurb, path: `/${hub.id}` })}
+      />
+      <JsonLd data={breadcrumbListSchema(breadcrumbItems)} />
+
       <PageHero
         eyebrow={hub.eyebrow}
         title={hub.name}
-        breadcrumb={
-          <Breadcrumb
-            variant="dark"
-            items={[{ label: "Home", href: "/" }, { label: "Learn", href: "/learn" }, { label: hub.name }]}
-          />
-        }
+        breadcrumb={<Breadcrumb variant="dark" items={breadcrumbItems} />}
       />
 
       <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20">

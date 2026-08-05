@@ -5,11 +5,13 @@ import Breadcrumb from "@/components/Breadcrumb";
 import AuthorBox from "@/components/AuthorBox";
 import ConversionCta from "@/components/ConversionCta";
 import GatedDownload from "@/components/GatedDownload";
+import JsonLd from "@/components/JsonLd";
 import { TableOfContentsMobile, TableOfContentsDesktop } from "@/components/TableOfContents";
 import { getAllArticleMeta, getArticleBySlug } from "@/lib/articles";
 import { getHubsForArticle } from "@/data/hubs";
 import { resources } from "@/data/resources";
 import { pageMetadata } from "@/lib/metadata";
+import { articleSchema, breadcrumbListSchema } from "@/lib/schema";
 
 export function generateStaticParams() {
   return getAllArticleMeta().map((article) => ({ slug: article.slug }));
@@ -88,17 +90,26 @@ export default async function ArticlePage({
     ? splitHtmlAtMidpoint(article.contentHtml)
     : [article.contentHtml, ""];
 
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    ...(primaryHub ? [{ label: primaryHub.name, href: `/${primaryHub.id}` }] : []),
+    { label: article.h1 },
+  ];
+
   return (
     <>
+      <JsonLd
+        data={articleSchema({
+          headline: article.h1,
+          description: article.metaDescription,
+          path: `/${article.slug}`,
+        })}
+      />
+      <JsonLd data={breadcrumbListSchema(breadcrumbItems)} />
+
       <div className="mx-auto mt-10 max-w-5xl px-4 pt-10 sm:px-6 sm:pt-14 lg:flex lg:items-start lg:gap-12">
         <div className="lg:min-w-0 lg:flex-1">
-          <Breadcrumb
-            items={[
-              { label: "Home", href: "/" },
-              ...(primaryHub ? [{ label: primaryHub.name, href: `/${primaryHub.id}` }] : []),
-              { label: article.h1 },
-            ]}
-          />
+          <Breadcrumb items={breadcrumbItems} />
           <h1 className="mt-4 font-display text-3xl font-bold text-balance text-pine-900 sm:text-4xl">
             {article.h1}
           </h1>
