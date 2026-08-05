@@ -1,6 +1,7 @@
 import PageHero from "@/components/PageHero";
 import GatedDownload from "@/components/GatedDownload";
 import FadeIn from "@/components/FadeIn";
+import { GatedDownloadProvider } from "@/lib/gated-download-context";
 import { resources } from "@/data/resources";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -21,13 +22,15 @@ export default function ResourcesPage() {
       />
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {resources.map((resource, i) => (
-            <FadeIn key={resource.slug} delay={i * 0.06}>
-              <GatedDownload resource={resource} />
-            </FadeIn>
-          ))}
-        </div>
+        <GatedDownloadProvider>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {resources.map((resource, i) => (
+              <FadeIn key={resource.slug} delay={i * 0.06}>
+                <GatedDownload resource={resource} />
+              </FadeIn>
+            ))}
+          </div>
+        </GatedDownloadProvider>
       </section>
     </>
   );

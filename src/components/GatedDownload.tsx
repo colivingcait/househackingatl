@@ -1,14 +1,39 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import Link from "next/link";
 import { trackStandardEvent } from "@/lib/analytics";
 import type { Resource } from "@/data/resources";
 import { kit } from "@/lib/site-config";
+import { useGatedDownload } from "@/lib/gated-download-context";
+
+function submitToKit(resource: Resource, firstName: string, email: string) {
+  const data = new FormData();
+  data.set("fields[resource]", resource.title);
+  data.set("fields[first_name]", firstName);
+  data.set("email_address", email);
+  return fetch(`https://app.kit.com/forms/${kit.resourcesFormId}/subscriptions`, {
+    method: "POST",
+    body: data,
+    headers: { Accept: "application/json" },
+  });
+}
 
 export default function GatedDownload({ resource }: { resource: Resource }) {
+  const shared = useGatedDownload();
   const [formOpen, setFormOpen] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+
+  // Already gave us their email for another resource on this page this
+  // visit — unlock this one immediately instead of asking again. The
+  // per-resource tag still gets sent to Kit for segmentation, just
+  // silently in the background; we don't gate the download on it.
+  useEffect(() => {
+    if (shared?.subscriber && status === "idle") {
+      setStatus("success");
+      submitToKit(resource, shared.subscriber.firstName, shared.subscriber.email).catch(() => {});
+    }
+  }, [shared?.subscriber, status, resource]);
 
   if (!kit.resourcesFormId) {
     return (
@@ -31,19 +56,15 @@ export default function GatedDownload({ resource }: { resource: Resource }) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
+    const firstName = String(data.get("fields[first_name]") ?? "");
+    const email = String(data.get("email_address") ?? "");
 
     try {
-      const res = await fetch(
-        `https://app.kit.com/forms/${kit.resourcesFormId}/subscriptions`,
-        {
-          method: "POST",
-          body: data,
-          headers: { Accept: "application/json" },
-        }
-      );
+      const res = await submitToKit(resource, firstName, email);
       if (res.ok) {
         setStatus("success");
         trackStandardEvent("Lead", { content_name: `resource:${resource.slug}` });
+        shared?.unlock({ firstName, email });
         form.reset();
       } else {
         setStatus("error");
