@@ -8,7 +8,7 @@ import { author, links } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Meet Caitlyn — Atlanta-based realtor, investor, and serial house hacker, and the sites behind House Hacking Atlanta.",
+    "Meet Caitlyn Verdugo — Atlanta REALTOR®, investor, and serial house hacker, and the sites behind House Hacking Atlanta.",
 };
 
 const elsewhere = [
@@ -46,10 +46,12 @@ export default function AboutPage() {
             </div>
           )}
           <div>
-            <h2 className="font-display text-2xl font-bold text-pine-900">Caitlyn</h2>
+            <h2 className="font-display text-2xl font-bold text-pine-900">{author.name}</h2>
+            <p className="mt-1 text-sm font-semibold uppercase tracking-wide text-clay-600">
+              {author.credential}
+            </p>
             <p className="mt-3 text-lg text-pine-800">
-              I&apos;m Caitlyn, your go-to for all things house hacking.
-              Atlanta-based realtor, investor, and serial house hacker.
+              I&apos;m Caitlyn, your go-to for all things house hacking. {author.bio}
             </p>
             <p className="mt-3 text-sm text-pine-500">
               Fuller bio coming soon.
@@ -58,8 +60,9 @@ export default function AboutPage() {
         </FadeIn>
 
         <div className="mt-6 rounded-xl border border-pine-100 bg-sage-50 p-4 text-xs leading-relaxed text-pine-500">
-          Caitlyn is a licensed Georgia real estate agent with Keller
-          Williams. See the site footer for full brokerage disclosure.
+          {author.name} is a licensed Georgia real estate agent with Keller
+          Williams Metro Atlanta. See the site footer for full brokerage
+          disclosure.
         </div>
       </section>
 

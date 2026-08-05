@@ -85,11 +85,13 @@ All five live in `src/lib/site-config.ts` under `links`.
 
 ## Legal
 
-- [ ] **License/brokerage disclosure** — footer currently shows a clearly
-      flagged placeholder (`src/lib/site-config.ts` → `licenseDisclosure`).
-      **Do not launch publicly until your broker's exact approved wording
-      replaces it** — Georgia advertising rules require this. Once you
-      have it, update `licenseDisclosure.text` and set `confirmed: true`.
+- [ ] **License/brokerage disclosure** — footer now shows your real name
+      and brokerage (Caitlyn Verdugo, REALTOR®, Keller Williams Metro
+      Atlanta) but still a flagged placeholder for the actual sentence
+      (`src/lib/site-config.ts` → `licenseDisclosure`). **Do not launch
+      publicly until your broker's exact approved wording replaces it** —
+      Georgia advertising rules require this. Once you have it, update
+      `licenseDisclosure.text` and set `confirmed: true`.
 
 ## Everything else
 

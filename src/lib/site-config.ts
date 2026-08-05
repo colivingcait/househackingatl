@@ -21,9 +21,9 @@ export const siteConfig = {
  * arriving from search who's never seen this site before.
  */
 export const author = {
-  name: "Caitlyn",
-  bio: "Atlanta-based realtor, investor, and serial house hacker.",
-  credential: "Licensed Georgia Real Estate Agent, Keller Williams Realty",
+  name: "Caitlyn Verdugo",
+  bio: "Atlanta REALTOR®, investor, and serial house hacker.",
+  credential: "REALTOR®, Keller Williams Metro Atlanta",
   photo: "/images/caitlyn-headshot.jpg",
 };
 
@@ -117,10 +117,12 @@ export const sponsorInquiry = {
  * Required Georgia real estate advertising disclosure. Georgia Real Estate
  * Commission rules require brokerage attribution on real estate
  * advertising. NEEDS CAITLYN: exact approved wording from her broker
- * (Keller Williams) — this placeholder must not go live as-is.
+ * (Keller Williams Metro Atlanta) — name/brokerage below are real, but the
+ * specific disclosure phrasing is still pending approval. Do not go live
+ * as-is.
  */
 export const licenseDisclosure = {
   text:
-    "Caitlyn [Last Name], Licensed Real Estate Agent, Keller Williams Realty. [Exact broker-approved disclosure wording pending — placeholder text, not for production use.]",
+    "Caitlyn Verdugo, REALTOR®, Keller Williams Metro Atlanta. [Exact broker-approved disclosure wording pending — placeholder text, not for production use.]",
   confirmed: false,
 };
