@@ -3,7 +3,6 @@ import Image from "next/image";
 import DoorMark from "@/components/DoorMark";
 import CtaButton from "@/components/CtaButton";
 import KitSignupForm from "@/components/KitSignupForm";
-import SponsorGrid from "@/components/SponsorGrid";
 import FadeIn from "@/components/FadeIn";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
 import { houseHackModels } from "@/data/models";
@@ -284,23 +283,6 @@ export default function Home() {
             </Link>
           </p>
         </FadeIn>
-      </section>
-
-      {/* Sponsors */}
-      <section className="py-16 sm:py-20">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6">
-          <FadeIn className="mb-8 text-center">
-            <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">
-              With thanks to
-            </p>
-            <h2 className="mt-2 font-display text-3xl font-bold text-pine-900">
-              Our partners
-            </h2>
-          </FadeIn>
-          <FadeIn delay={0.1}>
-            <SponsorGrid />
-          </FadeIn>
-        </div>
       </section>
 
       {/* Sign off */}

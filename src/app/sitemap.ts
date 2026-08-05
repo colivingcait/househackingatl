@@ -10,7 +10,6 @@ const routes = [
   "/meetups",
   "/group",
   "/listings",
-  "/sponsors",
   "/about",
 ];
 
