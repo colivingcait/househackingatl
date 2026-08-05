@@ -3,6 +3,7 @@ import PageHero from "@/components/PageHero";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
 import FadeIn from "@/components/FadeIn";
 import JsonLd from "@/components/JsonLd";
+import CtaButton from "@/components/CtaButton";
 import { author, links } from "@/lib/site-config";
 import { pageMetadata } from "@/lib/metadata";
 import { localBusinessSchema } from "@/lib/schema";
@@ -61,6 +62,11 @@ export default function AboutPage() {
             <p className="mt-3 text-sm text-pine-500">
               Fuller bio coming soon.
             </p>
+            <div className="mt-5">
+              <CtaButton href={links.calendly} variant="primary" external>
+                Book a discovery call
+              </CtaButton>
+            </div>
           </div>
         </FadeIn>
 

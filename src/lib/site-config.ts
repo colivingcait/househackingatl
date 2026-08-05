@@ -78,6 +78,10 @@ export const links = {
   atlantaWomenInvestors: "",
   roomsForRentAtl: "",
   facebookGroup: "https://facebook.com/groups/househackingatl",
+  // Base scheduling link — the month/back params on the URL you sent are
+  // just view-state from whatever month you were looking at when you
+  // copied it, not part of the permanent link, so they're dropped here.
+  calendly: "https://calendly.com/colivingcait/buyer-or-seller-discovery-call",
   eventbriteOrganizer: "",
 };
 
