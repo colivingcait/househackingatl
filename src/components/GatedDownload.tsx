@@ -86,10 +86,15 @@ export default function GatedDownload({ resource }: { resource: Resource }) {
 
       {status === "success" ? (
         <div className="mt-4 rounded-lg bg-sage-50 p-4">
-          <p className="text-sm font-semibold text-pine-800">Check your inbox.</p>
-          <p className="mt-1 text-sm text-pine-600">
-            We just sent {resource.title} to your email.
-          </p>
+          <p className="text-sm font-semibold text-pine-800">You&apos;re in.</p>
+          <a
+            href={resource.file}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-clay-600 hover:text-clay-700"
+          >
+            Download {resource.title} →
+          </a>
         </div>
       ) : formOpen ? (
         <form onSubmit={handleSubmit} className="mt-4 flex flex-col gap-2">
