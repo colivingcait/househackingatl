@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import FacebookPixel from "@/components/FacebookPixel";
 import { siteConfig } from "@/lib/site-config";
 import { getSearchIndex } from "@/lib/search";
+import { pageMetadata } from "@/lib/metadata";
 
 const sourceSans = Source_Sans_3({
   subsets: ["latin"],
@@ -23,23 +24,14 @@ const libreBaskerville = Libre_Baskerville({
 
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${siteConfig.domain}`),
+  ...pageMetadata({
+    path: "/",
+    title: `${siteConfig.name} — ${siteConfig.tagline}`,
+    description: siteConfig.shortBlurb,
+  }),
   title: {
     default: `${siteConfig.name} — ${siteConfig.tagline}`,
     template: `%s — ${siteConfig.name}`,
-  },
-  description: siteConfig.shortBlurb,
-  openGraph: {
-    title: siteConfig.name,
-    description: siteConfig.shortBlurb,
-    url: `https://${siteConfig.domain}`,
-    siteName: siteConfig.name,
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.name,
-    description: siteConfig.shortBlurb,
   },
 };
 

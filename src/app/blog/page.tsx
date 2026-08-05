@@ -1,16 +1,17 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
 import FadeIn from "@/components/FadeIn";
 import { getAllPosts } from "@/lib/blog";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: "/blog",
   title: "Blog",
   description:
     "Real numbers, real Atlanta-area deals, and practical house hacking advice — from House Hacking Atlanta.",
-};
+});
 
 function formatDate(date: string) {
   return new Date(date).toLocaleDateString("en-US", {

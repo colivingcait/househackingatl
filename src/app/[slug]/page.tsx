@@ -8,6 +8,7 @@ import { TableOfContentsMobile, TableOfContentsDesktop } from "@/components/Tabl
 import { getAllArticleMeta, getArticleBySlug } from "@/lib/articles";
 import { getHubsForArticle } from "@/data/hubs";
 import { resources } from "@/data/resources";
+import { pageMetadata } from "@/lib/metadata";
 
 export function generateStaticParams() {
   return getAllArticleMeta().map((article) => ({ slug: article.slug }));
@@ -20,15 +21,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const article = await getArticleBySlug(params.slug);
   if (!article) return {};
-  return {
+  return pageMetadata({
+    path: `/${article.slug}`,
     title: article.seoTitle,
     description: article.metaDescription,
-    openGraph: {
-      title: article.seoTitle,
-      description: article.metaDescription,
-      type: "article",
-    },
-  };
+    type: "article",
+  });
 }
 
 /**

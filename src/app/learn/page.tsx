@@ -1,15 +1,16 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import FadeIn from "@/components/FadeIn";
 import { hubs } from "@/data/hubs";
 import { getAllArticleMeta } from "@/lib/articles";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: "/learn",
   title: "Learn",
   description:
     "83 articles on house hacking, organized into 8 topics — finding a property, financing, running the numbers, being a landlord, and more.",
-};
+});
 
 export default function LearnPage() {
   const allArticles = getAllArticleMeta();

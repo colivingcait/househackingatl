@@ -1,14 +1,16 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import Fuse from "fuse.js";
 import PageHero from "@/components/PageHero";
 import { getSearchIndex } from "@/lib/search";
 import { hubs } from "@/data/hubs";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: "/search",
   title: "Search",
-  robots: { index: false },
-};
+  description: "Search 83 articles on house hacking in the Atlanta metro.",
+  noIndex: true,
+});
 
 export default function SearchPage({
   searchParams,

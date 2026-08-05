@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import GatedDownload from "@/components/GatedDownload";
 import FadeIn from "@/components/FadeIn";
 import { resources } from "@/data/resources";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: "/resources",
   title: "Free Guides",
   description:
     "Free worksheets and checklists for every stage of house hacking — deciding, running the numbers, touring a property, and screening housemates.",
-};
+});
 
 export default function ResourcesPage() {
   return (

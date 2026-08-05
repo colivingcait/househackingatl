@@ -1,16 +1,17 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import CtaButton from "@/components/CtaButton";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
 import FadeIn from "@/components/FadeIn";
 import { links } from "@/lib/site-config";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: "/listings",
   title: "See It In Practice",
   description:
     "A look at what house hacking looks like in practice around the Atlanta metro, courtesy of Rooms for Rent ATL.",
-};
+});
 
 // NEEDS CAITLYN: more photos to round this out — 4 of 6 tiles are real,
 // the rest are placeholders sized to drop photos in without a layout

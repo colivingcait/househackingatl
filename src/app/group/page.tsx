@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import CtaButton from "@/components/CtaButton";
 import KitSignupForm from "@/components/KitSignupForm";
 import { kit, links } from "@/lib/site-config";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: "/group",
   title: "The Group",
   description:
     "House Hacking Atlanta on Facebook — real numbers from real Atlanta-area deals, financing questions answered, and a community that shares openly.",
-};
+});
 
 const whoFor = [
   "First-time buyers who want their housing payment covered",

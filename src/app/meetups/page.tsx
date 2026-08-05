@@ -1,15 +1,16 @@
-import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import CtaButton from "@/components/CtaButton";
 import MeetupScheduleTable from "@/components/MeetupScheduleTable";
 import Timeline from "@/components/Timeline";
 import { meetup, womensGroup } from "@/lib/site-config";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: "/meetups",
   title: "Meetups",
   description:
     "House Hacking Atlanta meets the second Tuesday of every month. See the topic calendar and register on Eventbrite.",
-};
+});
 
 export default function MeetupsPage() {
   return (

@@ -6,6 +6,7 @@ import CtaButton from "@/components/CtaButton";
 import KitSignupForm from "@/components/KitSignupForm";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import { kit, links } from "@/lib/site-config";
+import { pageMetadata } from "@/lib/metadata";
 
 export function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }));
@@ -18,15 +19,16 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const post = await getPostBySlug(params.slug);
   if (!post) return {};
-  return {
+  const base = pageMetadata({
+    path: `/blog/${post.slug}`,
     title: post.title,
     description: post.excerpt,
-    openGraph: {
-      title: post.title,
-      description: post.excerpt,
-      type: "article",
-      publishedTime: post.date,
-    },
+    image: post.coverImage,
+    type: "article",
+  });
+  return {
+    ...base,
+    openGraph: { ...base.openGraph, type: "article", publishedTime: post.date },
   };
 }
 

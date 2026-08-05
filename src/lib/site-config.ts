@@ -8,7 +8,10 @@
 
 export const siteConfig = {
   name: "House Hacking Atlanta",
-  domain: "househackingatl.com",
+  // The site resolves at www — non-www redirects to this (see
+  // next.config.mjs). Every canonical/og:url/sitemap URL is built from
+  // this value, so it's the single place to change if that ever flips.
+  domain: "www.househackingatl.com",
   tagline: "Live for less. Build more wealth. Every door is an opportunity.",
   missionLine: "live for less, build more wealth",
   doorMotif: "Every door is an opportunity. 🚪",

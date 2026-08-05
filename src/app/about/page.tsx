@@ -1,15 +1,16 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
 import FadeIn from "@/components/FadeIn";
 import { author, links } from "@/lib/site-config";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: "/about",
   title: "About",
   description:
     "Meet Caitlyn Verdugo — Atlanta REALTOR®, investor, and serial house hacker, and the sites behind House Hacking Atlanta.",
-};
+});
 
 const elsewhere = [
   {
