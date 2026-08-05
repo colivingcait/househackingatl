@@ -77,6 +77,21 @@ const config: Config = {
             a: { fontWeight: "600", textDecoration: "none" },
             "a:hover": { textDecoration: "underline" },
             "h2, h3": { fontFamily: "var(--font-fraunces), Georgia, serif" },
+            // Disclaimer / callout blocks (e.g. "I am not your CPA"). These
+            // carry real compliance weight, so they need to read as a
+            // distinct warning box, not muted decorative italic quote text.
+            blockquote: {
+              fontStyle: "normal",
+              fontWeight: "500",
+              backgroundColor: theme("colors.clay[50]"),
+              borderLeftColor: theme("colors.clay[500]"),
+              borderLeftWidth: "4px",
+              borderRadius: "0.5rem",
+              padding: "1rem 1.25rem",
+              color: theme("colors.pine[900]"),
+            },
+            "blockquote p:first-of-type::before": { content: "none" },
+            "blockquote p:last-of-type::after": { content: "none" },
           },
         },
       }),
