@@ -1,10 +1,14 @@
 import Link from "next/link";
 import { links, licenseDisclosure, siteConfig } from "@/lib/site-config";
 import { navLinks, secondaryLinks } from "@/data/nav";
+import { withUtm } from "@/lib/utm";
 import DoorMark from "./DoorMark";
 
 const elsewhereLinks = [
-  { href: links.facebookGroup, label: "Facebook Group" },
+  {
+    href: links.facebookGroup && withUtm(links.facebookGroup, { source: "facebook" }),
+    label: "Facebook Group",
+  },
   { href: links.colivingCait, label: "ColivingCait" },
   { href: links.atlantaWomenInvestors, label: "Atlanta Women Investors" },
   { href: links.roomsForRentAtl, label: "Rooms for Rent ATL" },

@@ -4,6 +4,7 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import AuthorBox from "@/components/AuthorBox";
 import ConversionCta from "@/components/ConversionCta";
+import GatedDownload from "@/components/GatedDownload";
 import { TableOfContentsMobile, TableOfContentsDesktop } from "@/components/TableOfContents";
 import { getAllArticleMeta, getArticleBySlug } from "@/lib/articles";
 import { getHubsForArticle } from "@/data/hubs";
@@ -78,8 +79,10 @@ export default async function ArticlePage({
   const relatedMeta = getAllArticleMeta();
 
   // Inline lead magnet — embedded where research intent is highest, per
-  // BUILD-SPEC §8, not a popup.
-  const leadMagnet = resources.find((r) => r.articleSlug === article.slug);
+  // BUILD-SPEC §8, not a popup. Renders the actual gated form in place
+  // rather than a link out to /resources, so capture happens without
+  // leaving the article.
+  const leadMagnet = resources.find((r) => r.articleSlugs?.includes(article.slug));
   const showToc = article.headings.length >= 2 && article.wordCount >= 400;
   const [firstHalf, secondHalf] = leadMagnet
     ? splitHtmlAtMidpoint(article.contentHtml)
@@ -113,20 +116,9 @@ export default async function ArticlePage({
           />
 
           {leadMagnet && (
-            <Link
-              href="/resources"
-              className="my-8 flex items-center gap-4 rounded-xl border border-clay-200 bg-clay-50 p-5 hover:bg-clay-100/60"
-            >
-              <div>
-                <p className="text-xs font-bold uppercase tracking-wide text-clay-700">
-                  Free download
-                </p>
-                <p className="mt-1 font-display text-base font-semibold text-pine-900">
-                  {leadMagnet.title}
-                </p>
-                <p className="mt-1 text-sm text-pine-700">{leadMagnet.description}</p>
-              </div>
-            </Link>
+            <div className="my-8">
+              <GatedDownload resource={leadMagnet} />
+            </div>
           )}
 
           {secondHalf && (

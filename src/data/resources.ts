@@ -4,8 +4,8 @@ export type Resource = {
   stage: string;
   description: string;
   file: string;
-  /** Article slug (no leading slash) to embed this download inline in, per BUILD-SPEC.md §8. */
-  articleSlug?: string;
+  /** Article slugs (no leading slash) to embed this download inline in, per BUILD-SPEC.md §8. */
+  articleSlugs?: string[];
 };
 
 export const resources: Resource[] = [
@@ -24,6 +24,7 @@ export const resources: Resource[] = [
     description:
       "A decision guide for how much sharing, capital, and work you actually want — answered honestly, not aspirationally.",
     file: "/downloads/which-house-hack-fits-you.pdf",
+    articleSlugs: ["four-ways-to-house-hack"],
   },
   {
     slug: "four-numbers",
@@ -32,7 +33,7 @@ export const resources: Resource[] = [
     description:
       "Run these on any property in twenty minutes. Fillable worksheet for cost to own, realistic rent, effective housing cost, and the move-out math.",
     file: "/downloads/four-numbers-worksheet.pdf",
-    articleSlug: "four-numbers-house-hack",
+    articleSlugs: ["four-numbers-house-hack"],
   },
   {
     slug: "walkthrough-checklist",
@@ -41,7 +42,7 @@ export const resources: Resource[] = [
     description:
       "Print one per property. Sightlines, entrances, sound, bathrooms, systems to photograph — everything that's easy to miss in person.",
     file: "/downloads/property-walkthrough-checklist.pdf",
-    articleSlug: "house-hack-walkthrough",
+    articleSlugs: ["house-hack-walkthrough", "what-makes-a-good-house-hack"],
   },
   {
     slug: "before-anyone-moves-in",

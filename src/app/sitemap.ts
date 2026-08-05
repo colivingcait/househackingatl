@@ -13,6 +13,7 @@ const routes = [
   "/group",
   "/listings",
   "/about",
+  "/privacy",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

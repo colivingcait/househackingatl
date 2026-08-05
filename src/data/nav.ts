@@ -10,4 +10,5 @@ export const navLinks = [
 export const secondaryLinks = [
   { href: "/listings", label: "Listings" },
   { href: "/blog", label: "Blog" },
+  { href: "/privacy", label: "Privacy" },
 ];

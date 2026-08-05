@@ -106,6 +106,15 @@ export const metaPixel = {
 };
 
 /**
+ * Google Analytics (GA4). Only loads if a Measurement ID is set — get one
+ * from Google Analytics → Admin → Data Streams → (web stream) → Measurement
+ * ID (looks like "G-XXXXXXXXXX").
+ */
+export const googleAnalytics = {
+  measurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "",
+};
+
+/**
  * Sponsor inquiry submissions. No form backend is wired up yet (no email
  * provider confirmed), so the sponsor inquiry form falls back to a mailto:
  * link pre-filled with the submission. Swap in a real form handler

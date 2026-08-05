@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FacebookPixel from "@/components/FacebookPixel";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { siteConfig } from "@/lib/site-config";
 import { getSearchIndex } from "@/lib/search";
 import { pageMetadata } from "@/lib/metadata";
@@ -45,6 +46,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${sourceSans.variable} ${libreBaskerville.variable} font-sans antialiased`}>
         <FacebookPixel />
+        <GoogleAnalytics />
         <Header searchIndex={searchIndex} />
         <main>{children}</main>
         <Footer />

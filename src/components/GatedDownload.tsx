@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import Link from "next/link";
 import { trackStandardEvent } from "@/lib/analytics";
 import type { Resource } from "@/data/resources";
 import { kit } from "@/lib/site-config";
@@ -102,6 +103,13 @@ export default function GatedDownload({ resource }: { resource: Resource }) {
               Something went wrong — mind trying again?
             </p>
           )}
+          <p className="text-xs text-pine-500">
+            By downloading you agree to our{" "}
+            <Link href="/privacy" className="underline hover:text-pine-700">
+              privacy policy
+            </Link>
+            .
+          </p>
         </form>
       ) : (
         <button

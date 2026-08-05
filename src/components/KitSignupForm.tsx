@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import Link from "next/link";
 import { trackStandardEvent } from "@/lib/analytics";
 
 type Variant = "listing-alerts" | "newsletter";
@@ -129,6 +130,14 @@ export default function KitSignupForm({
             Something went wrong — mind trying again?
           </p>
         )}
+
+        <p className="text-xs text-pine-500">
+          By signing up you agree to our{" "}
+          <Link href="/privacy" className="underline hover:text-pine-700">
+            privacy policy
+          </Link>
+          . Unsubscribe anytime.
+        </p>
       </div>
     </form>
   );
