@@ -89,26 +89,28 @@ export default async function ArticlePage({
 
   return (
     <>
-      <div className="mx-auto max-w-3xl px-4 pt-10 sm:px-6 sm:pt-14">
-        <Breadcrumb
-          items={[
-            { label: "Home", href: "/" },
-            ...(primaryHub ? [{ label: primaryHub.name, href: `/${primaryHub.id}` }] : []),
-            { label: article.h1 },
-          ]}
-        />
-        <h1 className="mt-4 font-display text-3xl font-bold text-balance text-pine-900 sm:text-4xl">
-          {article.h1}
-        </h1>
-        <p className="mt-3 text-sm text-pine-500">{article.readingTime}</p>
-      </div>
-
-      <div className="mx-auto mt-10 max-w-5xl px-4 sm:px-6 lg:flex lg:items-start lg:gap-12">
-        {showToc && <TableOfContentsMobile headings={article.headings} />}
-
+      <div className="mx-auto mt-10 max-w-5xl px-4 pt-10 sm:px-6 sm:pt-14 lg:flex lg:items-start lg:gap-12">
         <div className="lg:min-w-0 lg:flex-1">
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              ...(primaryHub ? [{ label: primaryHub.name, href: `/${primaryHub.id}` }] : []),
+              { label: article.h1 },
+            ]}
+          />
+          <h1 className="mt-4 font-display text-3xl font-bold text-balance text-pine-900 sm:text-4xl">
+            {article.h1}
+          </h1>
+          <p className="mt-3 text-sm text-pine-500">{article.readingTime}</p>
+
+          {showToc && (
+            <div className="mt-8">
+              <TableOfContentsMobile headings={article.headings} />
+            </div>
+          )}
+
           <div
-            className="prose prose-pine max-w-none"
+            className="prose prose-pine mt-8 max-w-none"
             dangerouslySetInnerHTML={{ __html: firstHalf }}
           />
 
