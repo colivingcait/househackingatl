@@ -61,9 +61,11 @@ need real values before the site should go live to the public.
       and Before Anyone Moves In. All gated behind the Kit resources form
       above. Send more whenever you have them and I'll add them the same
       way.
-- [ ] **Eventbrite organizer URL** — `links.eventbriteOrganizer` /
-      `meetup.eventbriteOrganizerUrl`. Individual events can also get their
-      own link via `eventbriteUrl` on each entry in `src/data/meetups.ts`.
+- [x] **Eventbrite collection URL** — confirmed:
+      `https://www.eventbrite.com/cc/house-hacking-atl-4861227`, set on
+      `meetup.eventbriteOrganizerUrl`. Individual events can still get
+      their own link via `eventbriteUrl` on each entry in
+      `src/data/meetups.ts`.
 - [ ] **Meta Pixel ID** — `NEXT_PUBLIC_META_PIXEL_ID`. Once set, the pixel
       fires `PageView` on load and `Lead` on both signup forms. Sponsor
       inquiries fire a custom `SponsorInquiry` event.
@@ -74,15 +76,16 @@ need real values before the site should go live to the public.
       the word if you'd rather I wire up a real form handler (e.g. Resend)
       instead.
 
-## URLs (all currently blank — pages render a "link coming soon" state)
+## URLs (blank ones render a "link coming soon" state)
 
 - [ ] ColivingCait — defaulted to `colivingcait.com`, confirm
 - [ ] Atlanta Women Investors — need URL
 - [ ] Rooms for Rent ATL — need URL
-- [ ] Facebook group ("House Hacking Atlanta") — need URL
-- [ ] Eventbrite organizer page — need URL
+- [x] Facebook group ("House Hacking Atlanta") — confirmed:
+      `https://facebook.com/groups/househackingatl`
 
-All five live in `src/lib/site-config.ts` under `links`.
+Live in `src/lib/site-config.ts` under `links` (Eventbrite moved to
+`meetup.eventbriteOrganizerUrl`, now confirmed — see above).
 
 ## Legal
 

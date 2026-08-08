@@ -57,8 +57,10 @@ export const meetup = {
     { label: "Open networking", time: "7:45 – 9:00 PM" },
   ],
   sizeLabel: "~20–30 people",
-  // NEEDS CAITLYN: Eventbrite organizer page URL.
-  eventbriteOrganizerUrl: "",
+  // House Hacking Atlanta collection — groups all the recurring meetup
+  // events. Individual events can still override with their own
+  // `eventbriteUrl` in src/data/meetups.ts.
+  eventbriteOrganizerUrl: "https://www.eventbrite.com/cc/house-hacking-atl-4861227",
 };
 
 export const womensGroup = {
@@ -82,7 +84,6 @@ export const links = {
   // just view-state from whatever month you were looking at when you
   // copied it, not part of the permanent link, so they're dropped here.
   calendly: "https://calendly.com/colivingcait/buyer-or-seller-discovery-call",
-  eventbriteOrganizer: "",
 };
 
 /**
