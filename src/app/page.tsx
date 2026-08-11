@@ -10,7 +10,7 @@ import { houseHackModels } from "@/data/models";
 import { resources } from "@/data/resources";
 import { hubs } from "@/data/hubs";
 import { getAllPosts } from "@/lib/blog";
-import { kit, links, siteConfig } from "@/lib/site-config";
+import { links, siteConfig } from "@/lib/site-config";
 import { localBusinessSchema } from "@/lib/schema";
 
 function formatDate(date: string) {
@@ -63,11 +63,8 @@ export default function Home() {
           </FadeIn>
           <FadeIn delay={0.3}>
             <div className="mt-9 flex flex-wrap gap-4">
-              <CtaButton
-                href={kit.listingAlertsFormId ? "#get-listings" : "/learn"}
-                variant="primary"
-              >
-                {kit.listingAlertsFormId ? "Get New House Hack Listings" : "Browse the Library"}
+              <CtaButton href="#get-listings" variant="primary">
+                Get New House Hack Listings
               </CtaButton>
               <CtaButton
                 href={links.facebookGroup || "/group"}
@@ -82,31 +79,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Listing alerts — the primary conversion goal, right up top. Hidden
-          entirely (not just the form) until a real Kit form ID is set —
-          a headline promising a signup with no way to sign up is its own
-          broken-feature problem. */}
-      {kit.listingAlertsFormId && (
-        <section id="get-listings" className="py-16 sm:py-20">
-          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:items-center">
-            <FadeIn>
-              <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">
-                Straight to your inbox
-              </p>
-              <h2 className="mt-2 font-display text-3xl font-bold text-pine-900">
-                Never miss a real candidate
-              </h2>
-              <p className="mt-3 max-w-sm text-pine-700">
-                A metro-wide MLS search built to surface genuine house hack
-                opportunities — not just any duplex listing.
-              </p>
-            </FadeIn>
-            <FadeIn delay={0.15}>
-              <KitSignupForm variant="listing-alerts" formId={kit.listingAlertsFormId} />
-            </FadeIn>
-          </div>
-        </section>
-      )}
+      {/* Listing alerts — the primary conversion goal, right up top. */}
+      <section id="get-listings" className="py-16 sm:py-20">
+        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:items-center">
+          <FadeIn>
+            <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">
+              Straight to your inbox
+            </p>
+            <h2 className="mt-2 font-display text-3xl font-bold text-pine-900">
+              Never miss a real candidate
+            </h2>
+            <p className="mt-3 max-w-sm text-pine-700">
+              A metro-wide MLS search built to surface genuine house hack
+              opportunities — not just any duplex listing.
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.15}>
+            <KitSignupForm variant="listing-alerts" />
+          </FadeIn>
+        </div>
+      </section>
 
       {/* Four models — photo-topped cards */}
       <section className="bg-sage-50 py-16 sm:py-20">

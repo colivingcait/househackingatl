@@ -34,33 +34,25 @@ need real values before the site should go live to the public.
 
 ## Accounts / credentials (all in `src/lib/site-config.ts` + env vars)
 
-- [ ] **Kit form IDs** — `NEXT_PUBLIC_KIT_LISTING_ALERTS_FORM_ID`,
-      `NEXT_PUBLIC_KIT_NEWSLETTER_FORM_ID`, and
-      `NEXT_PUBLIC_KIT_RESOURCES_FORM_ID` (see `.env.example`). These are
-      the public numeric form IDs from Kit → Grow → Landing Pages & Forms
-      → (form) → Embed — **not** the private API key, nothing secret is
-      needed for the signup forms themselves to work.
-      - In Kit, set each form's automation to tag new subscribers:
-        - Listing alerts form → `hh-site` + `listing-alerts`
-        - Newsletter form → `hh-site`
-        - Resources (guide downloads) form → `hh-site` + `resource-download`
-      - All three forms collect first name + email; the listing-alerts
-        form also collects a price range and target areas, and the
-        resources form sends a `fields[resource]` value naming which
-        guide was requested — confirm those field keys exist in your Kit
-        account (`price_range`, `target_areas`, `resource`) or tell me
-        the actual keys so I can match them.
-      - Before launch: submit a test entry through all three forms in
-        staging and confirm the subscriber shows up correctly tagged in
-        Kit — the POST endpoint/field names were built from Kit's
-        documented conventions but I haven't tested against your live
-        account.
+- [x] **CRM cutover** — all three signup forms (listing alerts,
+      newsletter, resource downloads) now POST directly to your CRM at
+      `https://www.callcaitlyn.com/api/webhooks/house-hacking-site`
+      (`crm.webhookUrl` in `src/lib/site-config.ts`). No more Kit form
+      IDs, no dual-write — full cutover. Each submission sends
+      `{ name, email, phone?, source, sourceDetail? }` with `source` one
+      of `listing_alerts` / `newsletter` / `gated_download`.
+      - **Dropped in the move:** the listing-alerts form used to also
+        collect a target price range and target areas (Kit custom
+        fields) — the CRM's documented payload doesn't have a place for
+        these, so those two fields were removed from the form rather
+        than silently collecting data that goes nowhere. Say the word if
+        you want them folded into `sourceDetail` or added to the CRM
+        schema properly.
 - [ ] **Free guides** (`/resources`) — five PDFs are live at
       `public/downloads/`: House Hacking One Page, Which House Hack Fits
       You, The Four Numbers Worksheet, Property Walkthrough Checklist,
-      and Before Anyone Moves In. All gated behind the Kit resources form
-      above. Send more whenever you have them and I'll add them the same
-      way.
+      and Before Anyone Moves In. All gated behind the CRM signup above.
+      Send more whenever you have them and I'll add them the same way.
 - [x] **Eventbrite collection URL** — confirmed:
       `https://www.eventbrite.com/cc/house-hacking-atl-4861227`, set on
       `meetup.eventbriteOrganizerUrl`. Individual events can still get

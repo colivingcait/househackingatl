@@ -16,8 +16,8 @@ Open [http://localhost:3000](http://localhost:3000).
 ## Where things live
 
 - `src/lib/site-config.ts` — single source of truth for editable values:
-  venue, external links, Kit form IDs, Meta Pixel ID, license disclosure.
-  Change the meetup venue here, not across pages.
+  venue, external links, CRM webhook URL, Meta Pixel ID, license
+  disclosure. Change the meetup venue here, not across pages.
 - `src/data/meetups.ts` — the monthly topic calendar. One array entry per
   month; add `speaker` and `eventbriteUrl` as they're confirmed.
 - `src/data/sponsors.ts` — anchor partners and event sponsors. Empty by

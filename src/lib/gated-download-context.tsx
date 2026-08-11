@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState, type ReactNode } from "react";
 
-type Subscriber = { email: string; firstName: string };
+type Subscriber = { email: string; firstName: string; phone: string };
 type GatedDownloadCtx = {
   subscriber: Subscriber | null;
   unlock: (subscriber: Subscriber) => void;

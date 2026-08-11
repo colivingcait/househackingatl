@@ -6,7 +6,6 @@ import Link from "next/link";
 import Fuse from "fuse.js";
 import { navLinks } from "@/data/nav";
 import type { SearchEntry } from "@/lib/search";
-import { kit } from "@/lib/site-config";
 import CtaButton from "./CtaButton";
 
 export default function Header({ searchIndex }: { searchIndex: SearchEntry[] }) {
@@ -15,8 +14,8 @@ export default function Header({ searchIndex }: { searchIndex: SearchEntry[] }) 
   const [searchOpen, setSearchOpen] = useState(false);
   const searchBoxRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
-  const ctaHref = kit.listingAlertsFormId ? "/#get-listings" : "/learn";
-  const ctaLabel = kit.listingAlertsFormId ? "Get Listings" : "Browse Library";
+  const ctaHref = "/#get-listings";
+  const ctaLabel = "Get Listings";
 
   const fuse = useMemo(
     () =>

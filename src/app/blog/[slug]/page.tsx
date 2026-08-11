@@ -5,7 +5,7 @@ import Image from "next/image";
 import CtaButton from "@/components/CtaButton";
 import KitSignupForm from "@/components/KitSignupForm";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
-import { kit, links } from "@/lib/site-config";
+import { links } from "@/lib/site-config";
 import { pageMetadata } from "@/lib/metadata";
 
 export function generateStaticParams() {
@@ -92,13 +92,11 @@ export default async function BlogPostPage({
         />
       </section>
 
-      {kit.newsletterFormId && (
-        <section className="bg-sage-50 py-16 sm:py-20">
-          <div className="mx-auto max-w-2xl px-4 sm:px-6">
-            <KitSignupForm variant="newsletter" formId={kit.newsletterFormId} />
-          </div>
-        </section>
-      )}
+      <section className="bg-sage-50 py-16 sm:py-20">
+        <div className="mx-auto max-w-2xl px-4 sm:px-6">
+          <KitSignupForm variant="newsletter" />
+        </div>
+      </section>
 
       <section className="mx-auto max-w-3xl px-4 py-12 text-center sm:px-6">
         <CtaButton

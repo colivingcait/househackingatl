@@ -52,12 +52,8 @@ export default function PrivacyPage() {
 
           <h2>Where it&rsquo;s stored</h2>
           <p>
-            Signup form data is processed and stored by{" "}
-            <a href="https://kit.com" target="_blank" rel="noopener noreferrer">
-              Kit
-            </a>{" "}
-            (formerly ConvertKit), our email service provider. Kit&rsquo;s own privacy policy governs how they handle
-            that data on our behalf.
+            Signup form data is sent directly to Caitlyn&rsquo;s own CRM system, where it&rsquo;s stored and used to
+            follow up on your request.
           </p>
 
           <h2>Cookies and pixels</h2>

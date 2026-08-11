@@ -3,8 +3,14 @@
 import { useState, type FormEvent } from "react";
 import Link from "next/link";
 import { trackStandardEvent } from "@/lib/analytics";
+import { crm } from "@/lib/site-config";
 
 type Variant = "listing-alerts" | "newsletter";
+
+const SOURCE: Record<Variant, string> = {
+  "listing-alerts": "listing_alerts",
+  newsletter: "newsletter",
+};
 
 const COPY: Record<
   Variant,
@@ -24,36 +30,29 @@ const COPY: Record<
   },
 };
 
-export default function KitSignupForm({
-  variant,
-  formId,
-}: {
-  variant: Variant;
-  formId: string;
-}) {
+export default function KitSignupForm({ variant }: { variant: Variant }) {
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const copy = COPY[variant];
-
-  // A broken feature should be absent, not announced — render nothing
-  // until a real Kit form ID is configured.
-  if (!formId) {
-    return null;
-  }
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
+    const firstName = String(data.get("first_name") ?? "");
+    const email = String(data.get("email") ?? "");
+    const phone = String(data.get("phone") ?? "");
 
     try {
-      const res = await fetch(
-        `https://app.kit.com/forms/${formId}/subscriptions`,
-        {
-          method: "POST",
-          body: data,
-          headers: { Accept: "application/json" },
-        }
-      );
+      const res = await fetch(crm.webhookUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: firstName,
+          email,
+          ...(phone ? { phone } : {}),
+          source: SOURCE[variant],
+        }),
+      });
       if (res.ok) {
         setStatus("success");
         trackStandardEvent(copy.fbEvent, { content_name: variant });
@@ -70,9 +69,7 @@ export default function KitSignupForm({
     return (
       <div className="rounded-2xl border border-pine-200 bg-sage-50 p-6">
         <p className="font-display font-semibold text-pine-800">You&apos;re in.</p>
-        <p className="mt-1 text-sm text-pine-700">
-          Check your inbox to confirm — that&apos;s how we know it&apos;s really you.
-        </p>
+        <p className="mt-1 text-sm text-pine-700">Thanks for signing up.</p>
       </div>
     );
   }
@@ -88,35 +85,24 @@ export default function KitSignupForm({
       <div className="mt-4 flex flex-col gap-3">
         <input
           type="text"
-          name="fields[first_name]"
+          name="first_name"
           placeholder="First name"
           required
           className="rounded-lg border border-pine-200 px-4 py-2.5 text-sm focus:border-clay-500 focus:outline-none"
         />
         <input
           type="email"
-          name="email_address"
+          name="email"
           placeholder="Email address"
           required
           className="rounded-lg border border-pine-200 px-4 py-2.5 text-sm focus:border-clay-500 focus:outline-none"
         />
-
-        {variant === "listing-alerts" && (
-          <>
-            <input
-              type="text"
-              name="fields[price_range]"
-              placeholder="Target price range (e.g. $350k–$450k)"
-              className="rounded-lg border border-pine-200 px-4 py-2.5 text-sm focus:border-clay-500 focus:outline-none"
-            />
-            <input
-              type="text"
-              name="fields[target_areas]"
-              placeholder="Areas you're watching (e.g. East Point, Decatur)"
-              className="rounded-lg border border-pine-200 px-4 py-2.5 text-sm focus:border-clay-500 focus:outline-none"
-            />
-          </>
-        )}
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Phone (optional)"
+          className="rounded-lg border border-pine-200 px-4 py-2.5 text-sm focus:border-clay-500 focus:outline-none"
+        />
 
         <button
           type="submit"
