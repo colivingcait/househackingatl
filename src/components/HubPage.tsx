@@ -69,15 +69,25 @@ export default function HubPage({ hub }: { hub: Hub }) {
               {section.items
                 .filter((item) => item.slug !== hub.pillar)
                 .map((item) => {
-                  const isResource = item.kind === "resource";
-                  const meta = isResource ? undefined : articleMeta.get(item.slug);
-                  const href = isResource ? "/resources" : `/${item.slug}`;
-                  const title = isResource
-                    ? "Before Anyone Moves In — free conversation guide"
-                    : meta?.h1 ?? item.slug;
-                  const description = isResource
-                    ? "A ten-minute checklist of screening and expectations questions, free to download."
-                    : meta?.metaDescription;
+                  const meta = !item.kind || item.kind === "article" ? articleMeta.get(item.slug) : undefined;
+                  const href =
+                    item.kind === "resource"
+                      ? "/resources"
+                      : item.kind === "calculator"
+                        ? "/calculator"
+                        : `/${item.slug}`;
+                  const title =
+                    item.kind === "resource"
+                      ? "Before Anyone Moves In — free conversation guide"
+                      : item.kind === "calculator"
+                        ? "Effective Housing Cost Calculator"
+                        : meta?.h1 ?? item.slug;
+                  const description =
+                    item.kind === "resource"
+                      ? "A ten-minute checklist of screening and expectations questions, free to download."
+                      : item.kind === "calculator"
+                        ? "Cost to own minus expected rent, by rental strategy — an interactive version of the numbers below."
+                        : meta?.metaDescription;
 
                   return (
                     <FadeIn key={item.slug}>

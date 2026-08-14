@@ -7,7 +7,7 @@ export type HubItem = {
    * resource rather than a written article — those resolve to /resources
    * instead of a flat article route.
    */
-  kind?: "article" | "resource";
+  kind?: "article" | "resource" | "calculator";
 };
 
 export type HubSection = {
@@ -147,6 +147,7 @@ export const hubs: Hub[] = [
         heading: "Evaluating a deal",
         items: [
           { slug: "four-numbers-house-hack" },
+          { slug: "calculator", kind: "calculator" },
           { slug: "what-your-space-is-worth" },
           { slug: "what-percentage-mortgage" },
           { slug: "works-after-you-move-out" },
