@@ -147,6 +147,30 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Calculator — a free interactive tool, not gated behind an email signup */}
+      <section className="bg-clay-600 py-14 sm:py-16">
+        <FadeIn className="mx-auto flex max-w-6xl flex-col items-start gap-6 px-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wide text-clay-100">
+              Free tool
+            </p>
+            <h2 className="mt-2 font-display text-2xl font-bold text-white sm:text-3xl">
+              Run your own numbers
+            </h2>
+            <p className="mt-2 max-w-lg text-clay-50">
+              See what a property would actually cost you every month — and what&apos;s left
+              once you factor in rent. No email required.
+            </p>
+          </div>
+          <Link
+            href="/calculator"
+            className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-clay-700 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg sm:text-base"
+          >
+            Try the Calculator →
+          </Link>
+        </FadeIn>
+      </section>
+
       {/* The library — 8 hub cards, the entry point into all 83 articles */}
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
         <FadeIn className="mb-8 flex items-end justify-between">

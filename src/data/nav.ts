@@ -3,6 +3,7 @@ export const navLinks = [
   { href: "/meetups", label: "Meetups" },
   { href: "/group", label: "Group" },
   { href: "/resources", label: "Resources" },
+  { href: "/calculator", label: "Calculator" },
   { href: "/about", label: "About" },
 ];
 
