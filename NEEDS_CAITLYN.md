@@ -27,8 +27,9 @@ need real values before the site should go live to the public.
       property addresses, nothing more specific than "Atlanta metro."
 - [x] **Headshot** — live on `/about` and in the author box on every
       article.
-- [ ] **Fuller bio** — `/about` has your approved intro line live; the
-      longer bio is still a placeholder.
+- [x] **Fuller bio** — the 150-word canonical bio from `ENTITY-FACTS.md`
+      is now live on `/about` (`author.fullerBio` in `src/lib/site-config.ts`).
+      Flag if anything needs to change.
 - [ ] **Adam** — co-founder credit. Not included anywhere yet — confirm
       whether/how he should appear (About page, meetup hosting, etc.).
 
@@ -88,6 +89,11 @@ Live in `src/lib/site-config.ts` under `links` (Eventbrite moved to
       publicly until your broker's exact approved wording replaces it** —
       Georgia advertising rules require this. Once you have it, update
       `licenseDisclosure.text` and set `confirmed: true`.
+- [x] **License number, phone, and brokerage address** — confirmed via
+      `ENTITY-FACTS.md` and now live in `src/lib/site-config.ts` → `nap`
+      (Georgia Real Estate License #414610, (678) 884-4494, 101 W Ponce De
+      Leon STE 200, Decatur GA 30030) and in the `RealEstateAgent` schema
+      on `/about`.
 
 ## Everything else
 

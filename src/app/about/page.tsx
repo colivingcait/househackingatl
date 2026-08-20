@@ -4,7 +4,7 @@ import PhotoPlaceholder from "@/components/PhotoPlaceholder";
 import FadeIn from "@/components/FadeIn";
 import JsonLd from "@/components/JsonLd";
 import CtaButton from "@/components/CtaButton";
-import { author, links } from "@/lib/site-config";
+import { author, links, nap } from "@/lib/site-config";
 import { pageMetadata } from "@/lib/metadata";
 import { localBusinessSchema } from "@/lib/schema";
 
@@ -59,9 +59,6 @@ export default function AboutPage() {
             <p className="mt-3 text-lg text-pine-800">
               I&apos;m Caitlyn, your go-to for all things house hacking. {author.bio}
             </p>
-            <p className="mt-3 text-sm text-pine-500">
-              Fuller bio coming soon.
-            </p>
             <div className="mt-5">
               <CtaButton href={links.calendly} variant="primary" external>
                 Book a discovery call
@@ -70,10 +67,25 @@ export default function AboutPage() {
           </div>
         </FadeIn>
 
+        <FadeIn className="mt-8 flex flex-col gap-4 text-base leading-relaxed text-pine-800">
+          {author.fullerBio.split("\n\n").map((paragraph, i) => (
+            <p key={i}>{paragraph}</p>
+          ))}
+        </FadeIn>
+
         <div className="mt-6 rounded-xl border border-pine-100 bg-sage-50 p-4 text-xs leading-relaxed text-pine-500">
-          {author.name} is a licensed Georgia real estate agent with Keller
-          Williams Metro Atlanta. See the site footer for full brokerage
-          disclosure.
+          <p>
+            {author.name} is a licensed Georgia real estate agent ({nap.license}
+            ) with Keller Williams Metro Atlanta. See the site footer for full
+            brokerage disclosure.
+          </p>
+          <p className="mt-2">
+            {nap.brokerage} · {nap.address.street}, {nap.address.city}{" "}
+            {nap.address.state} {nap.address.zip} ·{" "}
+            <a href={`tel:${nap.phone.replace(/[^\d+]/g, "")}`} className="hover:text-clay-600">
+              {nap.phone}
+            </a>
+          </p>
         </div>
       </section>
 

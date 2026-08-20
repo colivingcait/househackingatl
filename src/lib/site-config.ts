@@ -26,9 +26,33 @@ export const siteConfig = {
 export const author = {
   name: "Caitlyn Verdugo",
   bio: "Atlanta REALTOR®, investor, and serial house hacker.",
+  fullerBio:
+    "Caitlyn Verdugo is a licensed Georgia REALTOR® with Keller Williams Realty Metro Atlanta, serving buyers and sellers throughout Decatur and east Atlanta. She works with first-time buyers, move-up sellers, and investors, and specializes in house hacking, small multifamily, and rent-by-the-room conversions.\n\nShe is also a coliving operator, sourcing, converting, and running a portfolio of shared homes across the Atlanta metro through Lustra House LLC. She co-founded Atlanta Women Investors, a monthly meetup for women building wealth through real estate, and She Leads Coliving, a community of more than 500 women; she also founded the first Women's Coliving Summit in 2025.\n\nCaitlyn bought her first house hack in 2022, co-authored \"Coliving Authority,\" and founded House Hacking Atlanta. She hosts two free monthly real estate meetups in Atlanta and takes on a small number of one-on-one coaching clients.",
   credential: "REALTOR®, Keller Williams Metro Atlanta",
   photo: "/images/caitlyn-headshot.jpg",
-  email: "cv.sellshomes@gmail.com",
+  // Public-facing canonical business email — matches the NAP in
+  // ENTITY-FACTS.md. Used in schema.org output; keep in sync with the
+  // ColivingCait repo's lib/entity.ts.
+  email: "Caitlyn@CallCaitlyn.com",
+};
+
+/**
+ * Canonical name/address/phone — sourced from ENTITY-FACTS.md. Every site
+ * must agree with this file. Do not hardcode these values elsewhere.
+ */
+export const nap = {
+  name: "Caitlyn Verdugo",
+  title: "REALTOR® | Investor",
+  brokerage: "Keller Williams Metro Atlanta",
+  license: "Georgia Real Estate License #414610",
+  address: {
+    street: "101 W Ponce De Leon STE 200",
+    city: "Decatur",
+    state: "GA",
+    zip: "30030",
+  },
+  phone: "(678) 884-4494",
+  email: "Caitlyn@CallCaitlyn.com",
 };
 
 export const meetup = {
@@ -76,7 +100,7 @@ export const womensGroup = {
  * a broken or dead link when a URL is empty.
  */
 export const links = {
-  colivingCait: "https://colivingcait.com",
+  colivingCait: "https://www.colivingcait.com",
   atlantaWomenInvestors: "",
   roomsForRentAtl: "",
   facebookGroup: "https://facebook.com/groups/househackingatl",
@@ -85,6 +109,21 @@ export const links = {
   // copied it, not part of the permanent link, so they're dropped here.
   calendly: "https://calendly.com/colivingcait/buyer-or-seller-discovery-call",
 };
+
+/**
+ * The profile graph — confirmed URLs only (a 404 or placeholder in sameAs
+ * actively hurts). Mirrors the `sameAs` array in ColivingCait's
+ * lib/entity.ts. Add entries once created/located; never guess a URL.
+ */
+export const sameAs = [
+  "https://kw.com/agent/caitlyn-verdugo/811213",
+  "https://caitlynverdugo.kw.com",
+  "https://www.facebook.com/caitlynverdugorealtor",
+  "https://www.linkedin.com/in/caitlyn-verdugo-realtor/",
+  "https://www.instagram.com/colivingcait/",
+  "https://www.colivingcait.com",
+  links.facebookGroup,
+].filter(Boolean);
 
 /**
  * Caitlyn's custom CRM. All three signup forms (listing alerts, newsletter,

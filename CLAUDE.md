@@ -83,3 +83,12 @@ Next.js 14 (App Router) / TypeScript / Tailwind, deployed on Vercel.
 Editable site-wide values (venue, external links, Kit form IDs, license
 disclosure) live in `src/lib/site-config.ts`. See `NEEDS_CAITLYN.md` for
 what's still pending from Caitlyn before public launch.
+
+## Shared entity facts
+
+`ENTITY-FACTS.md` is the canonical NAP/bio/identity-stack reference,
+shared verbatim with the ColivingCait repo — if a site disagrees with it,
+the site is wrong. The machine-readable NAP and `sameAs` profile graph
+live in `src/lib/site-config.ts` (`nap`, `sameAs`) and feed
+`localBusinessSchema()` in `src/lib/schema.ts`. Update `ENTITY-FACTS.md`
+in both repos together; never hardcode NAP values into a page component.

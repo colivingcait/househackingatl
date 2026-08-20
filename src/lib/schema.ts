@@ -1,4 +1,4 @@
-import { siteConfig, author, meetup, links } from "./site-config";
+import { siteConfig, author, meetup, nap, sameAs } from "./site-config";
 import type { Crumb } from "@/components/Breadcrumb";
 
 const BASE = `https://${siteConfig.domain}`;
@@ -91,23 +91,24 @@ export function localBusinessSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
-    name: author.name,
+    name: nap.name,
+    jobTitle: nap.title,
     url: BASE,
     image: absoluteUrl(author.photo),
     description: siteConfig.shortBlurb,
     areaServed: { "@type": "City", name: "Atlanta" },
     address: {
       "@type": "PostalAddress",
-      streetAddress: "101 W Ponce de Leon Ave",
-      addressLocality: "Decatur",
-      addressRegion: "GA",
-      postalCode: "30030",
+      streetAddress: nap.address.street,
+      addressLocality: nap.address.city,
+      addressRegion: nap.address.state,
+      postalCode: nap.address.zip,
       addressCountry: "US",
     },
     priceRange: "$$",
-    email: author.email,
-    // telephone deliberately omitted — not published.
-    sameAs: [links.facebookGroup, links.colivingCait].filter(Boolean),
+    email: nap.email,
+    telephone: nap.phone,
+    sameAs,
   };
 }
 
