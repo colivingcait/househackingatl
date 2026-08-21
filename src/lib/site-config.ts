@@ -94,7 +94,7 @@ export const links = {
  * them apart. Full cutover from Kit — not dual-writing.
  */
 export const crm = {
-  webhookUrl: "https://www.callcaitlyn.com/api/webhooks/house-hacking-site",
+  webhookUrl: "https://crm.callcaitlyn.com/api/webhooks/house-hacking-site",
 };
 
 /**
