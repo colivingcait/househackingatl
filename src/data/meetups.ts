@@ -20,19 +20,19 @@ export type MeetupEvent = {
 export const meetupSchedule: MeetupEvent[] = [
   {
     month: "September 2026",
+    topic: "Financing the Deal",
+    category: "Lender",
+  },
+  {
+    month: "October 2026",
     topic: "Finding the Deal",
     category: "Realtor",
     speaker: "Caitlyn",
   },
   {
-    month: "October 2026",
-    topic: "Protecting Your House Hack",
-    category: "Insurance",
-  },
-  {
     month: "November 2026",
-    topic: "Lowering Maintenance Costs",
-    category: "Home Warranty",
+    topic: "Protecting Your Assets",
+    category: "Insurance",
   },
   {
     month: "December 2026",
@@ -52,6 +52,17 @@ export const meetupSchedule: MeetupEvent[] = [
   },
   {
     month: "March 2027",
+    topic: "Hands-On Numbers Workshop",
+    category: "Workshop",
+    speaker: "Caitlyn",
+  },
+  {
+    month: "April 2027",
+    topic: "Lowering Maintenance Costs",
+    category: "Home Warranty",
+  },
+  {
+    month: "May 2027",
     topic: "Adding Value to Your House Hack",
     category: "Appraisal",
   },
