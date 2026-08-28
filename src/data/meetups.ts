@@ -31,7 +31,8 @@ export const meetupSchedule: MeetupEvent[] = [
     month: "October 2026",
     topic: "Finding the Deal",
     category: "Realtor",
-    speaker: "Caitlyn",
+    speaker: "Caitlyn Verdugo",
+    speakerCompany: "Keller Williams Metro Atlanta",
   },
   {
     month: "November 2026",
@@ -60,7 +61,8 @@ export const meetupSchedule: MeetupEvent[] = [
     month: "March 2027",
     topic: "Hands-On Numbers Workshop",
     category: "Workshop",
-    speaker: "Caitlyn",
+    speaker: "Caitlyn Verdugo",
+    speakerCompany: "Keller Williams Metro Atlanta",
   },
   {
     month: "April 2027",
