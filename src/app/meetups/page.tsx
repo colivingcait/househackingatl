@@ -14,6 +14,7 @@ export const metadata = pageMetadata({
   title: "Meetups",
   description:
     "House Hacking Atlanta meets the second Tuesday of every month. See the topic calendar and register on Eventbrite.",
+  image: "/images/og-meetups.jpg",
 });
 
 export default function MeetupsPage() {
