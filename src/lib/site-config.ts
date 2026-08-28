@@ -29,6 +29,14 @@ export const author = {
   credential: "REALTOR®, Keller Williams Metro Atlanta",
   photo: "/images/caitlyn-headshot.jpg",
   email: "cv.sellshomes@gmail.com",
+  // Longer version for /about. Deliberately free of specific numbers
+  // (properties owned, years active, dollar figures) since none have been
+  // confirmed — swap in real specifics whenever Caitlyn wants to add them.
+  fullBio: [
+    "I bought my first house hack because the math made too much sense to ignore — live in part of the property, rent out the rest, and let someone else cover most of my mortgage. It worked. So I did it again. That's the whole idea behind this site: the same math, laid out plainly, for anyone willing to run the numbers before they buy.",
+    "I'm a licensed REALTOR® with Keller Williams Metro Atlanta, and house hacking isn't a side note to my business — it's the center of it. I work with buyers who are looking at a property specifically because of what it could rent for, not just what it looks like on a Sunday tour, and I built the monthly meetup and this whole library of articles because there wasn't a single place in Atlanta covering the real mechanics: financing, running the numbers, and the day-to-day of actually sharing a home with a tenant.",
+    "If you're past the first house hack and thinking about what a more intentional shared-living setup could look like, that's ColivingCait — a different brand, a more advanced model, for when you're ready for it. Most people start here, though: one property, one extra bedroom or unit, and the question of whether the numbers actually work. That's exactly what I help people figure out.",
+  ],
 };
 
 export const meetup = {

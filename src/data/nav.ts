@@ -10,6 +10,7 @@ export const navLinks = [
 /** Reachable, but intentionally outside the 5-item primary nav — see BUILD-SPEC.md §16. */
 export const secondaryLinks = [
   { href: "/listings", label: "Listings" },
+  { href: "/sponsors", label: "Local Pros" },
   { href: "/blog", label: "Blog" },
   { href: "/privacy", label: "Privacy" },
 ];

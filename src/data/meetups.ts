@@ -13,6 +13,8 @@ export type MeetupEvent = {
   topic: string;
   category: string;
   speaker?: string;
+  /** Kept separate from `speaker` so Event schema can set performer.worksFor correctly. */
+  speakerCompany?: string;
   eventbriteUrl?: string;
   note?: string;
 };
@@ -22,6 +24,8 @@ export const meetupSchedule: MeetupEvent[] = [
     month: "September 2026",
     topic: "Financing the Deal",
     category: "Lender",
+    speaker: "Krishen Shah",
+    speakerCompany: "Highland Mortgage",
   },
   {
     month: "October 2026",
@@ -33,6 +37,8 @@ export const meetupSchedule: MeetupEvent[] = [
     month: "November 2026",
     topic: "Protecting Your Assets",
     category: "Insurance",
+    speaker: "Whitney Mckee",
+    speakerCompany: "Allstate Insurance",
   },
   {
     month: "December 2026",

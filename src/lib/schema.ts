@@ -145,12 +145,14 @@ export function meetupEventSchema({
   topic,
   category,
   speaker,
+  speakerCompany,
   eventbriteUrl,
 }: {
   monthLabel: string;
   topic: string;
   category: string;
   speaker?: string;
+  speakerCompany?: string;
   eventbriteUrl?: string;
 }) {
   const date = secondTuesdayOf(monthLabel);
@@ -179,10 +181,18 @@ export function meetupEventSchema({
       },
     },
     description: `${topic} — a house hacking meetup topic with a ${category.toLowerCase()} guest${
-      speaker ? ` (${speaker})` : ""
+      speaker ? ` (${speaker}${speakerCompany ? `, ${speakerCompany}` : ""})` : ""
     }. Second Tuesday of the month, doors 6:30pm.`,
     organizer: { "@type": "Organization", name: siteConfig.name, url: BASE },
-    performer: speaker ? { "@type": "Person", name: speaker } : undefined,
+    performer: speaker
+      ? {
+          "@type": "Person",
+          name: speaker,
+          ...(speakerCompany
+            ? { worksFor: { "@type": "Organization", name: speakerCompany } }
+            : {}),
+        }
+      : undefined,
     offers: {
       "@type": "Offer",
       price: "0",

@@ -15,20 +15,27 @@ need real values before the site should go live to the public.
       code, if handy — schema.org doesn't require it, but it's a small
       completeness improvement.
 - [ ] **Speaker names** for the topic calendar — currently render as
-      "Speaker TBA" in `src/data/meetups.ts`. Fill in `speaker: "..."` as
-      each is confirmed.
-- [ ] **Sponsor logos / partners** — `src/data/sponsors.ts` is empty on
-      purpose; the site shows a clean "opportunities available" card
-      instead of a blank grid. Add entries to `anchorPartners` /
-      `eventSponsors` as deals close.
+      "Speaker TBA" in `src/data/meetups.ts`. Confirmed so far: Krishen Shah
+      (Highland Mortgage) for September, Whitney Mckee (Allstate Insurance)
+      for November, Caitlyn for October and the March workshop.
+- [x] **Sponsor/partner directory** — `/sponsors` ("Local Pros") is live,
+      listing Highland Mortgage and Allstate Insurance from
+      `src/data/sponsors.ts` → `anchorPartners`. **Still needed:** a
+      `logoUrl` and `url` (website/contact link) for each — right now the
+      cards show name, contact person, and category only, no way to click
+      through. `eventSponsors` (one-off per-event sponsors, as opposed to
+      the annual category partners above) is still unused/empty if that
+      becomes relevant later.
 - [ ] **Rooms for Rent ATL photos** — `/listings` shows 6 "Photo coming
       soon" placeholders. Send 3–6 photos and I'll swap them in.
       Reminder of the privacy rule already baked into the page copy: no
       property addresses, nothing more specific than "Atlanta metro."
 - [x] **Headshot** — live on `/about` and in the author box on every
       article.
-- [ ] **Fuller bio** — `/about` has your approved intro line live; the
-      longer bio is still a placeholder.
+- [x] **Fuller bio** — `/about` now has a full three-paragraph bio
+      (`author.fullBio` in `site-config.ts`). Written without any specific
+      numbers (properties owned, years active, dollar figures) since none
+      were confirmed — flag if you want real specifics worked in.
 - [ ] **Adam** — co-founder credit. Not included anywhere yet — confirm
       whether/how he should appear (About page, meetup hosting, etc.).
 

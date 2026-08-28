@@ -39,7 +39,11 @@ export default function MeetupScheduleTable() {
                 {event.category}
               </td>
               <td className="hidden px-4 py-4 text-pine-600 md:table-cell">
-                {event.speaker || "Speaker TBA"}
+                {event.speaker
+                  ? event.speakerCompany
+                    ? `${event.speaker}, ${event.speakerCompany}`
+                    : event.speaker
+                  : "Speaker TBA"}
               </td>
               <td className="px-4 py-4 text-right">
                 <CtaButton

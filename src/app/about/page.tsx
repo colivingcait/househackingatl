@@ -59,15 +59,20 @@ export default function AboutPage() {
             <p className="mt-3 text-lg text-pine-800">
               I&apos;m Caitlyn, your go-to for all things house hacking. {author.bio}
             </p>
-            <p className="mt-3 text-sm text-pine-500">
-              Fuller bio coming soon.
-            </p>
             <div className="mt-5">
               <CtaButton href={links.calendly} variant="primary" external>
                 Book a discovery call
               </CtaButton>
             </div>
           </div>
+        </FadeIn>
+
+        <FadeIn delay={0.1} className="mt-8 flex flex-col gap-4">
+          {author.fullBio.map((paragraph, i) => (
+            <p key={i} className="text-pine-800">
+              {paragraph}
+            </p>
+          ))}
         </FadeIn>
 
         <div className="mt-6 rounded-xl border border-pine-100 bg-sage-50 p-4 text-xs leading-relaxed text-pine-500">

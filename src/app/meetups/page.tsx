@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import Breadcrumb from "@/components/Breadcrumb";
 import CtaButton from "@/components/CtaButton";
@@ -30,6 +31,7 @@ export default function MeetupsPage() {
             topic: event.topic,
             category: event.category,
             speaker: event.speaker,
+            speakerCompany: event.speakerCompany,
             eventbriteUrl: event.eventbriteUrl,
           })}
         />
@@ -87,6 +89,12 @@ export default function MeetupsPage() {
           <div className="mt-8">
             <MeetupScheduleTable />
           </div>
+          <Link
+            href="/sponsors"
+            className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-clay-600 hover:text-clay-700"
+          >
+            Need a lender or insurance agent? See local pros who&apos;ve spoken here →
+          </Link>
         </div>
       </section>
 

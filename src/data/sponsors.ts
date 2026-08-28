@@ -9,10 +9,13 @@
  */
 
 export type AnchorPartner = {
-  name: string;
+  name: string; // business name, e.g. "Highland Mortgage"
+  contactName?: string; // the person, e.g. "Krishen Shah"
   category: string; // e.g. "Lender", "Insurance"
   logoUrl?: string;
   url?: string;
+  /** Which meetup they've spoken at / are speaking at — see src/data/meetups.ts. */
+  speakingMonth?: string;
 };
 
 export type EventSponsor = {
@@ -23,7 +26,20 @@ export type EventSponsor = {
   bio?: string;
 };
 
-export const anchorPartners: AnchorPartner[] = [];
+export const anchorPartners: AnchorPartner[] = [
+  {
+    name: "Highland Mortgage",
+    contactName: "Krishen Shah",
+    category: "Lender",
+    speakingMonth: "September 2026",
+  },
+  {
+    name: "Allstate Insurance",
+    contactName: "Whitney Mckee",
+    category: "Insurance",
+    speakingMonth: "November 2026",
+  },
+];
 
 export const eventSponsors: EventSponsor[] = [];
 
