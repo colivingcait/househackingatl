@@ -1,8 +1,14 @@
-import { siteConfig, author, meetup, links } from "./site-config";
+import { siteConfig, author, meetup, links, contact, brokerage } from "./site-config";
+import { testimonialsForSchema, zillowReviews } from "../data/testimonials";
 import type { Crumb } from "@/components/Breadcrumb";
 
 const BASE = `https://${siteConfig.domain}`;
 const DEFAULT_IMAGE = `${BASE}/images/og-default.jpg`;
+
+/** Same @id colivingcait.com uses, so the two sites are one Person. */
+export const PERSON_ID = "https://www.colivingcait.com/#caitlyn";
+export const ORG_ID = `${BASE}/#org`;
+export const WEBSITE_ID = `${BASE}/#website`;
 
 function absoluteUrl(path: string): string {
   if (path === "/") return BASE;
@@ -28,11 +34,13 @@ export function articleSchema({
   description,
   path,
   image,
+  datePublished,
 }: {
   headline: string;
   description: string;
   path: string;
   image?: string;
+  datePublished?: string;
 }) {
   return {
     "@context": "https://schema.org",
@@ -40,12 +48,9 @@ export function articleSchema({
     headline,
     description,
     image: [image ? absoluteUrl(image) : DEFAULT_IMAGE],
-    author: { "@type": "Person", name: author.name, url: absoluteUrl("/about") },
-    publisher: {
-      "@type": "Organization",
-      name: siteConfig.name,
-      logo: { "@type": "ImageObject", url: DEFAULT_IMAGE },
-    },
+    ...(datePublished ? { datePublished } : {}),
+    author: { "@id": PERSON_ID },
+    publisher: { "@id": ORG_ID },
     mainEntityOfPage: { "@type": "WebPage", "@id": absoluteUrl(path) },
   };
 }
@@ -68,13 +73,7 @@ export function collectionPageSchema({
   };
 }
 
-/**
- * Not yet applied anywhere — none of the 83 articles currently have a
- * genuine Q&A section (checked: no explicit question/answer pairs, just
- * rhetorical section headers). Ready to use once/if one does; forcing this
- * onto content that isn't really FAQ-shaped risks a Google structured-data
- * manual action for mismatched markup.
- */
+/** Only for a real Q&A block whose visible answers match these strings. */
 export function faqPageSchema(qas: { question: string; answer: string }[]) {
   return {
     "@context": "https://schema.org",
@@ -87,27 +86,113 @@ export function faqPageSchema(qas: { question: string; answer: string }[]) {
   };
 }
 
-export function localBusinessSchema() {
+/**
+ * Sitewide Person + Organization + WebSite graph.
+ * Homes.com and Realtor.com are omitted — those profiles are unverified.
+ * Person.founder is omitted: that property means "who founded this
+ * person," which would invert the relationship. The meetup's founder
+ * edge points at Caitlyn instead.
+ * aggregateRating and review are valid on RealEstateAgent (a LocalBusiness),
+ * not on Person alone, so Caitlyn is both types. Only reviews shown on the
+ * page are included. The 5.0 / 18 count is the Zillow total.
+ */
+export function entityGraphSchema() {
+  const reviews = testimonialsForSchema().map((item) => ({
+    "@type": "Review",
+    author: { "@type": "Person", name: item.name },
+    datePublished: item.datePublished,
+    reviewBody: item.quote,
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: "5",
+      bestRating: "5",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Zillow",
+      sameAs: zillowReviews.profileUrl,
+    },
+  }));
+
   return {
     "@context": "https://schema.org",
-    "@type": "RealEstateAgent",
-    name: author.name,
-    url: BASE,
-    image: absoluteUrl(author.photo),
-    description: siteConfig.shortBlurb,
-    areaServed: { "@type": "City", name: "Atlanta" },
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "101 W Ponce de Leon Ave",
-      addressLocality: "Decatur",
-      addressRegion: "GA",
-      postalCode: "30030",
-      addressCountry: "US",
-    },
-    priceRange: "$$",
-    email: author.email,
-    // telephone deliberately omitted — not published.
-    sameAs: [links.facebookGroup, links.colivingCait].filter(Boolean),
+    "@graph": [
+      {
+        "@type": ["Person", "RealEstateAgent"],
+        "@id": PERSON_ID,
+        name: author.name,
+        alternateName: "Coliving Cait",
+        jobTitle: "REALTOR®",
+        description:
+          "Atlanta REALTOR® with Keller Williams Realty Metro Atlanta specializing in house hacking, rent-by-the-room, coliving and PadSplit-ready properties; real estate investor and coliving operator.",
+        image: absoluteUrl(author.photo),
+        url: "https://www.colivingcait.com/about",
+        email: contact.emailHref,
+        telephone: contact.phoneE164,
+        worksFor: {
+          "@type": "RealEstateAgent",
+          name: brokerage.name,
+          telephone: brokerage.telephone,
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: brokerage.streetAddress,
+            addressLocality: brokerage.addressLocality,
+            addressRegion: brokerage.addressRegion,
+            postalCode: brokerage.postalCode,
+            addressCountry: brokerage.addressCountry,
+          },
+        },
+        knowsAbout: [
+          "House hacking",
+          "Rent by the room",
+          "Coliving",
+          "PadSplit",
+          "Small multifamily",
+          "ADUs",
+          "FHA owner-occupant financing",
+          "Atlanta real estate",
+        ],
+        sameAs: [
+          links.colivingCait,
+          links.linkedin,
+          links.instagram,
+          links.zillow,
+          meetup.eventbriteOrganizerUrl,
+          links.womensColivingSummit,
+        ],
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: zillowReviews.ratingValue,
+          bestRating: "5",
+          reviewCount: zillowReviews.reviewCount,
+        },
+        review: reviews,
+      },
+      {
+        "@type": "Organization",
+        "@id": ORG_ID,
+        name: siteConfig.name,
+        url: BASE,
+        logo: DEFAULT_IMAGE,
+        description:
+          "Free monthly house hacking meetup and guide library for metro Atlanta, founded and hosted by REALTOR® Caitlyn Verdugo (Keller Williams Realty Metro Atlanta).",
+        founder: { "@id": PERSON_ID },
+        areaServed: { "@type": "AdministrativeArea", name: "Metro Atlanta, GA" },
+        sameAs: [
+          links.facebookGroup,
+          meetup.eventbriteOrganizerUrl,
+          meetup.eventbriteCollectionUrl,
+        ],
+      },
+      {
+        "@type": "WebSite",
+        "@id": WEBSITE_ID,
+        url: BASE,
+        name: siteConfig.name,
+        publisher: { "@id": ORG_ID },
+        author: { "@id": PERSON_ID },
+      },
+    ],
   };
 }
 
@@ -159,12 +244,15 @@ export function meetupEventSchema({
   const year = date.getFullYear();
   const month = date.getMonth();
   const day = date.getDate();
-  const url = eventbriteUrl || meetup.eventbriteOrganizerUrl || absoluteUrl("/meetups");
+  const url = eventbriteUrl || meetup.eventbriteCollectionUrl || absoluteUrl("/meetups");
+  const speakerLine = speaker
+    ? `, with guest speaker ${speaker}${speakerCompany ? ` (${speakerCompany})` : ""}`
+    : "";
 
   return {
     "@context": "https://schema.org",
     "@type": "Event",
-    name: `House Hacking Atlanta: ${topic}`,
+    name: `House Hacking Atlanta Monthly Meetup: ${topic}`,
     startDate: easternIso(year, month, day, 18, 30),
     endDate: easternIso(year, month, day, 21, 0),
     image: [DEFAULT_IMAGE],
@@ -178,21 +266,13 @@ export function meetupEventSchema({
         streetAddress: meetup.venue.street,
         addressLocality: meetup.venue.city,
         addressRegion: meetup.venue.state,
+        postalCode: meetup.venue.postalCode,
+        addressCountry: "US",
       },
     },
-    description: `${topic} — a house hacking meetup topic with a ${category.toLowerCase()} guest${
-      speaker ? ` (${speaker}${speakerCompany ? `, ${speakerCompany}` : ""})` : ""
-    }. Second Tuesday of the month, doors 6:30pm.`,
-    organizer: { "@type": "Organization", name: siteConfig.name, url: BASE },
-    performer: speaker
-      ? {
-          "@type": "Person",
-          name: speaker,
-          ...(speakerCompany
-            ? { worksFor: { "@type": "Organization", name: speakerCompany } }
-            : {}),
-        }
-      : undefined,
+    description: `Free monthly meetup on house hacking in Atlanta, hosted by Caitlyn Verdugo, REALTOR® (Keller Williams Realty Metro Atlanta). This month: ${topic} (${category})${speakerLine}.`,
+    organizer: { "@id": ORG_ID },
+    performer: { "@id": PERSON_ID },
     offers: {
       "@type": "Offer",
       price: "0",

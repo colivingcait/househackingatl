@@ -5,13 +5,14 @@ import CtaButton from "@/components/CtaButton";
 import KitSignupForm from "@/components/KitSignupForm";
 import FadeIn from "@/components/FadeIn";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
-import JsonLd from "@/components/JsonLd";
+import AgentCta from "@/components/AgentCta";
+import FaqSection from "@/components/FaqSection";
+import TestimonialsStrip from "@/components/TestimonialsStrip";
 import { houseHackModels } from "@/data/models";
 import { resources } from "@/data/resources";
 import { hubs } from "@/data/hubs";
 import { getAllPosts } from "@/lib/blog";
-import { links, siteConfig } from "@/lib/site-config";
-import { localBusinessSchema } from "@/lib/schema";
+import { author, links, siteConfig } from "@/lib/site-config";
 
 function formatDate(date: string) {
   return new Date(date).toLocaleDateString("en-US", {
@@ -26,8 +27,6 @@ export default function Home() {
 
   return (
     <>
-      <JsonLd data={localBusinessSchema()} />
-
       {/* Hero */}
       <section className="relative overflow-hidden bg-sage-950 text-white">
         <Image
@@ -49,30 +48,41 @@ export default function Home() {
             <DoorMark className="h-12 w-9 text-clay-400" />
           </FadeIn>
           <FadeIn delay={0.1}>
-            <h1 className="mt-6 max-w-xl font-display text-5xl font-bold leading-[1.05] text-balance sm:text-6xl">
-              Live for less.
-              <br />
-              Build more wealth.
+            <h1 className="mt-6 max-w-3xl font-display text-4xl font-bold leading-[1.1] text-balance sm:text-5xl">
+              Caitlyn Verdugo, Atlanta House Hacking Realtor (KW)
             </h1>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <p className="mt-6 max-w-md text-lg text-sage-100">
-              You live in part of the house. You rent out the rest. Every door
-              is an opportunity.
+            <div className="mt-6 flex items-center gap-4">
+              <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full ring-2 ring-white/80">
+                <Image
+                  src={author.photo}
+                  alt="Caitlyn Verdugo"
+                  fill
+                  sizes="64px"
+                  className="object-cover object-top"
+                />
+              </div>
+              <p className="max-w-md text-base font-semibold text-white sm:text-lg">
+                Hosted by Caitlyn Verdugo, REALTOR® with Keller Williams Metro Atlanta
+              </p>
+            </div>
+            <p className="mt-4 max-w-xl text-lg text-sage-100">
+              Live for less, build more wealth: rent-by-the-room, basement units,
+              duplexes, ADUs and coliving. Free monthly meetup, 83 guides, and an
+              agent who runs the numbers like an investor.
             </p>
           </FadeIn>
           <FadeIn delay={0.3}>
             <div className="mt-9 flex flex-wrap gap-4">
-              <CtaButton href="#get-listings" variant="primary">
-                Get New House Hack Listings
+              <CtaButton href={links.book} variant="primary" external>
+                Book a call
               </CtaButton>
-              <CtaButton
-                href={links.facebookGroup || "/group"}
-                variant="ghost"
-                external={Boolean(links.facebookGroup)}
-                className="!border-white !text-white hover:!bg-white/10"
-              >
-                Join the Facebook Group
+              <CtaButton href="#get-listings" variant="ghost" className="!border-white !text-white hover:!bg-white/10">
+                Get house-hack listings
+              </CtaButton>
+              <CtaButton href="/meetups" variant="ghost" className="!border-white !text-white hover:!bg-white/10">
+                Join the meetup
               </CtaButton>
             </div>
           </FadeIn>
@@ -145,6 +155,30 @@ export default function Home() {
             </Link>
           </FadeIn>
         </div>
+      </section>
+
+      <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20">
+        <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">
+          A different model
+        </p>
+        <h2 className="mt-2 font-display text-3xl font-bold text-pine-900">
+          Beyond house hacking: coliving and PadSplit
+        </h2>
+        <p className="mt-4 text-pine-800">
+          House hacking means you live in the home. Coliving is the related,
+          more advanced model: rooms rented in a shared house, often when the
+          owner does not live there, including homes set up for PadSplit.
+          Caitlyn covers that work at Coliving Cait.
+        </p>
+        <a
+          href={links.colivingCait}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-clay-600 hover:text-clay-700"
+        >
+          Visit Coliving Cait
+          <span aria-hidden="true">→</span>
+        </a>
       </section>
 
       {/* Calculator — a free interactive tool, not gated behind an email signup */}
@@ -355,6 +389,10 @@ export default function Home() {
           </p>
         </FadeIn>
       </section>
+
+      <FaqSection />
+      <AgentCta />
+      <TestimonialsStrip />
 
       {/* Sign off */}
       <section className="border-t border-pine-100 bg-sage-950 py-16 text-center text-white">

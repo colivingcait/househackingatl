@@ -16,6 +16,7 @@ export function pageMetadata({
   image,
   type = "website",
   noIndex = false,
+  absoluteTitle = false,
 }: {
   /** Route path starting with "/", e.g. "/what-is-house-hacking" or "/" for home. */
   path: string;
@@ -25,12 +26,14 @@ export function pageMetadata({
   image?: string;
   type?: "website" | "article";
   noIndex?: boolean;
+  /** Skip the root title template so the document title matches `title` exactly. */
+  absoluteTitle?: boolean;
 }): Metadata {
   const url = `https://${siteConfig.domain}${path === "/" ? "" : path}`;
   const ogImage = image ?? DEFAULT_OG_IMAGE;
 
   return {
-    title,
+    title: absoluteTitle ? { absolute: title } : title,
     description,
     alternates: { canonical: path },
     openGraph: {

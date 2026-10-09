@@ -3,10 +3,14 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import CtaButton from "@/components/CtaButton";
+import AuthorByline from "@/components/AuthorByline";
+import AgentCta from "@/components/AgentCta";
+import JsonLd from "@/components/JsonLd";
 import KitSignupForm from "@/components/KitSignupForm";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import { links } from "@/lib/site-config";
 import { pageMetadata } from "@/lib/metadata";
+import { articleSchema } from "@/lib/schema";
 
 export function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }));
@@ -50,6 +54,15 @@ export default async function BlogPostPage({
 
   return (
     <>
+      <JsonLd
+        data={articleSchema({
+          headline: post.title,
+          description: post.excerpt,
+          path: `/blog/${post.slug}`,
+          image: post.coverImage,
+          datePublished: post.date,
+        })}
+      />
       <article className="border-b border-pine-100 bg-sage-950 text-white">
         <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20">
           <Link
@@ -64,6 +77,7 @@ export default async function BlogPostPage({
           <h1 className="mt-2 font-display text-3xl font-bold text-balance sm:text-5xl">
             {post.title}
           </h1>
+          <AuthorByline className="mt-4 text-sage-100" />
           {post.tags && post.tags.length > 0 && (
             <div className="mt-4 flex flex-wrap gap-2">
               {post.tags.map((tag) => (
@@ -107,6 +121,8 @@ export default async function BlogPostPage({
           Join the Facebook Group
         </CtaButton>
       </section>
+
+      <AgentCta />
     </>
   );
 }

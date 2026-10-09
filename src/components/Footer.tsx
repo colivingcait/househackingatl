@@ -1,15 +1,19 @@
 import Link from "next/link";
-import { links, licenseDisclosure, siteConfig } from "@/lib/site-config";
+import { contact, licenseDisclosure, links, meetup, siteConfig } from "@/lib/site-config";
 import { navLinks, secondaryLinks } from "@/data/nav";
 import { withUtm } from "@/lib/utm";
 import DoorMark from "./DoorMark";
 
-const elsewhereLinks = [
+const profileLinks = [
+  { href: links.linkedin, label: "LinkedIn" },
+  { href: links.zillow, label: "Zillow" },
+  { href: meetup.eventbriteOrganizerUrl, label: "Eventbrite" },
+  { href: links.instagram, label: "Instagram" },
+  { href: links.colivingCait, label: "Coliving Cait" },
   {
     href: links.facebookGroup && withUtm(links.facebookGroup, { source: "facebook" }),
     label: "Facebook Group",
   },
-  { href: links.colivingCait, label: "ColivingCait" },
   { href: links.atlantaWomenInvestors, label: "Atlanta Women Investors" },
   { href: links.roomsForRentAtl, label: "Rooms for Rent ATL" },
 ].filter((link) => link.href);
@@ -26,8 +30,19 @@ export default function Footer() {
                 House Hacking Atlanta
               </span>
             </div>
-            <p className="mt-3 max-w-xs text-sm text-sage-300">
-              {siteConfig.tagline}
+            <p className="mt-3 max-w-xs text-sm font-semibold text-white">
+              Caitlyn Verdugo, REALTOR®
+            </p>
+            <p className="mt-1 max-w-xs text-sm text-sage-300">
+              Keller Williams Realty Metro Atlanta
+            </p>
+            <p className="mt-3 flex flex-col gap-1 text-sm">
+              <a href={contact.phoneHref} className="hover:text-clay-300">
+                {contact.phoneDisplay}
+              </a>
+              <a href={contact.emailHref} className="hover:text-clay-300">
+                {contact.email}
+              </a>
             </p>
           </div>
 
@@ -46,13 +61,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          {elsewhereLinks.length > 0 && (
+          {profileLinks.length > 0 && (
             <div>
               <p className="text-sm font-semibold uppercase tracking-wide text-sage-400">
-                Elsewhere
+                Profiles
               </p>
               <ul className="mt-3 flex flex-col gap-2 text-sm">
-                {elsewhereLinks.map((link) => (
+                {profileLinks.map((link) => (
                   <li key={link.href}>
                     <a
                       href={link.href}

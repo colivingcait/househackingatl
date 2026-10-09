@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import AuthorBox from "@/components/AuthorBox";
+import AuthorByline from "@/components/AuthorByline";
+import AgentCta from "@/components/AgentCta";
 import ConversionCta from "@/components/ConversionCta";
 import GatedDownload from "@/components/GatedDownload";
 import JsonLd from "@/components/JsonLd";
@@ -113,7 +115,8 @@ export default async function ArticlePage({
           <h1 className="mt-4 font-display text-3xl font-bold text-balance text-pine-900 sm:text-4xl">
             {article.h1}
           </h1>
-          <p className="mt-3 text-sm text-pine-500">{article.readingTime}</p>
+          <AuthorByline className="mt-3 text-pine-600" />
+          <p className="mt-1 text-sm text-pine-500">{article.readingTime}</p>
 
           {showToc && (
             <div className="mt-8">
@@ -171,6 +174,7 @@ export default async function ArticlePage({
       )}
 
       <ConversionCta />
+      <AgentCta />
     </>
   );
 }

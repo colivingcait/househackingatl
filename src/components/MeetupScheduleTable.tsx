@@ -47,9 +47,9 @@ export default function MeetupScheduleTable() {
               </td>
               <td className="px-4 py-4 text-right">
                 <CtaButton
-                  href={event.eventbriteUrl || meetup.eventbriteOrganizerUrl || "/meetups"}
+                  href={event.eventbriteUrl || meetup.eventbriteCollectionUrl || "/meetups"}
                   variant="ghost"
-                  external={Boolean(event.eventbriteUrl || meetup.eventbriteOrganizerUrl)}
+                  external={Boolean(event.eventbriteUrl || meetup.eventbriteCollectionUrl)}
                   className="!px-4 !py-1.5 !text-xs"
                 >
                   Register
