@@ -9,11 +9,9 @@ need real values before the site should go live to the public.
 - [ ] **House stacking definition** — drafted copy is live on
       `/what-is-house-hacking#house-stacking` per your confirmation. Flag if
       anything needs to change.
-- [x] **Venue** — confirmed: New Realm Brewing, 550 Sommerset Terrace NE,
-      Suite 101, Atlanta, GA (`src/lib/site-config.ts` → `meetup.venue`).
-      Live on `/meetups` and in the Event schema. **Nice to have:** the ZIP
-      code, if handy — schema.org doesn't require it, but it's a small
-      completeness improvement.
+- [x] **Venue** — confirmed: New Realm Brewing Co., 550 Somerset Terrace NE,
+      Suite 101, Atlanta, GA 30306 (`src/lib/site-config.ts` → `meetup.venue`).
+      Live on `/meetups` and in the Event schema.
 - [ ] **Speaker names** for the topic calendar — currently render as
       "Speaker TBA" in `src/data/meetups.ts`. Confirmed so far: Krishen Shah
       (Highland Mortgage) for September, Whitney Mckee (Allstate Insurance)
@@ -62,6 +60,7 @@ need real values before the site should go live to the public.
       Send more whenever you have them and I'll add them the same way.
 - [x] **Eventbrite collection URL** — confirmed:
       `https://www.eventbrite.com/cc/house-hacking-atl-4861227`, set on
+      `meetup.eventbriteCollectionUrl`. The organizer profile is
       `meetup.eventbriteOrganizerUrl`. Individual events can still get
       their own link via `eventbriteUrl` on each entry in
       `src/data/meetups.ts`.
@@ -83,8 +82,8 @@ need real values before the site should go live to the public.
 - [x] Facebook group ("House Hacking Atlanta") — confirmed:
       `https://facebook.com/groups/househackingatl`
 
-Live in `src/lib/site-config.ts` under `links` (Eventbrite moved to
-`meetup.eventbriteOrganizerUrl`, now confirmed — see above).
+Live in `src/lib/site-config.ts` under `links` (Eventbrite collection
+and organizer URLs live on `meetup`, now confirmed — see above).
 
 ## Legal
 

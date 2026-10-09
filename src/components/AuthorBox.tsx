@@ -11,7 +11,7 @@ export default function AuthorBox() {
     <div className="flex gap-4 rounded-xl border border-pine-200 bg-sage-50 p-5">
       {author.photo ? (
         <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full">
-          <Image src={author.photo} alt={author.name} fill className="object-cover" />
+          <Image src={author.photo} alt={author.name} fill sizes="56px" className="object-cover object-top" />
         </div>
       ) : (
         <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-dashed border-sage-300 bg-white text-[10px] text-pine-400">

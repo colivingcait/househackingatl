@@ -2,6 +2,7 @@ import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import Breadcrumb from "@/components/Breadcrumb";
 import ConversionCta from "@/components/ConversionCta";
+import AgentCta from "@/components/AgentCta";
 import FadeIn from "@/components/FadeIn";
 import JsonLd from "@/components/JsonLd";
 import type { Hub } from "@/data/hubs";
@@ -108,6 +109,7 @@ export default function HubPage({ hub }: { hub: Hub }) {
       ))}
 
       <ConversionCta lead={hub.nextStep.description} />
+      <AgentCta />
     </>
   );
 }

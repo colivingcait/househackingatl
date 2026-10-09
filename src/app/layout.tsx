@@ -8,6 +8,8 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { siteConfig } from "@/lib/site-config";
 import { getSearchIndex } from "@/lib/search";
 import { pageMetadata } from "@/lib/metadata";
+import JsonLd from "@/components/JsonLd";
+import { entityGraphSchema } from "@/lib/schema";
 
 const sourceSans = Source_Sans_3({
   subsets: ["latin"],
@@ -27,11 +29,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(`https://${siteConfig.domain}`),
   ...pageMetadata({
     path: "/",
-    title: `${siteConfig.name} — ${siteConfig.tagline}`,
-    description: siteConfig.shortBlurb,
+    title: siteConfig.homeTitle,
+    description: siteConfig.homeDescription,
   }),
   title: {
-    default: `${siteConfig.name} — ${siteConfig.tagline}`,
+    default: siteConfig.homeTitle,
     template: `%s — ${siteConfig.name}`,
   },
 };
@@ -45,6 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${sourceSans.variable} ${libreBaskerville.variable} font-sans antialiased`}>
+        <JsonLd data={entityGraphSchema()} />
         <FacebookPixel />
         <GoogleAnalytics />
         <Header searchIndex={searchIndex} />

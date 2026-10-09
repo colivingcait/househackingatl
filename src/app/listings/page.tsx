@@ -35,15 +35,13 @@ export default function ListingsPage() {
         title="What a house hack actually looks like"
         subtitle="A few real rooms and homes from around the Atlanta metro, curated by Rooms for Rent ATL."
       >
-        <div>
-          <CtaButton
-            href={links.roomsForRentAtl || "#"}
-            variant="primary"
-            external={Boolean(links.roomsForRentAtl)}
-          >
-            {links.roomsForRentAtl ? "Visit Rooms for Rent ATL" : "Link coming soon"}
-          </CtaButton>
-        </div>
+        {links.roomsForRentAtl ? (
+          <div>
+            <CtaButton href={links.roomsForRentAtl} variant="primary" external>
+              Visit Rooms for Rent ATL
+            </CtaButton>
+          </div>
+        ) : null}
       </PageHero>
 
       <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-20">

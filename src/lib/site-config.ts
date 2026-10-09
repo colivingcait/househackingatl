@@ -17,6 +17,33 @@ export const siteConfig = {
   doorMotif: "Every door is an opportunity. 🚪",
   shortBlurb:
     "House hacking in the Atlanta metro — living in one part of your property and renting out another. Real numbers, real deals, real support. Live for less. Build more wealth. Every door is an opportunity.",
+  homeTitle:
+    "House Hacking Atlanta — Caitlyn Verdugo, Atlanta House Hacking Realtor (KW)",
+  homeDescription:
+    "Atlanta house hacking realtor Caitlyn Verdugo (Keller Williams Metro Atlanta) helps you buy a home that pays you back — rent-by-the-room, coliving, PadSplit-ready, duplex and ADU. Free monthly meetup + 83 guides.",
+};
+
+/** Public contact. This is the only phone and email the site publishes. */
+export const contact = {
+  email: "CV.SellsHomes@gmail.com",
+  emailHref: "mailto:CV.SellsHomes@gmail.com",
+  phoneDisplay: "678-884-4494",
+  phoneHref: "tel:+16788844494",
+  phoneE164: "+1-678-884-4494",
+};
+
+/**
+ * Keller Williams Realty Metro Atlanta office, used only in JSON-LD
+ * worksFor. Not rendered as Caitlyn's own address or phone.
+ */
+export const brokerage = {
+  name: "Keller Williams Realty Metro Atlanta",
+  telephone: "+1-404-564-5560",
+  streetAddress: "101 W Ponce de Leon Ave",
+  addressLocality: "Decatur",
+  addressRegion: "GA",
+  postalCode: "30030",
+  addressCountry: "US",
 };
 
 /**
@@ -25,17 +52,16 @@ export const siteConfig = {
  */
 export const author = {
   name: "Caitlyn Verdugo",
-  bio: "Atlanta REALTOR®, investor, and serial house hacker.",
-  credential: "REALTOR®, Keller Williams Metro Atlanta",
+  /** Identity order: realtor, investor, coliving operator, women's community leader. Coach is omitted — this site doesn't offer a coaching program. */
+  bio: "Atlanta REALTOR® with Keller Williams Realty Metro Atlanta, real estate investor, and coliving operator. Co-founder of the Women's Coliving Summit and She Leads Coliving.",
+  credential: "REALTOR®, Keller Williams Realty Metro Atlanta",
+  byline: "REALTOR®, KW Metro Atlanta",
   photo: "/images/caitlyn-headshot.jpg",
-  email: "cv.sellshomes@gmail.com",
-  // Longer version for /about. Deliberately free of specific numbers
-  // (properties owned, years active, dollar figures) since none have been
-  // confirmed — swap in real specifics whenever Caitlyn wants to add them.
+  email: contact.email,
   fullBio: [
-    "I bought my first house hack because the math made too much sense to ignore — live in part of the property, rent out the rest, and let someone else cover most of my mortgage. It worked. So I did it again. That's the whole idea behind this site: the same math, laid out plainly, for anyone willing to run the numbers before they buy.",
-    "I'm a licensed REALTOR® with Keller Williams Metro Atlanta, and house hacking isn't a side note to my business — it's the center of it. I work with buyers who are looking at a property specifically because of what it could rent for, not just what it looks like on a Sunday tour, and I built the monthly meetup and this whole library of articles because there wasn't a single place in Atlanta covering the real mechanics: financing, running the numbers, and the day-to-day of actually sharing a home with a tenant.",
-    "If you're past the first house hack and thinking about what a more intentional shared-living setup could look like, that's ColivingCait — a different brand, a more advanced model, for when you're ready for it. Most people start here, though: one property, one extra bedroom or unit, and the question of whether the numbers actually work. That's exactly what I help people figure out.",
+    "I'm Caitlyn Verdugo, an Atlanta REALTOR® with Keller Williams Realty Metro Atlanta and a serial house hacker. I help buyers find homes that pay them back: rent-by-the-room, basement apartments, small multifamily, and ADUs.",
+    "As an investor, I operate 50+ coliving rooms across metro Atlanta. Coliving is a different model from house hacking — rooms rented in a shared home, often when the owner does not live there — and I can help with that, including PadSplit-style rentals, when you're ready. I co-founded the Women's Coliving Summit and She Leads Coliving.",
+    "I started House Hacking Atlanta and the monthly meetup because no one place in Atlanta covered the real mechanics: financing, running the numbers, and the day-to-day of sharing a home. If you're past the first house hack, Coliving Cait is the brand for that next step. Most people start here: one property, one extra bedroom or unit, and the question of whether the numbers work.",
   ],
 };
 
@@ -49,14 +75,13 @@ export const meetup = {
   // see CLAUDE.md) doesn't apply here; unlike her own listings, people need
   // to be able to find this address.
   venue: {
-    name: "New Realm Brewing",
+    name: "New Realm Brewing Co.",
     confirmed: true,
-    street: "550 Sommerset Terrace NE, Suite 101",
+    street: "550 Somerset Terrace NE, Suite 101",
     city: "Atlanta",
     state: "GA",
-    // NEEDS CAITLYN: ZIP code — optional for the schema/display address
-    // below, but nice to have for a fully-specified PostalAddress.
-    address: "550 Sommerset Terrace NE, Suite 101, Atlanta, GA",
+    postalCode: "30306",
+    address: "550 Somerset Terrace NE, Suite 101, Atlanta, GA 30306",
   },
   schedule: [
     { label: "Doors & food ordering", time: "6:30 – 7:00 PM" },
@@ -65,10 +90,12 @@ export const meetup = {
     { label: "Open networking", time: "7:45 – 9:00 PM" },
   ],
   sizeLabel: "~20–30 people",
-  // House Hacking Atlanta collection — groups all the recurring meetup
-  // events. Individual events can still override with their own
-  // `eventbriteUrl` in src/data/meetups.ts.
-  eventbriteOrganizerUrl: "https://www.eventbrite.com/cc/house-hacking-atl-4861227",
+  // Collection of the recurring meetup events. Register buttons use this
+  // unless an event has its own `eventbriteUrl` in src/data/meetups.ts.
+  eventbriteCollectionUrl: "https://www.eventbrite.com/cc/house-hacking-atl-4861227",
+  // Organizer profile — Caitlyn Verdugo | House Hacking Atlanta.
+  eventbriteOrganizerUrl:
+    "https://www.eventbrite.com/o/caitlyn-verdugo-house-hacking-atlanta-119802863511",
 };
 
 export const womensGroup = {
@@ -84,14 +111,15 @@ export const womensGroup = {
  * a broken or dead link when a URL is empty.
  */
 export const links = {
-  colivingCait: "https://colivingcait.com",
+  colivingCait: "https://www.colivingcait.com",
+  book: "https://www.colivingcait.com/book",
+  linkedin: "https://www.linkedin.com/in/coliving-cait",
+  instagram: "https://instagram.com/colivingcait",
+  zillow: "https://www.zillow.com/profile/caitlynverdugo",
+  womensColivingSummit: "https://www.womenscolivingsummit.com/about/",
   atlantaWomenInvestors: "",
   roomsForRentAtl: "",
   facebookGroup: "https://facebook.com/groups/househackingatl",
-  // Base scheduling link — the month/back params on the URL you sent are
-  // just view-state from whatever month you were looking at when you
-  // copied it, not part of the permanent link, so they're dropped here.
-  calendly: "https://calendly.com/colivingcait/buyer-or-seller-discovery-call",
 };
 
 /**
@@ -142,6 +170,6 @@ export const sponsorInquiry = {
  * as-is.
  */
 export const licenseDisclosure = {
-  text: "Caitlyn Verdugo, REALTOR®, Keller Williams Metro Atlanta",
+  text: "Caitlyn Verdugo, REALTOR® · Keller Williams Realty Metro Atlanta",
   confirmed: false,
 };
