@@ -157,8 +157,7 @@ export const googleAnalytics = {
  * (Resend, Formspree, a Kit tag call, etc.) later without changing the UI.
  */
 export const sponsorInquiry = {
-  // NEEDS CAITLYN: which inbox should sponsor inquiries land in?
-  contactEmail: "hello@househackingatl.com",
+  contactEmail: contact.email,
 };
 
 /**
