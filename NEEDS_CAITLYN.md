@@ -67,12 +67,11 @@ need real values before the site should go live to the public.
 - [ ] **Meta Pixel ID** — `NEXT_PUBLIC_META_PIXEL_ID`. Once set, the pixel
       fires `PageView` on load and `Lead` on both signup forms. Sponsor
       inquiries fire a custom `SponsorInquiry` event.
-- [ ] **Sponsor inquiry inbox** — `sponsorInquiry.contactEmail` is set to a
-      placeholder `hello@househackingatl.com`. The "Become a Sponsor" form
-      has no backend yet (no email provider confirmed) — it opens a
-      pre-filled `mailto:` to that address. Confirm the real inbox, or say
-      the word if you'd rather I wire up a real form handler (e.g. Resend)
-      instead.
+- [x] **Sponsor inquiry inbox** — `sponsorInquiry.contactEmail` uses the
+      public contact address, `CV.SellsHomes@gmail.com`. The "Become a
+      Sponsor" form still has no backend — it opens a pre-filled `mailto:`
+      to that address. A real form handler (e.g. Resend) can replace it
+      later without changing the inbox.
 
 ## URLs (blank ones render a "link coming soon" state)
 

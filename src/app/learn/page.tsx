@@ -1,6 +1,7 @@
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import FadeIn from "@/components/FadeIn";
+import AgentCta from "@/components/AgentCta";
 import { hubs } from "@/data/hubs";
 import { getAllArticleMeta } from "@/lib/articles";
 import { pageMetadata } from "@/lib/metadata";
@@ -128,6 +129,8 @@ export default function LearnPage() {
           ))}
         </div>
       </section>
+
+      <AgentCta />
     </>
   );
 }
