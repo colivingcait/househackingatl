@@ -43,7 +43,7 @@ export default function MeetupScheduleTable() {
                   ? event.speakerCompany
                     ? `${event.speaker}, ${event.speakerCompany}`
                     : event.speaker
-                  : "Speaker TBA"}
+                  : null}
               </td>
               <td className="px-4 py-4 text-right">
                 <CtaButton

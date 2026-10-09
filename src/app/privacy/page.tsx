@@ -1,6 +1,6 @@
 import PageHero from "@/components/PageHero";
 import { pageMetadata } from "@/lib/metadata";
-import { sponsorInquiry } from "@/lib/site-config";
+import { contact } from "@/lib/site-config";
 
 export const metadata = pageMetadata({
   path: "/privacy",
@@ -68,7 +68,7 @@ export default function PrivacyPage() {
           <p>
             Every email we send includes an unsubscribe link — one click removes you from that list. If you&rsquo;d
             like your information removed entirely, or have any other privacy question, email us at{" "}
-            <a href={`mailto:${sponsorInquiry.contactEmail}`}>{sponsorInquiry.contactEmail}</a> and we&rsquo;ll handle
+            <a href={contact.emailHref}>{contact.email}</a> and we&rsquo;ll handle
             it directly.
           </p>
 
@@ -84,7 +84,7 @@ export default function PrivacyPage() {
           <h2>Questions</h2>
           <p>
             Reach out any time at{" "}
-            <a href={`mailto:${sponsorInquiry.contactEmail}`}>{sponsorInquiry.contactEmail}</a>.
+            <a href={contact.emailHref}>{contact.email}</a>.
           </p>
         </div>
       </section>

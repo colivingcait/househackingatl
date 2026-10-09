@@ -10,7 +10,7 @@ import JsonLd from "@/components/JsonLd";
 import { author, links, meetup, womensGroup } from "@/lib/site-config";
 import { meetupSchedule } from "@/data/meetups";
 import { pageMetadata } from "@/lib/metadata";
-import { meetupEventSchema, breadcrumbListSchema } from "@/lib/schema";
+import { meetupEventSchema, breadcrumbListSchema, isUpcomingMeetup } from "@/lib/schema";
 
 export const metadata = pageMetadata({
   path: "/meetups",
@@ -25,7 +25,9 @@ export default function MeetupsPage() {
 
   return (
     <>
-      {meetupSchedule.map((event) => (
+      {meetupSchedule
+        .filter((event) => isUpcomingMeetup(event.month))
+        .map((event) => (
         <JsonLd
           key={event.month}
           data={meetupEventSchema({
@@ -43,7 +45,7 @@ export default function MeetupsPage() {
       <PageHero
         eyebrow="Come as you are"
         title="The monthly meetup"
-        subtitle={`${meetup.cadenceLabel}, ${meetup.venue.name}. One guest speaker, plenty of networking, ${meetup.sizeLabel}.`}
+        subtitle={`${meetup.cadenceLabel}, ${meetup.venue.name} One guest speaker, plenty of networking, ${meetup.sizeLabel}.`}
         breadcrumb={<Breadcrumb variant="dark" items={breadcrumbItems} />}
       >
         <div>

@@ -1,8 +1,8 @@
 /**
  * Monthly meetup topic calendar. One line = one line edit.
  *
- * `speaker` is intentionally optional — layout must not break when a
- * speaker isn't confirmed yet (render "Speaker TBA").
+ * `speaker` is intentionally optional — when it is missing, the schedule
+ * leaves that cell blank.
  *
  * `eventbriteUrl` is optional per-event. When empty, the CTA falls back to
  * the Eventbrite organizer page (see site-config.ts) instead of a dead link.

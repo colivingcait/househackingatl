@@ -225,6 +225,13 @@ function secondTuesdayOf(monthLabel: string): Date {
   return nthWeekdayOfMonth(parsed.getFullYear(), parsed.getMonth(), 2, 2);
 }
 
+/** True when the meetup's 9:00 PM Eastern end is still ahead of `now`. */
+export function isUpcomingMeetup(monthLabel: string, now = new Date()): boolean {
+  const date = secondTuesdayOf(monthLabel);
+  const end = easternIso(date.getFullYear(), date.getMonth(), date.getDate(), 21, 0);
+  return new Date(end).getTime() > now.getTime();
+}
+
 export function meetupEventSchema({
   monthLabel,
   topic,

@@ -30,20 +30,14 @@ export const featuredTestimonials: Testimonial[] = [
   {
     name: "BurkeCapital",
     role: "repeat buyer",
-    quote: "She can walk through a property and tell you almost exactly what things are going to cost to fix.",
+    quote: "She can walk through a property and tell you almost exactly what things are going to cost to fix, which has saved our butts like in the sewer situation.",
     datePublished: "2026-01-12",
   },
   {
     name: "Malika D.",
     role: "seller",
-    quote: "We had been trying to sell an investment property on our own for months and we’re about to give up when Caitlyn came and offered her services.",
+    quote: "I highly recommend Caitlyn, we had been trying to sell an investment property on our own for months and we’re about to give up when Caitlyn came and offered her services.",
     datePublished: "2026-01-17",
-  },
-  {
-    name: "Kevin F.",
-    role: "first-time buyer",
-    quote: "Caitlyn was the best realtor I encountered in my home buying experience.",
-    datePublished: "2024-06-05",
   },
   {
     name: "Adam U.",
