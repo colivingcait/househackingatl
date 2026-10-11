@@ -25,6 +25,8 @@ export const siteConfig = {
 /** One label each, used everywhere that button appears. */
 export const cta = {
   book: "Book a call",
+  /** Homepage hero only. */
+  bookHero: "Book a free call",
   nextMeetup: "Next meetup",
   register: "Register",
   listings: "Get listings",
@@ -64,6 +66,9 @@ export const author = {
   bio: "Atlanta REALTOR® with Keller Williams Realty Metro Atlanta, real estate investor, and coach. 6+ years. Co-founder of the Women's Coliving Summit and She Leads Coliving.",
   credential: "Realtor · Investor · Coach · 6+ years",
   byline: "REALTOR®, KW Metro Atlanta",
+  /** One sentence for the article author box. */
+  oneLiner:
+    "Atlanta REALTOR® with Keller Williams Realty Metro Atlanta, investor, and coach.",
   /** Verbatim meetup host bio. Do not paraphrase. */
   hostBio:
     "Caitlyn Verdugo is an Atlanta house-hacking REALTOR® with Keller Williams Realty Metro Atlanta. She's a real estate investor and coliving operator, and began her journey in real estate investing with a basement conversion. She founded House Hacking Atlanta and hosts this free monthly meetup aimed at teaching other investors how to begin their house hacking and investing journey.",

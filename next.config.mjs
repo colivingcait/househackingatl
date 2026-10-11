@@ -6,11 +6,6 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: "/buy-and-sell",
-        destination: "https://colivingcait.com/buy-and-sell",
-        permanent: true,
-      },
-      {
         source: "/:path*",
         has: [{ type: "host", value: "househackingatl.com" }],
         destination: "https://www.househackingatl.com/:path*",

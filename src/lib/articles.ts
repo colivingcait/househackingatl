@@ -4,8 +4,22 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import remarkHtml from "remark-html";
 import readingTime from "reading-time";
+import { articleDatesByFile } from "@/lib/article-dates";
 
 const ARTICLES_DIR = path.join(process.cwd(), "blog");
+
+/**
+ * Interiors only. Exteriors (the hero house, the ADU cottage) stay off
+ * article images. Anything not listed here keeps the site og-default.
+ */
+const INTERIOR_IMAGES: Record<string, string> = {
+  "basement-airbnb": "/images/models/basement-conversion.jpg",
+  "furnishing-a-rental": "/images/models/rent-by-the-room.jpg",
+  "furnished-vs-unfurnished-house-hack": "/images/models/rent-by-the-room.jpg",
+  "which-space-rents": "/images/models/rent-by-the-room.jpg",
+  "shared-spaces-that-work": "/images/models/rent-by-the-room.jpg",
+  "what-its-like-to-live-with-your-tenants": "/images/models/rent-by-the-room.jpg",
+};
 
 export type ArticleMeta = {
   /** Filesystem-safe route slug, no leading slash — e.g. "four-numbers-house-hack" */
@@ -17,6 +31,12 @@ export type ArticleMeta = {
   secondaryKeywords: string[];
   /** Target slugs (no leading slash) this article should link to in-body. Not yet wired into body text. */
   internalLinks: string[];
+  /** ISO 8601. Frontmatter wins; otherwise git first-commit, then the committed snapshot. */
+  datePublished: string;
+  /** ISO 8601. Frontmatter wins; otherwise git last-commit, then the committed snapshot. */
+  dateModified: string;
+  /** Root-relative interior image, when one is relevant. Omit to use og-default. */
+  image?: string;
 };
 
 export type ArticleHeading = { id: string; text: string };
@@ -70,6 +90,48 @@ function readFrontmatter(file: string) {
   return matter(raw);
 }
 
+function frontmatterDate(value: unknown): string | undefined {
+  if (typeof value !== "string" || !value.trim()) return undefined;
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) return undefined;
+  return value;
+}
+
+function datesFor(file: string, data: Record<string, unknown>) {
+  const git = articleDatesByFile()[`blog/${file}`];
+  const datePublished =
+    frontmatterDate(data.date_published) ||
+    frontmatterDate(data.datePublished) ||
+    git?.datePublished;
+  let dateModified =
+    frontmatterDate(data.date_modified) ||
+    frontmatterDate(data.dateModified) ||
+    git?.dateModified ||
+    datePublished;
+  if (!datePublished || !dateModified) {
+    throw new Error(`Missing publish dates for blog/${file}`);
+  }
+  if (new Date(dateModified).getTime() < new Date(datePublished).getTime()) {
+    dateModified = datePublished;
+  }
+  return { datePublished, dateModified };
+}
+
+function metaFrom(file: string, data: Record<string, unknown>): ArticleMeta {
+  const slug = stripLeadingSlash(data.slug as string);
+  return {
+    slug,
+    seoTitle: data.seo_title as string,
+    h1: data.h1 as string,
+    metaDescription: data.meta_description as string,
+    primaryKeyword: data.primary_keyword as string,
+    secondaryKeywords: (data.secondary_keywords as string[]) || [],
+    internalLinks: ((data.internal_links as string[]) || []).map(stripLeadingSlash),
+    ...datesFor(file, data),
+    ...(INTERIOR_IMAGES[slug] ? { image: INTERIOR_IMAGES[slug] } : {}),
+  };
+}
+
 function listFiles(): string[] {
   if (!fs.existsSync(ARTICLES_DIR)) return [];
   return fs.readdirSync(ARTICLES_DIR).filter((file) => file.endsWith(".md"));
@@ -78,15 +140,7 @@ function listFiles(): string[] {
 export function getAllArticleMeta(): ArticleMeta[] {
   return listFiles().map((file) => {
     const { data } = readFrontmatter(file);
-    return {
-      slug: stripLeadingSlash(data.slug as string),
-      seoTitle: data.seo_title as string,
-      h1: data.h1 as string,
-      metaDescription: data.meta_description as string,
-      primaryKeyword: data.primary_keyword as string,
-      secondaryKeywords: (data.secondary_keywords as string[]) || [],
-      internalLinks: ((data.internal_links as string[]) || []).map(stripLeadingSlash),
-    };
+    return metaFrom(file, data as Record<string, unknown>);
   });
 }
 
@@ -104,13 +158,7 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
   const stats = readingTime(body);
 
   return {
-    slug: stripLeadingSlash(data.slug as string),
-    seoTitle: data.seo_title as string,
-    h1: data.h1 as string,
-    metaDescription: data.meta_description as string,
-    primaryKeyword: data.primary_keyword as string,
-    secondaryKeywords: (data.secondary_keywords as string[]) || [],
-    internalLinks: ((data.internal_links as string[]) || []).map(stripLeadingSlash),
+    ...metaFrom(file, data as Record<string, unknown>),
     contentHtml: addHeadingIds(processed.toString(), headings),
     readingTime: stats.text,
     wordCount: Math.round(stats.words),

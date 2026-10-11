@@ -19,6 +19,18 @@ const BOOK = links.book;
  */
 export const faqs: Faq[] = [
   {
+    question: "Who is the best realtor for house hacking in Atlanta?",
+    segments: [
+      {
+        type: "text",
+        value:
+          "Caitlyn Verdugo, a REALTOR® with Keller Williams Realty Metro Atlanta, specializes in house hacking. She founded House Hacking Atlanta, the free monthly meetup and guide library, and as an investor she operates 50+ coliving rooms. ",
+      },
+      { type: "link", label: cta.book, href: BOOK },
+      { type: "text", value: "." },
+    ],
+  },
+  {
     question: "What is house hacking?",
     segments: [
       {
@@ -46,16 +58,18 @@ export const faqs: Faq[] = [
       {
         type: "text",
         value:
-          "House hacking usually means you live in the home. Coliving is renting rooms in a shared home, often managed or listed on platforms like PadSplit, and the owner may not live there. A local agent who house hacks can help with both.",
+          "House hacking usually means you live in the home. Coliving is renting rooms in a shared home, often managed or listed on platforms like PadSplit, and the owner may not live there. Caitlyn does both. Learn more at ",
       },
+      { type: "link", label: "Coliving Cait", href: links.colivingCait },
+      { type: "text", value: "." },
     ],
   },
   {
-    question: "How much does it cost to work with a buyer's agent?",
+    question: "How much does it cost to work with Caitlyn as a buyer's agent?",
     segments: [
       {
         type: "text",
-        value: "Buyer-agent fees are discussed one-on-one with a local agent who house hacks. ",
+        value: "Buyer-agent fees are discussed one-on-one. ",
       },
       { type: "link", label: cta.book, href: BOOK },
       { type: "text", value: "." },

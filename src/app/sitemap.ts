@@ -9,6 +9,7 @@ const routes = [
   "/learn",
   "/resources",
   "/meetups",
+  "/buy-and-sell",
   "/group",
   "/about",
   "/privacy",
@@ -26,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
   const articleRoutes = getAllArticleMeta().map((article) => ({
     url: `${base}/${article.slug}`,
-    lastModified: new Date(),
+    lastModified: new Date(article.dateModified),
   }));
   const postRoutes = getAllPosts().map((post) => ({
     url: `${base}/blog/${post.slug}`,
