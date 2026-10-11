@@ -11,6 +11,7 @@ export const metadata = pageMetadata({
   title: "See It In Practice",
   description:
     "A look at what house hacking looks like in practice around the Atlanta metro, courtesy of Rooms for Rent ATL.",
+  noIndex: true,
 });
 
 // NEEDS CAITLYN: more photos to round this out — 4 of 6 tiles are real,
@@ -21,7 +22,7 @@ export const metadata = pageMetadata({
 const tiles = [
   { label: "Rent by the room", span: "sm:row-span-2", image: "/images/models/rent-by-the-room.jpg" },
   { label: "Basement conversion", span: "", image: "/images/models/basement-conversion.jpg" },
-  { label: "Backyard ADU", span: "", image: "/images/models/adu-detached-unit.jpg" },
+  { label: "Backyard ADU", span: "", image: "/images/models/adu-cottage.jpg" },
   { label: "Small multifamily", span: "sm:row-span-2", image: "/images/hero-house.jpg" },
   { label: "Shared common space", span: "" },
   { label: "One side of a duplex", span: "" },

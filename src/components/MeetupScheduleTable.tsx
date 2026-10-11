@@ -1,6 +1,4 @@
 import { meetupSchedule } from "@/data/meetups";
-import { meetup } from "@/lib/site-config";
-import CtaButton from "./CtaButton";
 
 export default function MeetupScheduleTable() {
   return (
@@ -15,9 +13,6 @@ export default function MeetupScheduleTable() {
             </th>
             <th className="hidden px-4 py-3 font-semibold md:table-cell">
               Speaker
-            </th>
-            <th className="px-4 py-3 font-semibold">
-              <span className="sr-only">Register</span>
             </th>
           </tr>
         </thead>
@@ -44,16 +39,6 @@ export default function MeetupScheduleTable() {
                     ? `${event.speaker}, ${event.speakerCompany}`
                     : event.speaker
                   : null}
-              </td>
-              <td className="px-4 py-4 text-right">
-                <CtaButton
-                  href={event.eventbriteUrl || meetup.eventbriteCollectionUrl || "/meetups"}
-                  variant="ghost"
-                  external={Boolean(event.eventbriteUrl || meetup.eventbriteCollectionUrl)}
-                  className="!px-4 !py-1.5 !text-xs"
-                >
-                  Register
-                </CtaButton>
               </td>
             </tr>
           ))}

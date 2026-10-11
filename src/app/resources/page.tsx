@@ -1,6 +1,7 @@
 import PageHero from "@/components/PageHero";
 import GatedDownload from "@/components/GatedDownload";
 import FadeIn from "@/components/FadeIn";
+import AgentCta from "@/components/AgentCta";
 import { GatedDownloadProvider } from "@/lib/gated-download-context";
 import { resources } from "@/data/resources";
 import { pageMetadata } from "@/lib/metadata";
@@ -32,6 +33,8 @@ export default function ResourcesPage() {
           </div>
         </GatedDownloadProvider>
       </section>
+
+      <AgentCta />
     </>
   );
 }

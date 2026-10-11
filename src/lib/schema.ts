@@ -35,12 +35,14 @@ export function articleSchema({
   path,
   image,
   datePublished,
+  dateModified,
 }: {
   headline: string;
   description: string;
   path: string;
   image?: string;
   datePublished?: string;
+  dateModified?: string;
 }) {
   return {
     "@context": "https://schema.org",
@@ -49,7 +51,13 @@ export function articleSchema({
     description,
     image: [image ? absoluteUrl(image) : DEFAULT_IMAGE],
     ...(datePublished ? { datePublished } : {}),
-    author: { "@id": PERSON_ID },
+    ...(dateModified || datePublished ? { dateModified: dateModified ?? datePublished } : {}),
+    author: {
+      "@type": "Person",
+      "@id": PERSON_ID,
+      name: author.name,
+      url: `${BASE}/about`,
+    },
     publisher: { "@id": ORG_ID },
     mainEntityOfPage: { "@type": "WebPage", "@id": absoluteUrl(path) },
   };
@@ -96,78 +104,93 @@ export function faqPageSchema(qas: { question: string; answer: string }[]) {
  * not on Person alone, so Caitlyn is both types. Only reviews shown on the
  * page are included. The 5.0 / 18 count is the Zillow total.
  */
-export function entityGraphSchema() {
-  const reviews = testimonialsForSchema().map((item) => ({
-    "@type": "Review",
-    author: { "@type": "Person", name: item.name },
-    datePublished: item.datePublished,
-    reviewBody: item.quote,
-    reviewRating: {
-      "@type": "Rating",
-      ratingValue: "5",
-      bestRating: "5",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Zillow",
-      sameAs: zillowReviews.profileUrl,
-    },
-  }));
+/** Full Person + RealEstateAgent node. Same @id on every page that names Caitlyn. */
+export function caitlynAgentNode({ includeReviews = false }: { includeReviews?: boolean } = {}) {
+  const reviews = includeReviews
+    ? testimonialsForSchema().map((item) => ({
+        "@type": "Review",
+        author: { "@type": "Person", name: item.name },
+        datePublished: item.datePublished,
+        reviewBody: item.quote,
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5",
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Zillow",
+          sameAs: zillowReviews.profileUrl,
+        },
+      }))
+    : undefined;
 
+  return {
+    "@type": ["Person", "RealEstateAgent"],
+    "@id": PERSON_ID,
+    name: author.name,
+    alternateName: "Coliving Cait",
+    jobTitle: "REALTOR®",
+    description:
+      "Atlanta REALTOR®, investor, and coach with Keller Williams Realty Metro Atlanta. 6+ years specializing in house hacking, rent-by-the-room, coliving, and PadSplit-ready properties.",
+    image: absoluteUrl(author.photo),
+    url: "https://www.colivingcait.com/about",
+    email: contact.emailHref,
+    telephone: contact.phoneE164,
+    worksFor: {
+      "@type": "RealEstateAgent",
+      name: brokerage.name,
+      telephone: brokerage.telephone,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: brokerage.streetAddress,
+        addressLocality: brokerage.addressLocality,
+        addressRegion: brokerage.addressRegion,
+        postalCode: brokerage.postalCode,
+        addressCountry: brokerage.addressCountry,
+      },
+    },
+    knowsAbout: [
+      "House hacking",
+      "Rent by the room",
+      "Coliving",
+      "PadSplit",
+      "Small multifamily",
+      "ADUs",
+      "FHA owner-occupant financing",
+      "Atlanta real estate",
+    ],
+    areaServed: [
+      { "@type": "City", name: "Atlanta" },
+      { "@type": "City", name: "Decatur" },
+      { "@type": "Place", name: "East Atlanta" },
+      { "@type": "AdministrativeArea", name: "DeKalb County, GA" },
+    ],
+    sameAs: [
+      links.colivingCait,
+      links.atlantaWomenInvestors,
+      links.zillow,
+      meetup.eventbriteOrganizerUrl,
+      `${BASE}/about`,
+      links.linkedin,
+      links.instagram,
+      links.womensColivingSummit,
+    ],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: zillowReviews.ratingValue,
+      bestRating: "5",
+      reviewCount: zillowReviews.reviewCount,
+    },
+    ...(reviews ? { review: reviews } : {}),
+  };
+}
+
+export function entityGraphSchema() {
   return {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": ["Person", "RealEstateAgent"],
-        "@id": PERSON_ID,
-        name: author.name,
-        alternateName: "Coliving Cait",
-        jobTitle: "REALTOR®",
-        description:
-          "Atlanta REALTOR® with Keller Williams Realty Metro Atlanta specializing in house hacking, rent-by-the-room, coliving and PadSplit-ready properties; real estate investor and coliving operator.",
-        image: absoluteUrl(author.photo),
-        url: "https://www.colivingcait.com/about",
-        email: contact.emailHref,
-        telephone: contact.phoneE164,
-        worksFor: {
-          "@type": "RealEstateAgent",
-          name: brokerage.name,
-          telephone: brokerage.telephone,
-          address: {
-            "@type": "PostalAddress",
-            streetAddress: brokerage.streetAddress,
-            addressLocality: brokerage.addressLocality,
-            addressRegion: brokerage.addressRegion,
-            postalCode: brokerage.postalCode,
-            addressCountry: brokerage.addressCountry,
-          },
-        },
-        knowsAbout: [
-          "House hacking",
-          "Rent by the room",
-          "Coliving",
-          "PadSplit",
-          "Small multifamily",
-          "ADUs",
-          "FHA owner-occupant financing",
-          "Atlanta real estate",
-        ],
-        sameAs: [
-          links.colivingCait,
-          links.linkedin,
-          links.instagram,
-          links.zillow,
-          meetup.eventbriteOrganizerUrl,
-          links.womensColivingSummit,
-        ],
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: zillowReviews.ratingValue,
-          bestRating: "5",
-          reviewCount: zillowReviews.reviewCount,
-        },
-        review: reviews,
-      },
+      caitlynAgentNode({ includeReviews: true }),
       {
         "@type": "Organization",
         "@id": ORG_ID,
@@ -192,6 +215,26 @@ export function entityGraphSchema() {
         publisher: { "@id": ORG_ID },
         author: { "@id": PERSON_ID },
       },
+    ],
+  };
+}
+
+/** Buy-and-sell page: the visible Realtor, plus a WebPage that points at her. */
+export function buyAndSellPageSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${absoluteUrl("/buy-and-sell")}#webpage`,
+        url: absoluteUrl("/buy-and-sell"),
+        name: "Buy or sell a house hack in Atlanta",
+        description:
+          "Caitlyn Verdugo, REALTOR® with Keller Williams Realty Metro Atlanta, helps buyers find house hacking deals, run the numbers, and buy or sell a primary residence or an investment property.",
+        about: { "@id": PERSON_ID },
+        mainEntity: { "@id": PERSON_ID },
+      },
+      caitlynAgentNode(),
     ],
   };
 }
@@ -278,7 +321,7 @@ export function meetupEventSchema({
       },
     },
     description: `Free monthly meetup on house hacking in Atlanta, hosted by Caitlyn Verdugo, REALTOR® (Keller Williams Realty Metro Atlanta). This month: ${topic} (${category})${speakerLine}.`,
-    organizer: { "@id": ORG_ID },
+    organizer: [{ "@id": PERSON_ID }, { "@id": ORG_ID }],
     performer: { "@id": PERSON_ID },
     offers: {
       "@type": "Offer",

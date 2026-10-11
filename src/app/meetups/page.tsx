@@ -3,11 +3,10 @@ import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import Breadcrumb from "@/components/Breadcrumb";
 import CtaButton from "@/components/CtaButton";
-import AgentCta from "@/components/AgentCta";
 import MeetupScheduleTable from "@/components/MeetupScheduleTable";
 import Timeline from "@/components/Timeline";
 import JsonLd from "@/components/JsonLd";
-import { author, links, meetup, womensGroup } from "@/lib/site-config";
+import { author, cta, links, meetup, womensGroup } from "@/lib/site-config";
 import { meetupSchedule } from "@/data/meetups";
 import { pageMetadata } from "@/lib/metadata";
 import { meetupEventSchema, breadcrumbListSchema, isUpcomingMeetup } from "@/lib/schema";
@@ -50,39 +49,14 @@ export default function MeetupsPage() {
       >
         <div>
           <CtaButton
-            href={meetup.eventbriteCollectionUrl || "#schedule"}
+            href={meetup.eventbriteCollectionUrl}
             variant="primary"
-            external={Boolean(meetup.eventbriteCollectionUrl)}
+            external
           >
-            View all events on Eventbrite
+            {cta.register}
           </CtaButton>
         </div>
       </PageHero>
-
-      <section className="border-b border-pine-100 bg-white">
-        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-12 sm:flex-row sm:items-center sm:px-6 sm:py-16">
-          <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-full">
-            <Image src={author.photo} alt="Caitlyn Verdugo" fill sizes="112px" className="object-cover object-top" />
-          </div>
-          <div className="max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">Your host</p>
-            <h2 className="mt-2 font-display text-2xl font-bold text-pine-900">
-              Caitlyn Verdugo, REALTOR®
-            </h2>
-            <p className="mt-3 text-pine-800">
-              Caitlyn Verdugo is an Atlanta house-hacking REALTOR® with Keller Williams
-              Realty Metro Atlanta. She&apos;s a real estate investor and coliving operator,
-              and she co-founded the Women&apos;s Coliving Summit and She Leads Coliving.
-              She founded House Hacking Atlanta and hosts this free monthly meetup.
-            </p>
-            <div className="mt-5">
-              <CtaButton href={links.book} variant="primary" external>
-                Book a call
-              </CtaButton>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Format */}
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
@@ -141,17 +115,33 @@ export default function MeetupsPage() {
             Different audience, different brand — worth a look if that&apos;s
             the room you&apos;re looking for.
           </p>
-          {womensGroup.url && (
-            <div className="mt-5">
-              <CtaButton href={womensGroup.url} variant="ghost" external>
-                Visit {womensGroup.name}
-              </CtaButton>
-            </div>
-          )}
+          <div className="mt-5">
+            <CtaButton href={womensGroup.url} variant="ghost" external>
+              Visit {womensGroup.name}
+            </CtaButton>
+          </div>
         </div>
       </section>
 
-      <AgentCta />
+      <section className="border-t border-pine-100 bg-white">
+        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-12 sm:flex-row sm:items-center sm:px-6 sm:py-16">
+          <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-full">
+            <Image src={author.photo} alt="Caitlyn Verdugo" fill sizes="112px" className="object-cover object-top" />
+          </div>
+          <div className="max-w-2xl">
+            <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">Your host</p>
+            <h2 className="mt-2 font-display text-2xl font-bold text-pine-900">
+              Caitlyn Verdugo, REALTOR®
+            </h2>
+            <p className="mt-3 text-pine-800">{author.hostBio}</p>
+            <div className="mt-5">
+              <CtaButton href={links.book} variant="primary" external>
+                {cta.book}
+              </CtaButton>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

@@ -11,6 +11,7 @@ export const metadata = pageMetadata({
   title: "Blog",
   description:
     "Real numbers, real Atlanta-area deals, and practical house hacking advice — from House Hacking Atlanta.",
+  noIndex: true,
 });
 
 function formatDate(date: string) {

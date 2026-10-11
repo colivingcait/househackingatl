@@ -3,7 +3,7 @@
 import { useState, type FormEvent } from "react";
 import Link from "next/link";
 import { trackStandardEvent } from "@/lib/analytics";
-import { crm } from "@/lib/site-config";
+import { crm, cta } from "@/lib/site-config";
 
 type Variant = "listing-alerts" | "newsletter";
 
@@ -17,9 +17,9 @@ const COPY: Record<
   { heading: string; sub: string; cta: string; fbEvent: string }
 > = {
   "listing-alerts": {
-    heading: "Get new house hack listings",
+    heading: "House hack listings, in your inbox",
     sub: "A metro-wide search for genuine house hack candidates, sent straight to your inbox as they hit the market.",
-    cta: "Send me listings",
+    cta: cta.listings,
     fbEvent: "Lead",
   },
   newsletter: {

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import AuthorBox from "@/components/AuthorBox";
@@ -13,6 +14,7 @@ import { getAllArticleMeta, getArticleBySlug } from "@/lib/articles";
 import { getHubsForArticle } from "@/data/hubs";
 import { resources } from "@/data/resources";
 import { pageMetadata } from "@/lib/metadata";
+import { formatArticleDate } from "@/lib/article-dates";
 import { articleSchema, breadcrumbListSchema } from "@/lib/schema";
 
 export function generateStaticParams() {
@@ -26,12 +28,22 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const article = await getArticleBySlug(params.slug);
   if (!article) return {};
-  return pageMetadata({
+  const base = pageMetadata({
     path: `/${article.slug}`,
     title: article.seoTitle,
     description: article.metaDescription,
+    image: article.image,
     type: "article",
   });
+  return {
+    ...base,
+    openGraph: {
+      ...base.openGraph,
+      type: "article",
+      publishedTime: article.datePublished,
+      modifiedTime: article.dateModified,
+    },
+  };
 }
 
 /**
@@ -105,6 +117,9 @@ export default async function ArticlePage({
           headline: article.h1,
           description: article.metaDescription,
           path: `/${article.slug}`,
+          image: article.image,
+          datePublished: article.datePublished,
+          dateModified: article.dateModified,
         })}
       />
       <JsonLd data={breadcrumbListSchema(breadcrumbItems)} />
@@ -116,7 +131,32 @@ export default async function ArticlePage({
             {article.h1}
           </h1>
           <AuthorByline className="mt-3 text-pine-600" />
-          <p className="mt-1 text-sm text-pine-500">{article.readingTime}</p>
+          <p className="mt-1 text-sm text-pine-500">
+            <time dateTime={article.datePublished}>Published {formatArticleDate(article.datePublished)}</time>
+            {article.dateModified !== article.datePublished && (
+              <>
+                {" · "}
+                <time dateTime={article.dateModified}>Updated {formatArticleDate(article.dateModified)}</time>
+              </>
+            )}
+            {" · "}
+            {article.readingTime}
+          </p>
+          {article.image && (
+            <div className="relative mt-8 aspect-[16/9] overflow-hidden rounded-2xl">
+              <Image
+                src={article.image}
+                alt={
+                  article.image.includes("basement")
+                    ? "A finished basement with a seating area and a kitchenette"
+                    : "A bedroom with a bed, nightstand, and window light"
+                }
+                fill
+                sizes="(min-width: 1024px) 720px, 100vw"
+                className="object-cover"
+              />
+            </div>
+          )}
 
           {showToc && (
             <div className="mt-8">

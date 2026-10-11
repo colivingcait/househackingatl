@@ -1,16 +1,15 @@
 export const navLinks = [
-  { href: "/learn", label: "Learn" },
   { href: "/meetups", label: "Meetups" },
-  { href: "/group", label: "Group" },
-  { href: "/resources", label: "Resources" },
-  { href: "/calculator", label: "Calculator" },
+  { href: "/buy-and-sell", label: "Buy & Sell" },
+  { href: "/learn", label: "Learn" },
   { href: "/about", label: "About" },
 ];
 
-/** Reachable, but intentionally outside the 5-item primary nav — see BUILD-SPEC.md §16. */
+/** Footer only. Blog and listings stay reachable by URL but are not listed. */
 export const secondaryLinks = [
-  { href: "/listings", label: "Listings" },
+  { href: "/group", label: "Group" },
+  { href: "/calculator", label: "Calculator" },
+  { href: "/resources", label: "Free guides" },
   { href: "/sponsors", label: "Local Pros" },
-  { href: "/blog", label: "Blog" },
   { href: "/privacy", label: "Privacy" },
 ];

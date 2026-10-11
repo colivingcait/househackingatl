@@ -1,33 +1,22 @@
 import Link from "next/link";
 import Image from "next/image";
-import DoorMark from "@/components/DoorMark";
 import CtaButton from "@/components/CtaButton";
 import KitSignupForm from "@/components/KitSignupForm";
 import FadeIn from "@/components/FadeIn";
-import PhotoPlaceholder from "@/components/PhotoPlaceholder";
-import AgentCta from "@/components/AgentCta";
 import FaqSection from "@/components/FaqSection";
-import TestimonialsStrip from "@/components/TestimonialsStrip";
 import { houseHackModels } from "@/data/models";
-import { resources } from "@/data/resources";
-import { hubs } from "@/data/hubs";
-import { getAllPosts } from "@/lib/blog";
-import { author, links, siteConfig } from "@/lib/site-config";
+import { meetupSchedule } from "@/data/meetups";
+import { author, cta, links, meetup } from "@/lib/site-config";
+import { isUpcomingMeetup } from "@/lib/schema";
 
-function formatDate(date: string) {
-  return new Date(date).toLocaleDateString("en-US", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-  });
-}
+const cardClass =
+  "flex h-full flex-col rounded-2xl border border-pine-200 bg-white p-6 transition-shadow hover:shadow-md";
 
 export default function Home() {
-  const latestPosts = getAllPosts().slice(0, 3);
+  const nextMeetup = meetupSchedule.find((event) => isUpcomingMeetup(event.month));
 
   return (
     <>
-      {/* Hero */}
       <section className="relative overflow-hidden bg-sage-950 text-white">
         <Image
           src="/images/hero-house.jpg"
@@ -45,14 +34,14 @@ export default function Home() {
         />
         <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-16 sm:px-6 sm:pb-20 sm:pt-24">
           <FadeIn>
-            <DoorMark className="h-12 w-9 text-clay-400" />
-          </FadeIn>
-          <FadeIn delay={0.1}>
-            <h1 className="mt-6 max-w-3xl font-display text-4xl font-bold leading-[1.1] text-balance sm:text-5xl">
-              Caitlyn Verdugo, Atlanta House Hacking Realtor (KW)
+            <h1 className="max-w-3xl font-display text-4xl font-bold leading-[1.1] text-balance sm:text-5xl">
+              Live for less in Atlanta by renting out part of your home.
             </h1>
           </FadeIn>
-          <FadeIn delay={0.2}>
+          <FadeIn delay={0.1}>
+            <p className="mt-6 max-w-xl text-lg text-sage-100">
+              House hacking means you live in one part of a property and rent the rest, so that rent covers most of your housing cost.
+            </p>
             <div className="mt-6 flex items-center gap-4">
               <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full ring-2 ring-white/80">
                 <Image
@@ -63,345 +52,170 @@ export default function Home() {
                   className="object-cover object-top"
                 />
               </div>
-              <p className="max-w-md text-base font-semibold text-white sm:text-lg">
-                Hosted by Caitlyn Verdugo, REALTOR® with Keller Williams Metro Atlanta
+              <p className="max-w-xl text-base font-semibold text-white sm:text-lg">
+                Caitlyn Verdugo · Realtor (KW) · Investor · Coach · 6+ years ·{" "}
+                <a
+                  href={links.zillow}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline decoration-white/40 underline-offset-2 hover:text-clay-100"
+                >
+                  5.0★ Zillow
+                </a>
               </p>
             </div>
-            <p className="mt-4 max-w-xl text-lg text-sage-100">
-              Live for less, build more wealth: rent-by-the-room, basement units,
-              duplexes, ADUs and coliving. Free monthly meetup, 83 guides, and an
-              agent who runs the numbers like an investor.
-            </p>
           </FadeIn>
-          <FadeIn delay={0.3}>
-            <div className="mt-9 flex flex-wrap gap-4">
+          <FadeIn delay={0.2}>
+            <div className="mt-9">
               <CtaButton href={links.book} variant="primary" external>
-                Book a call
-              </CtaButton>
-              <CtaButton href="#get-listings" variant="ghost" className="!border-white !text-white hover:!bg-white/10">
-                Get house-hack listings
-              </CtaButton>
-              <CtaButton href="/meetups" variant="ghost" className="!border-white !text-white hover:!bg-white/10">
-                Join the meetup
+                {cta.bookHero}
               </CtaButton>
             </div>
           </FadeIn>
         </div>
       </section>
 
-      {/* Listing alerts — the primary conversion goal, right up top. */}
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+          <FadeIn>
+            <Link href="/meetups" className={cardClass}>
+              <p className="text-xs font-semibold uppercase tracking-wide text-clay-600">Show up</p>
+              <h2 className="mt-2 font-display text-2xl font-bold text-pine-900">Meetups</h2>
+              <p className="mt-3 flex-1 text-pine-700">
+                Free monthly House Hacking Atlanta meetup. One topic, one guest speaker, and time to talk.
+              </p>
+              <span className="mt-4 text-sm font-semibold text-clay-600">See the meetup →</span>
+            </Link>
+          </FadeIn>
+          <FadeIn delay={0.08}>
+            <Link href="/buy-and-sell" className={cardClass}>
+              <p className="text-xs font-semibold uppercase tracking-wide text-clay-600">Work together</p>
+              <h2 className="mt-2 font-display text-2xl font-bold text-pine-900">Buy &amp; Sell</h2>
+              <p className="mt-3 flex-1 text-pine-700">
+                An investor-forward REALTOR® for buying or selling a house hack in metro Atlanta, including Decatur and East Atlanta.
+              </p>
+              <span className="mt-4 text-sm font-semibold text-clay-600">Buy &amp; sell →</span>
+            </Link>
+          </FadeIn>
+          <FadeIn delay={0.16}>
+            <Link href="/learn" className={cardClass}>
+              <p className="text-xs font-semibold uppercase tracking-wide text-clay-600">Read first</p>
+              <h2 className="mt-2 font-display text-2xl font-bold text-pine-900">Learn</h2>
+              <p className="mt-3 flex-1 text-pine-700">
+                What house hacking is, 83 guides, and a calculator you can run before you talk to anyone.
+              </p>
+              <span className="mt-4 text-sm font-semibold text-clay-600">Start learning →</span>
+            </Link>
+          </FadeIn>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
+        <FadeIn>
+          <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">The idea</p>
+          <h2 className="mt-2 max-w-2xl font-display text-3xl font-bold text-pine-900 sm:text-4xl">
+            Four ways to house hack
+          </h2>
+          <p className="mt-4 max-w-2xl text-lg text-pine-800">
+            You live in one part of a property and rent out the rest, so the rent covers most of your housing cost. Four common setups in Atlanta:
+          </p>
+        </FadeIn>
+        <ul className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {houseHackModels.map((model) => (
+            <li key={model.name} className="overflow-hidden rounded-2xl border border-pine-200 bg-white">
+              <div className="relative aspect-[4/3] w-full">
+                <Image
+                  src={model.image}
+                  alt=""
+                  fill
+                  sizes="(min-width: 1024px) 280px, (min-width: 640px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-5">
+                <p className="font-display text-lg font-semibold text-pine-900">{model.name}</p>
+                <p className="mt-2 text-sm text-pine-700">{model.short}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+        <Link
+          href="/what-is-house-hacking"
+          className="mt-8 inline-flex items-center gap-1 text-sm font-semibold text-clay-600 hover:text-clay-700"
+        >
+          Read the full explanation →
+        </Link>
+      </section>
+
+      <section className="bg-sage-50 py-16 sm:py-20">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 sm:px-6 lg:grid-cols-2">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">Community</p>
+            <h2 className="mt-2 font-display text-3xl font-bold text-pine-900">Next meetup</h2>
+            {nextMeetup ? (
+              <p className="mt-3 text-pine-800">
+                <span className="font-semibold text-pine-900">{nextMeetup.month}</span>
+                {" · "}
+                {nextMeetup.topic}. {meetup.cadenceLabel}, 6:30–9 PM at {meetup.venue.name}
+              </p>
+            ) : (
+              <p className="mt-3 text-pine-800">
+                {meetup.cadenceLabel}, 6:30–9 PM at {meetup.venue.name}
+              </p>
+            )}
+            <div className="mt-6">
+              <CtaButton href={meetup.eventbriteCollectionUrl} variant="primary" external>
+                {cta.register}
+              </CtaButton>
+            </div>
+          </div>
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">Online</p>
+            <h2 className="mt-2 font-display text-3xl font-bold text-pine-900">Facebook group</h2>
+            <p className="mt-3 text-pine-800">
+              Real numbers from Atlanta-area deals, between meetups. Whether you&apos;re buying your first home or your fifth, you&apos;re in the right place.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-4">
+              <CtaButton href={links.facebookGroup} variant="primary" external>
+                {cta.group}
+              </CtaButton>
+              <CtaButton href="/group" variant="ghost">
+                See guidelines
+              </CtaButton>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <FaqSection />
+
       <section id="get-listings" className="py-16 sm:py-20">
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:items-center">
           <FadeIn>
-            <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">
-              Straight to your inbox
-            </p>
-            <h2 className="mt-2 font-display text-3xl font-bold text-pine-900">
-              Never miss a real candidate
-            </h2>
+            <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">Listings</p>
+            <h2 className="mt-2 font-display text-3xl font-bold text-pine-900">{cta.listings}</h2>
             <p className="mt-3 max-w-sm text-pine-700">
-              A metro-wide MLS search built to surface genuine house hack
-              opportunities — not just any duplex listing.
+              A metro-wide search for genuine house hack candidates, sent when they hit the market.
             </p>
           </FadeIn>
-          <FadeIn delay={0.15}>
+          <FadeIn delay={0.1}>
             <KitSignupForm variant="listing-alerts" />
           </FadeIn>
         </div>
       </section>
 
-      {/* Four models — photo-topped cards */}
-      <section className="bg-sage-50 py-16 sm:py-20">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <FadeIn>
-            <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">
-              The idea
-            </p>
-            <h2 className="mt-2 max-w-lg font-display text-3xl font-bold text-pine-900 sm:text-4xl">
-              Four ways to house hack
-            </h2>
-          </FadeIn>
-          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {houseHackModels.map((model, i) => (
-              <FadeIn key={model.name} delay={0.1 + i * 0.08} className="group">
-                <Link href={model.href} className="block">
-                  {model.image ? (
-                    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl">
-                      <Image
-                        src={model.image}
-                        alt=""
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                      <span className="absolute bottom-3 left-3 rounded-full bg-white/80 px-3 py-1 text-xs font-medium text-pine-700 backdrop-blur">
-                        {model.name}
-                      </span>
-                    </div>
-                  ) : (
-                    <PhotoPlaceholder label={model.name} className="aspect-[4/3] w-full" />
-                  )}
-                  <p className="mt-3 text-sm text-pine-700">{model.short}</p>
-                </Link>
-              </FadeIn>
-            ))}
-          </div>
-          <FadeIn delay={0.4}>
-            <Link
-              href="/what-is-house-hacking"
-              className="group mt-8 inline-flex items-center gap-1 text-sm font-semibold text-clay-600 hover:text-clay-700"
-            >
-              Read the full breakdown, including how the financing works
-              <span className="transition-transform group-hover:translate-x-1">→</span>
-            </Link>
-          </FadeIn>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20">
-        <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">
-          A different model
+      <section className="border-t border-pine-100 py-10">
+        <p className="mx-auto max-w-3xl px-4 text-center text-sm text-pine-700 sm:px-6">
+          Want an agent who house hacks?{" "}
+          <a
+            href={links.book}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-clay-700 underline decoration-clay-300 underline-offset-2 hover:text-clay-800"
+          >
+            {cta.book}
+          </a>
         </p>
-        <h2 className="mt-2 font-display text-3xl font-bold text-pine-900">
-          Beyond house hacking: coliving and PadSplit
-        </h2>
-        <p className="mt-4 text-pine-800">
-          House hacking means you live in the home. Coliving is the related,
-          more advanced model: rooms rented in a shared house, often when the
-          owner does not live there, including homes set up for PadSplit.
-          Caitlyn covers that work at Coliving Cait.
-        </p>
-        <a
-          href={links.colivingCait}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-clay-600 hover:text-clay-700"
-        >
-          Visit Coliving Cait
-          <span aria-hidden="true">→</span>
-        </a>
-      </section>
-
-      {/* Calculator — a free interactive tool, not gated behind an email signup */}
-      <section className="bg-clay-600 py-14 sm:py-16">
-        <FadeIn className="mx-auto flex max-w-6xl flex-col items-start gap-6 px-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-clay-100">
-              Free tool
-            </p>
-            <h2 className="mt-2 font-display text-2xl font-bold text-white sm:text-3xl">
-              Run your own numbers
-            </h2>
-            <p className="mt-2 max-w-lg text-clay-50">
-              See what a property would actually cost you every month — and what&apos;s left
-              once you factor in rent. No email required.
-            </p>
-          </div>
-          <Link
-            href="/calculator"
-            className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-clay-700 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg sm:text-base"
-          >
-            Try the Calculator →
-          </Link>
-        </FadeIn>
-      </section>
-
-      {/* The library — 8 hub cards, the entry point into all 83 articles */}
-      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
-        <FadeIn className="mb-8 flex items-end justify-between">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">
-              Learn
-            </p>
-            <h2 className="mt-2 max-w-lg font-display text-3xl font-bold text-pine-900 sm:text-4xl">
-              Everything we know, organized by topic
-            </h2>
-          </div>
-          <Link
-            href="/learn"
-            className="hidden text-sm font-semibold text-clay-600 hover:text-clay-700 sm:block"
-          >
-            See the full library →
-          </Link>
-        </FadeIn>
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {hubs.map((hub, i) => (
-            <FadeIn key={hub.id} delay={0.1 + i * 0.05}>
-              <Link
-                href={`/${hub.id}`}
-                className="block h-full rounded-2xl border border-pine-200 bg-white p-5 transition-shadow hover:shadow-md"
-              >
-                <h3 className="font-display text-base font-semibold text-pine-900">
-                  {hub.name}
-                </h3>
-                <p className="mt-2 text-sm text-pine-700">{hub.blurb}</p>
-              </Link>
-            </FadeIn>
-          ))}
-        </div>
-        <Link
-          href="/learn"
-          className="mt-8 inline-block text-sm font-semibold text-clay-600 hover:text-clay-700 sm:hidden"
-        >
-          See the full library →
-        </Link>
-      </section>
-
-      {/* Free guides teaser */}
-      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
-        <FadeIn className="mb-8 flex items-end justify-between">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">
-              Free guides
-            </p>
-            <h2 className="mt-2 font-display text-3xl font-bold text-pine-900">
-              Worksheets & checklists
-            </h2>
-          </div>
-          <Link
-            href="/resources"
-            className="hidden text-sm font-semibold text-clay-600 hover:text-clay-700 sm:block"
-          >
-            See all guides →
-          </Link>
-        </FadeIn>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-          {resources.slice(0, 3).map((resource, i) => (
-            <FadeIn key={resource.slug} delay={0.1 + i * 0.08}>
-              <Link
-                href="/resources"
-                className="block rounded-2xl border border-pine-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
-              >
-                <p className="text-xs font-semibold uppercase tracking-wide text-clay-600">
-                  {resource.stage}
-                </p>
-                <p className="mt-1 font-display text-lg font-semibold text-pine-900">
-                  {resource.title}
-                </p>
-                <p className="mt-2 text-sm text-pine-700">{resource.description}</p>
-              </Link>
-            </FadeIn>
-          ))}
-        </div>
-        <Link
-          href="/resources"
-          className="mt-8 inline-block text-sm font-semibold text-clay-600 hover:text-clay-700 sm:hidden"
-        >
-          See all guides →
-        </Link>
-      </section>
-
-      {/* House stacking — pull quote instead of another paragraph block */}
-      <section className="bg-sage-950 py-20 text-white sm:py-24">
-        <FadeIn className="mx-auto max-w-3xl px-4 text-center sm:px-6">
-          <p className="text-sm font-semibold uppercase tracking-wide text-clay-400">
-            The long game
-          </p>
-          <p className="mt-4 font-display text-2xl font-medium leading-snug text-balance sm:text-4xl">
-            &ldquo;The first house is hard. The second is a different
-            conversation entirely.&rdquo;
-          </p>
-          <Link
-            href="/house-stacking"
-            className="mt-6 inline-block text-sm font-semibold text-clay-400 hover:text-clay-300"
-          >
-            What house stacking looks like →
-          </Link>
-        </FadeIn>
-      </section>
-
-      {/* Latest from the blog */}
-      {latestPosts.length > 0 && (
-        <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
-          <FadeIn className="mb-8 flex items-end justify-between">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">
-                From the blog
-              </p>
-              <h2 className="mt-2 font-display text-3xl font-bold text-pine-900">
-                Latest posts
-              </h2>
-            </div>
-            <Link
-              href="/blog"
-              className="hidden text-sm font-semibold text-clay-600 hover:text-clay-700 sm:block"
-            >
-              View all →
-            </Link>
-          </FadeIn>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-            {latestPosts.map((post, i) => (
-              <FadeIn key={post.slug} delay={0.1 + i * 0.08} className="group">
-                <Link href={`/blog/${post.slug}`} className="block">
-                  {post.coverImage ? (
-                    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl">
-                      <Image
-                        src={post.coverImage}
-                        alt=""
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                    </div>
-                  ) : (
-                    <PhotoPlaceholder label={post.title} className="aspect-[4/3] w-full" />
-                  )}
-                  <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-clay-600">
-                    {formatDate(post.date)}
-                  </p>
-                  <p className="mt-1 text-sm font-semibold text-pine-900">{post.title}</p>
-                </Link>
-              </FadeIn>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* Community — Facebook group is the lead CTA; the meetup is a modest mention, not a front-page draw */}
-      <section className="bg-sage-50 py-16 sm:py-20">
-        <FadeIn className="mx-auto max-w-5xl px-4 text-center sm:px-6">
-          <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">
-            Community
-          </p>
-          <h2 className="mt-2 font-display text-3xl font-bold text-pine-900">
-            The Facebook group
-          </h2>
-          <p className="mx-auto mt-3 max-w-lg text-pine-700">
-            Whether you&apos;re buying your first home or your fifth,
-            you&apos;re in the right place.
-          </p>
-          <div className="mt-7 flex flex-wrap justify-center gap-4">
-            <CtaButton
-              href={links.facebookGroup || "/group"}
-              variant="primary"
-              external={Boolean(links.facebookGroup)}
-            >
-              Join the Group
-            </CtaButton>
-            <CtaButton href="/group" variant="ghost">
-              See guidelines
-            </CtaButton>
-          </div>
-          <p className="mx-auto mt-8 max-w-lg border-t border-pine-200 pt-6 text-sm text-pine-600">
-            Want to meet other investors and connect with local lending,
-            insurance, and inspection professionals in person?{" "}
-            <Link href="/meetups" className="font-semibold text-clay-600 hover:text-clay-700">
-              See the monthly meetup →
-            </Link>
-          </p>
-        </FadeIn>
-      </section>
-
-      <FaqSection />
-      <AgentCta />
-      <TestimonialsStrip />
-
-      {/* Sign off */}
-      <section className="border-t border-pine-100 bg-sage-950 py-16 text-center text-white">
-        <FadeIn>
-          <DoorMark className="mx-auto h-8 w-6 text-clay-400" />
-          <p className="mt-4 font-display text-xl font-semibold">
-            {siteConfig.doorMotif}
-          </p>
-        </FadeIn>
       </section>
     </>
   );

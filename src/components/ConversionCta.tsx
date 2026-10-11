@@ -1,4 +1,5 @@
 import CtaButton from "./CtaButton";
+import { cta, links, meetup } from "@/lib/site-config";
 
 /**
  * The one CTA block used on every hub and article page — per BUILD-SPEC.md
@@ -11,15 +12,16 @@ export default function ConversionCta({ lead }: { lead?: string }) {
       <div className="mx-auto max-w-lg px-4 sm:px-6">
         {lead && <p className="text-sage-100">{lead}</p>}
         <div className="mt-6 flex flex-wrap justify-center gap-4">
-          <CtaButton href="/meetups" variant="primary">
-            See the meetup schedule
+          <CtaButton href={meetup.eventbriteCollectionUrl} variant="primary" external>
+            {cta.register}
           </CtaButton>
           <CtaButton
-            href="/group"
+            href={links.facebookGroup}
             variant="ghost"
+            external
             className="!border-white !text-white hover:!bg-white/10"
           >
-            Join the Facebook group
+            {cta.group}
           </CtaButton>
         </div>
       </div>

@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import FacebookPixel from "@/components/FacebookPixel";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { siteConfig } from "@/lib/site-config";
-import { getSearchIndex } from "@/lib/search";
 import { pageMetadata } from "@/lib/metadata";
 import JsonLd from "@/components/JsonLd";
 import { entityGraphSchema } from "@/lib/schema";
@@ -43,14 +42,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const searchIndex = getSearchIndex();
   return (
     <html lang="en">
       <body className={`${sourceSans.variable} ${libreBaskerville.variable} font-sans antialiased`}>
         <JsonLd data={entityGraphSchema()} />
         <FacebookPixel />
         <GoogleAnalytics />
-        <Header searchIndex={searchIndex} />
+        <Header />
         <main>{children}</main>
         <Footer />
       </body>

@@ -17,10 +17,20 @@ export const siteConfig = {
   doorMotif: "Every door is an opportunity. 🚪",
   shortBlurb:
     "House hacking in the Atlanta metro — living in one part of your property and renting out another. Real numbers, real deals, real support. Live for less. Build more wealth. Every door is an opportunity.",
-  homeTitle:
-    "House Hacking Atlanta — Caitlyn Verdugo, Atlanta House Hacking Realtor (KW)",
+  homeTitle: "House Hacking Atlanta — Live for less by renting out part of your home",
   homeDescription:
-    "Atlanta house hacking realtor Caitlyn Verdugo (Keller Williams Metro Atlanta) helps you buy a home that pays you back — rent-by-the-room, coliving, PadSplit-ready, duplex and ADU. Free monthly meetup + 83 guides.",
+    "House hacking in Atlanta means living in one part of your home and renting out the rest. Free monthly meetup, 83 guides, and a local community.",
+};
+
+/** One label each, used everywhere that button appears. */
+export const cta = {
+  book: "Book a call",
+  /** Homepage hero only. */
+  bookHero: "Book a free call",
+  nextMeetup: "Next meetup",
+  register: "Register",
+  listings: "Get listings",
+  group: "Join the Group",
 };
 
 /** Public contact. This is the only phone and email the site publishes. */
@@ -52,14 +62,20 @@ export const brokerage = {
  */
 export const author = {
   name: "Caitlyn Verdugo",
-  /** Identity order: realtor, investor, coliving operator, women's community leader. Coach is omitted — this site doesn't offer a coaching program. */
-  bio: "Atlanta REALTOR® with Keller Williams Realty Metro Atlanta, real estate investor, and coliving operator. Co-founder of the Women's Coliving Summit and She Leads Coliving.",
-  credential: "REALTOR®, Keller Williams Realty Metro Atlanta",
+  /** Role order Caitlyn asked to show: Realtor, then investor, then coach. */
+  bio: "Atlanta REALTOR® with Keller Williams Realty Metro Atlanta, real estate investor, and coach. 6+ years. Co-founder of the Women's Coliving Summit and She Leads Coliving.",
+  credential: "Realtor · Investor · Coach · 6+ years",
   byline: "REALTOR®, KW Metro Atlanta",
+  /** One sentence for the article author box. */
+  oneLiner:
+    "Atlanta REALTOR® with Keller Williams Realty Metro Atlanta, investor, and coach.",
+  /** Verbatim meetup host bio. Do not paraphrase. */
+  hostBio:
+    "Caitlyn Verdugo is an Atlanta house-hacking REALTOR® with Keller Williams Realty Metro Atlanta. She's a real estate investor and coliving operator, and began her journey in real estate investing with a basement conversion. She founded House Hacking Atlanta and hosts this free monthly meetup aimed at teaching other investors how to begin their house hacking and investing journey.",
   photo: "/images/caitlyn-headshot.jpg",
   email: contact.email,
   fullBio: [
-    "I'm Caitlyn Verdugo, an Atlanta REALTOR® with Keller Williams Realty Metro Atlanta and a serial house hacker. I help buyers find homes that pay them back: rent-by-the-room, basement apartments, small multifamily, and ADUs.",
+    "I'm Caitlyn Verdugo, an Atlanta REALTOR® with Keller Williams Realty Metro Atlanta, an investor, and a coach. I've been at this for 6+ years. I help people buy and sell homes that pay them back: rent-by-the-room, basement apartments, small multifamily, and ADUs.",
     "As an investor, I operate 50+ coliving rooms across metro Atlanta. Coliving is a different model from house hacking — rooms rented in a shared home, often when the owner does not live there — and I can help with that, including PadSplit-style rentals, when you're ready. I co-founded the Women's Coliving Summit and She Leads Coliving.",
     "I started House Hacking Atlanta and the monthly meetup because no one place in Atlanta covered the real mechanics: financing, running the numbers, and the day-to-day of sharing a home. If you're past the first house hack, Coliving Cait is the brand for that next step. Most people start here: one property, one extra bedroom or unit, and the question of whether the numbers work.",
   ],
@@ -101,8 +117,7 @@ export const meetup = {
 export const womensGroup = {
   name: "Atlanta Women Investors",
   cadenceLabel: "Fourth Tuesday of every month",
-  // NEEDS CAITLYN: exact URL.
-  url: "",
+  url: "https://www.atlantawomeninvestors.com",
 };
 
 /**
@@ -117,7 +132,7 @@ export const links = {
   instagram: "https://instagram.com/colivingcait",
   zillow: "https://www.zillow.com/profile/caitlynverdugo",
   womensColivingSummit: "https://www.womenscolivingsummit.com/about/",
-  atlantaWomenInvestors: "",
+  atlantaWomenInvestors: womensGroup.url,
   roomsForRentAtl: "",
   facebookGroup: "https://facebook.com/groups/househackingatl",
 };

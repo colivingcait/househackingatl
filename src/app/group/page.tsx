@@ -1,7 +1,6 @@
 import PageHero from "@/components/PageHero";
 import CtaButton from "@/components/CtaButton";
-import KitSignupForm from "@/components/KitSignupForm";
-import { links } from "@/lib/site-config";
+import { cta, links, meetup } from "@/lib/site-config";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
@@ -39,7 +38,7 @@ export default function GroupPage() {
             variant="primary"
             external={Boolean(links.facebookGroup)}
           >
-            {links.facebookGroup ? "Join the Group" : "Link coming soon"}
+            {cta.group}
           </CtaButton>
         </div>
       </PageHero>
@@ -96,15 +95,24 @@ export default function GroupPage() {
               variant="primary"
               external={Boolean(links.facebookGroup)}
             >
-              {links.facebookGroup ? "Join the Group" : "Link coming soon"}
+              {cta.group}
             </CtaButton>
           </div>
         </div>
       </section>
 
       <section className="py-16 sm:py-20">
-        <div className="mx-auto max-w-2xl px-4 sm:px-6">
-          <KitSignupForm variant="newsletter" />
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
+          <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">In person</p>
+          <h2 className="mt-2 font-display text-2xl font-bold text-pine-900">Monthly meetup</h2>
+          <p className="mt-3 text-pine-800">
+            {meetup.cadenceLabel}, 6:30–9 PM at {meetup.venue.name} One topic, one guest speaker, and time to talk.
+          </p>
+          <div className="mt-6">
+            <CtaButton href={meetup.eventbriteCollectionUrl} variant="primary" external>
+              {cta.register}
+            </CtaButton>
+          </div>
         </div>
       </section>
     </>
