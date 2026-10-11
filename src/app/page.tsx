@@ -122,9 +122,20 @@ export default function Home() {
         </FadeIn>
         <ul className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {houseHackModels.map((model) => (
-            <li key={model.name} className="rounded-2xl border border-pine-200 bg-white p-5">
-              <p className="font-display text-lg font-semibold text-pine-900">{model.name}</p>
-              <p className="mt-2 text-sm text-pine-700">{model.short}</p>
+            <li key={model.name} className="overflow-hidden rounded-2xl border border-pine-200 bg-white">
+              <div className="relative aspect-[4/3] w-full">
+                <Image
+                  src={model.image}
+                  alt=""
+                  fill
+                  sizes="(min-width: 1024px) 280px, (min-width: 640px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-5">
+                <p className="font-display text-lg font-semibold text-pine-900">{model.name}</p>
+                <p className="mt-2 text-sm text-pine-700">{model.short}</p>
+              </div>
             </li>
           ))}
         </ul>
