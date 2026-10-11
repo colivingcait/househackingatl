@@ -46,18 +46,16 @@ export const faqs: Faq[] = [
       {
         type: "text",
         value:
-          "House hacking usually means you live in the home. Coliving is renting rooms in a shared home, often managed or listed on platforms like PadSplit, and the owner may not live there. Caitlyn does both. Learn more at ",
+          "House hacking usually means you live in the home. Coliving is renting rooms in a shared home, often managed or listed on platforms like PadSplit, and the owner may not live there. A local agent who house hacks can help with both.",
       },
-      { type: "link", label: "Coliving Cait", href: links.colivingCait },
-      { type: "text", value: "." },
     ],
   },
   {
-    question: "How much does it cost to work with Caitlyn as a buyer's agent?",
+    question: "How much does it cost to work with a buyer's agent?",
     segments: [
       {
         type: "text",
-        value: "Buyer-agent fees are discussed one-on-one. ",
+        value: "Buyer-agent fees are discussed one-on-one with a local agent who house hacks. ",
       },
       { type: "link", label: cta.book, href: BOOK },
       { type: "text", value: "." },
