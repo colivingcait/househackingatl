@@ -22,7 +22,7 @@ export const metadata = pageMetadata({
 const tiles = [
   { label: "Rent by the room", span: "sm:row-span-2", image: "/images/models/rent-by-the-room.jpg" },
   { label: "Basement conversion", span: "", image: "/images/models/basement-conversion.jpg" },
-  { label: "Backyard ADU", span: "", image: "/images/models/adu-detached-unit.jpg" },
+  { label: "Backyard ADU", span: "", image: "/images/models/adu-cottage.jpg" },
   { label: "Small multifamily", span: "sm:row-span-2", image: "/images/hero-house.jpg" },
   { label: "Shared common space", span: "" },
   { label: "One side of a duplex", span: "" },
