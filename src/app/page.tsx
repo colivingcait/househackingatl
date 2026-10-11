@@ -4,15 +4,13 @@ import CtaButton from "@/components/CtaButton";
 import KitSignupForm from "@/components/KitSignupForm";
 import FadeIn from "@/components/FadeIn";
 import FaqSection from "@/components/FaqSection";
-import StatsStrip from "@/components/StatsStrip";
-import { featuredTestimonials } from "@/data/testimonials";
-import { zillowReviews } from "@/data/testimonials";
 import { houseHackModels } from "@/data/models";
 import { meetupSchedule } from "@/data/meetups";
-import { author, cta, links, meetup } from "@/lib/site-config";
+import { cta, links, meetup } from "@/lib/site-config";
 import { isUpcomingMeetup } from "@/lib/schema";
 
-const homeReviews = featuredTestimonials.slice(0, 3);
+const cardClass =
+  "flex h-full flex-col rounded-2xl border border-pine-200 bg-white p-6 transition-shadow hover:shadow-md";
 
 export default function Home() {
   const nextMeetup = meetupSchedule.find((event) => isUpcomingMeetup(event.month));
@@ -37,37 +35,25 @@ export default function Home() {
         <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-16 sm:px-6 sm:pb-20 sm:pt-24">
           <FadeIn>
             <h1 className="max-w-3xl font-display text-4xl font-bold leading-[1.1] text-balance sm:text-5xl">
-              Live for less and build wealth in Atlanta — house hacking with a Realtor who&apos;s done it.
+              Live for less in Atlanta by renting out part of your home.
             </h1>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <div className="mt-6 flex items-center gap-4">
-              <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full ring-2 ring-white/80">
-                <Image
-                  src={author.photo}
-                  alt="Caitlyn Verdugo"
-                  fill
-                  sizes="64px"
-                  className="object-cover object-top"
-                />
-              </div>
-              <p className="max-w-xl text-base font-semibold text-white sm:text-lg">
-                Caitlyn Verdugo · Realtor (KW) · Investor · Coach · 6+ years ·{" "}
-                <a
-                  href={links.zillow}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline decoration-white/40 underline-offset-2 hover:text-clay-100"
-                >
-                  5.0★ Zillow
-                </a>
-              </p>
-            </div>
+            <p className="mt-6 max-w-xl text-lg text-sage-100">
+              House hacking means you live in one part of a property and rent the rest, so that rent covers most of your housing cost. Start with the idea, or come to the monthly meetup.
+            </p>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <div className="mt-9">
-              <CtaButton href={links.book} variant="primary" external>
-                {cta.book}
+            <div className="mt-9 flex flex-wrap gap-4">
+              <CtaButton href="/meetups" variant="primary">
+                {cta.nextMeetup}
+              </CtaButton>
+              <CtaButton
+                href="/what-is-house-hacking"
+                variant="ghost"
+                className="!border-white !text-white hover:!bg-white/10"
+              >
+                What is house hacking
               </CtaButton>
             </div>
           </FadeIn>
@@ -75,79 +61,52 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           <FadeIn>
-            <Link
-              href="/meetups"
-              className="flex h-full flex-col rounded-2xl border border-pine-200 bg-white p-6 transition-shadow hover:shadow-md"
-            >
-              <p className="text-xs font-semibold uppercase tracking-wide text-clay-600">Show up</p>
-              <h2 className="mt-2 font-display text-2xl font-bold text-pine-900">Meetups</h2>
-              <p className="mt-3 flex-1 text-pine-700">
-                Free monthly House Hacking Atlanta meetup. One topic, one guest speaker, and time to talk.
-              </p>
-              <span className="mt-4 text-sm font-semibold text-clay-600">See the meetup →</span>
-            </Link>
-          </FadeIn>
-          <FadeIn delay={0.08}>
-            <Link
-              href="/buy-and-sell"
-              className="flex h-full flex-col rounded-2xl border border-pine-200 bg-white p-6 transition-shadow hover:shadow-md"
-            >
-              <p className="text-xs font-semibold uppercase tracking-wide text-clay-600">Work together</p>
-              <h2 className="mt-2 font-display text-2xl font-bold text-pine-900">Buy &amp; Sell</h2>
-              <p className="mt-3 flex-1 text-pine-700">
-                An investor-forward REALTOR® for buying or selling a house hack in metro Atlanta, including Decatur and East Atlanta.
-              </p>
-              <span className="mt-4 text-sm font-semibold text-clay-600">Buy &amp; sell →</span>
-            </Link>
-          </FadeIn>
-          <FadeIn delay={0.16}>
-            <Link
-              href="/learn"
-              className="flex h-full flex-col rounded-2xl border border-pine-200 bg-white p-6 transition-shadow hover:shadow-md"
-            >
+            <Link href="/learn" className={cardClass}>
               <p className="text-xs font-semibold uppercase tracking-wide text-clay-600">Read first</p>
-              <h2 className="mt-2 font-display text-2xl font-bold text-pine-900">Learn</h2>
+              <h2 className="mt-2 font-display text-2xl font-bold text-pine-900">Learn house hacking</h2>
               <p className="mt-3 flex-1 text-pine-700">
-                What house hacking is, 83 guides, and a calculator you can run before you talk to anyone.
+                What it is, 83 guides, and a calculator you can run before you talk to anyone.
               </p>
               <span className="mt-4 text-sm font-semibold text-clay-600">Start learning →</span>
             </Link>
           </FadeIn>
-        </div>
-      </section>
-
-      <section className="bg-sage-50 py-16 sm:py-20">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <FadeIn>
-            <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">Proof</p>
-            <h2 className="mt-2 font-display text-3xl font-bold text-pine-900">The work, in numbers and in clients&apos; words</h2>
+          <FadeIn delay={0.06}>
+            <Link href="/meetups" className={cardClass}>
+              <p className="text-xs font-semibold uppercase tracking-wide text-clay-600">Show up</p>
+              <h2 className="mt-2 font-display text-2xl font-bold text-pine-900">Meetups</h2>
+              <p className="mt-3 flex-1 text-pine-700">
+                Free monthly meetup. One topic, one guest speaker, and time to talk.
+              </p>
+              <span className="mt-4 text-sm font-semibold text-clay-600">See the meetup →</span>
+            </Link>
           </FadeIn>
-          <div className="mt-8">
-            <StatsStrip />
-          </div>
-          <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-3">
-            {homeReviews.map((item) => (
-              <figure key={item.name} className="flex h-full flex-col rounded-2xl border border-pine-200 bg-white p-6">
-                <blockquote className="text-pine-800">&ldquo;{item.quote}&rdquo;</blockquote>
-                <figcaption className="mt-4 text-sm font-semibold text-pine-900">
-                  {item.name}
-                  <span className="font-medium text-pine-600">, {item.role}</span>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-          <p className="mt-6">
+          <FadeIn delay={0.12}>
+            <Link href="/group" className={cardClass}>
+              <p className="text-xs font-semibold uppercase tracking-wide text-clay-600">Stay in touch</p>
+              <h2 className="mt-2 font-display text-2xl font-bold text-pine-900">Community</h2>
+              <p className="mt-3 flex-1 text-pine-700">
+                The Facebook group for real numbers from Atlanta-area house hacks, between meetups.
+              </p>
+              <span className="mt-4 text-sm font-semibold text-clay-600">See the group →</span>
+            </Link>
+          </FadeIn>
+          <FadeIn delay={0.18}>
             <a
-              href={zillowReviews.profileUrl}
+              href={links.book}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-semibold text-clay-700 underline decoration-clay-300 underline-offset-2 hover:text-clay-800"
+              className={cardClass}
             >
-              See all 18 Zillow reviews
+              <p className="text-xs font-semibold uppercase tracking-wide text-clay-600">Optional</p>
+              <h2 className="mt-2 font-display text-2xl font-bold text-pine-900">Work with a house hacking agent</h2>
+              <p className="mt-3 flex-1 text-pine-700">
+                When you want help buying or selling, talk with someone who has house hacked.
+              </p>
+              <span className="mt-4 text-sm font-semibold text-clay-600">{cta.book} →</span>
             </a>
-          </p>
+          </FadeIn>
         </div>
       </section>
 
@@ -170,10 +129,10 @@ export default function Home() {
           ))}
         </ul>
         <Link
-          href="/learn"
+          href="/what-is-house-hacking"
           className="mt-8 inline-flex items-center gap-1 text-sm font-semibold text-clay-600 hover:text-clay-700"
         >
-          Learn how it works →
+          Read the full explanation →
         </Link>
       </section>
 
@@ -194,11 +153,7 @@ export default function Home() {
               </p>
             )}
             <div className="mt-6">
-              <CtaButton
-                href={meetup.eventbriteCollectionUrl}
-                variant="primary"
-                external
-              >
+              <CtaButton href={meetup.eventbriteCollectionUrl} variant="primary" external>
                 {cta.register}
               </CtaButton>
             </div>
@@ -236,6 +191,20 @@ export default function Home() {
             <KitSignupForm variant="listing-alerts" />
           </FadeIn>
         </div>
+      </section>
+
+      <section className="border-t border-pine-100 py-10">
+        <p className="mx-auto max-w-3xl px-4 text-center text-sm text-pine-700 sm:px-6">
+          Want an agent who house hacks?{" "}
+          <a
+            href={links.book}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-clay-700 underline decoration-clay-300 underline-offset-2 hover:text-clay-800"
+          >
+            {cta.book}
+          </a>
+        </p>
       </section>
     </>
   );

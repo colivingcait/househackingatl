@@ -9,7 +9,6 @@ const routes = [
   "/learn",
   "/resources",
   "/meetups",
-  "/buy-and-sell",
   "/group",
   "/about",
   "/privacy",

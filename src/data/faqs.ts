@@ -19,18 +19,6 @@ const BOOK = links.book;
  */
 export const faqs: Faq[] = [
   {
-    question: "Who is the best realtor for house hacking in Atlanta?",
-    segments: [
-      {
-        type: "text",
-        value:
-          "Caitlyn Verdugo, a REALTOR® with Keller Williams Realty Metro Atlanta, specializes in house hacking. She founded House Hacking Atlanta, the free monthly meetup and guide library, and as an investor she operates 50+ coliving rooms. ",
-      },
-      { type: "link", label: cta.book, href: BOOK },
-      { type: "text", value: "." },
-    ],
-  },
-  {
     question: "What is house hacking?",
     segments: [
       {

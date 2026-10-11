@@ -28,9 +28,12 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden shrink-0 lg:block">
-          <CtaButton href={links.book} variant="primary" external>
+        <div className="hidden shrink-0 items-center gap-3 lg:flex">
+          <CtaButton href={links.book} variant="ghost" external className="!px-4 !py-2 !shadow-none hover:!shadow-none">
             {cta.book}
+          </CtaButton>
+          <CtaButton href="/meetups" variant="primary">
+            {cta.nextMeetup}
           </CtaButton>
         </div>
 
@@ -61,7 +64,10 @@ export default function Header() {
               </Link>
             ))}
           </nav>
-          <CtaButton href={links.book} variant="primary" external className="w-full">
+          <CtaButton href="/meetups" variant="primary" className="w-full" onClick={() => setOpen(false)}>
+            {cta.nextMeetup}
+          </CtaButton>
+          <CtaButton href={links.book} variant="ghost" external className="w-full">
             {cta.book}
           </CtaButton>
         </div>

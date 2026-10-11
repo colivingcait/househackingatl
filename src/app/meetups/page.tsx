@@ -133,14 +133,7 @@ export default function MeetupsPage() {
             <h2 className="mt-2 font-display text-2xl font-bold text-pine-900">
               Caitlyn Verdugo, REALTOR®
             </h2>
-            <p className="mt-3 text-pine-800">
-              Caitlyn Verdugo is an Atlanta house-hacking REALTOR® with Keller Williams
-              Realty Metro Atlanta. She&apos;s a real estate investor and coliving operator,
-              and began her journey in real estate investing with a basement conversion.
-              She founded House Hacking Atlanta and hosts this free monthly meetup aimed
-              at teaching other investors how to begin their house hacking and investing
-              journey.
-            </p>
+            <p className="mt-3 text-pine-800">{author.hostBio}</p>
             <div className="mt-5">
               <CtaButton href={links.book} variant="primary" external>
                 {cta.book}

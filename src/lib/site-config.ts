@@ -17,29 +17,19 @@ export const siteConfig = {
   doorMotif: "Every door is an opportunity. 🚪",
   shortBlurb:
     "House hacking in the Atlanta metro — living in one part of your property and renting out another. Real numbers, real deals, real support. Live for less. Build more wealth. Every door is an opportunity.",
-  homeTitle:
-    "House Hacking Atlanta — Caitlyn Verdugo, Atlanta House Hacking Realtor (KW)",
+  homeTitle: "House Hacking Atlanta — Live for less by renting out part of your home",
   homeDescription:
-    "Atlanta house hacking realtor Caitlyn Verdugo (Keller Williams Metro Atlanta) helps you buy a home that pays you back — rent-by-the-room, coliving, PadSplit-ready, duplex and ADU. Free monthly meetup + 83 guides.",
+    "House hacking in Atlanta means living in one part of your home and renting out the rest. Free monthly meetup, 83 guides, and a local community.",
 };
 
 /** One label each, used everywhere that button appears. */
 export const cta = {
   book: "Book a call",
+  nextMeetup: "Next meetup",
   register: "Register",
   listings: "Get listings",
   group: "Join the Group",
 };
-
-/** Figures Caitlyn approved for the homepage and About. No property addresses. */
-export const proofStats = [
-  { figure: "$2.5M", label: "AUM" },
-  { figure: "50+", label: "rooms" },
-  { figure: "100+", label: "residents" },
-  { figure: "500+", label: "women" },
-  { figure: "Top Realtor", label: "in DeKalb County" },
-  { figure: "6+", label: "years" },
-];
 
 /** Public contact. This is the only phone and email the site publishes. */
 export const contact = {
@@ -74,6 +64,9 @@ export const author = {
   bio: "Atlanta REALTOR® with Keller Williams Realty Metro Atlanta, real estate investor, and coach. 6+ years. Co-founder of the Women's Coliving Summit and She Leads Coliving.",
   credential: "Realtor · Investor · Coach · 6+ years",
   byline: "REALTOR®, KW Metro Atlanta",
+  /** Verbatim meetup host bio. Do not paraphrase. */
+  hostBio:
+    "Caitlyn Verdugo is an Atlanta house-hacking REALTOR® with Keller Williams Realty Metro Atlanta. She's a real estate investor and coliving operator, and began her journey in real estate investing with a basement conversion. She founded House Hacking Atlanta and hosts this free monthly meetup aimed at teaching other investors how to begin their house hacking and investing journey.",
   photo: "/images/caitlyn-headshot.jpg",
   email: contact.email,
   fullBio: [
