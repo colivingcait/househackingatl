@@ -1,5 +1,5 @@
 import CtaButton from "./CtaButton";
-import { contact, links } from "@/lib/site-config";
+import { contact, cta, links } from "@/lib/site-config";
 
 /**
  * Turns readers into agent leads. Lender referrals are left out on purpose
@@ -23,7 +23,7 @@ export default function AgentCta() {
         </p>
         <div className="mt-6 flex flex-wrap items-center gap-4">
           <CtaButton href={links.book} variant="primary" external>
-            Book a free call
+            {cta.book}
           </CtaButton>
           <a href={contact.phoneHref} className="text-sm font-semibold text-clay-700 hover:text-clay-800">
             {contact.phoneDisplay}

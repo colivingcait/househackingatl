@@ -76,7 +76,7 @@ need real values before the site should go live to the public.
 ## URLs (blank ones render a "link coming soon" state)
 
 - [ ] ColivingCait — defaulted to `colivingcait.com`, confirm
-- [ ] Atlanta Women Investors — need URL
+- [x] Atlanta Women Investors — `https://wreiconnected.com/atlanta`
 - [ ] Rooms for Rent ATL — need URL
 - [x] Facebook group ("House Hacking Atlanta") — confirmed:
       `https://facebook.com/groups/househackingatl`

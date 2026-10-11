@@ -8,10 +8,9 @@ const routes = [
   "",
   "/learn",
   "/resources",
-  "/blog",
   "/meetups",
+  "/buy-and-sell",
   "/group",
-  "/listings",
   "/about",
   "/privacy",
 ];

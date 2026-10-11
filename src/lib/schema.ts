@@ -124,7 +124,7 @@ export function entityGraphSchema() {
         alternateName: "Coliving Cait",
         jobTitle: "REALTOR®",
         description:
-          "Atlanta REALTOR® with Keller Williams Realty Metro Atlanta specializing in house hacking, rent-by-the-room, coliving and PadSplit-ready properties; real estate investor and coliving operator.",
+          "Atlanta REALTOR®, investor, and coach with Keller Williams Realty Metro Atlanta. 6+ years specializing in house hacking, rent-by-the-room, coliving, and PadSplit-ready properties.",
         image: absoluteUrl(author.photo),
         url: "https://www.colivingcait.com/about",
         email: contact.emailHref,

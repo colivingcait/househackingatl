@@ -2,15 +2,17 @@ import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import FadeIn from "@/components/FadeIn";
 import AgentCta from "@/components/AgentCta";
+import CtaButton from "@/components/CtaButton";
 import { hubs } from "@/data/hubs";
 import { getAllArticleMeta } from "@/lib/articles";
 import { pageMetadata } from "@/lib/metadata";
+import { cta, meetup } from "@/lib/site-config";
 
 export const metadata = pageMetadata({
   path: "/learn",
   title: "Learn",
   description:
-    "83 articles on house hacking, organized into 8 topics — finding a property, financing, running the numbers, being a landlord, and more.",
+    "83 articles on house hacking, organized into 8 topics — finding a property, financing, running the numbers, operating the home, and more.",
 });
 
 export default function LearnPage() {
@@ -54,6 +56,18 @@ export default function LearnPage() {
       </PageHero>
 
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
+        <FadeIn className="mb-8">
+          <Link
+            href="/what-is-house-hacking"
+            className="block rounded-2xl border border-clay-200 bg-sage-50 p-6 transition-shadow hover:shadow-md"
+          >
+            <p className="text-xs font-semibold uppercase tracking-wide text-clay-600">Start here</p>
+            <h2 className="mt-2 font-display text-2xl font-bold text-pine-900">What is house hacking?</h2>
+            <p className="mt-2 max-w-2xl text-pine-700">
+              Living in one part of a property and renting out the rest. The short version, then the four models and how the financing works.
+            </p>
+          </Link>
+        </FadeIn>
         <FadeIn className="mb-8">
           <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">
             Browse by topic
@@ -127,6 +141,21 @@ export default function LearnPage() {
               </ul>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="bg-sage-50 py-16 sm:py-20">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
+          <p className="text-sm font-semibold uppercase tracking-wide text-clay-600">In the room</p>
+          <h2 className="mt-2 font-display text-3xl font-bold text-pine-900">Come to the meetup</h2>
+          <p className="mt-3 text-pine-800">
+            {meetup.cadenceLabel}, 6:30–9 PM at {meetup.venue.name} Free, and a good place to ask the question the guides don&apos;t answer.
+          </p>
+          <div className="mt-6">
+            <CtaButton href={meetup.eventbriteCollectionUrl} variant="primary" external>
+              {cta.register}
+            </CtaButton>
+          </div>
         </div>
       </section>
 

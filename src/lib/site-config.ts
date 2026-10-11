@@ -23,6 +23,26 @@ export const siteConfig = {
     "Atlanta house hacking realtor Caitlyn Verdugo (Keller Williams Metro Atlanta) helps you buy a home that pays you back — rent-by-the-room, coliving, PadSplit-ready, duplex and ADU. Free monthly meetup + 83 guides.",
 };
 
+/** One label each, used everywhere that button appears. */
+export const cta = {
+  book: "Book a call",
+  /** Homepage hero only. Every other booking button uses `book`. */
+  bookHero: "Book a free call",
+  register: "Register",
+  listings: "Get listings",
+  group: "Join the Group",
+};
+
+/** Figures Caitlyn approved for the homepage and About. No property addresses. */
+export const proofStats = [
+  { figure: "$2.5M", label: "AUM" },
+  { figure: "50+", label: "rooms" },
+  { figure: "100+", label: "residents" },
+  { figure: "500+", label: "women" },
+  { figure: "Top Realtor", label: "in DeKalb County" },
+  { figure: "6+", label: "years" },
+];
+
 /** Public contact. This is the only phone and email the site publishes. */
 export const contact = {
   email: "CV.SellsHomes@gmail.com",
@@ -52,14 +72,14 @@ export const brokerage = {
  */
 export const author = {
   name: "Caitlyn Verdugo",
-  /** Identity order: realtor, investor, coliving operator, women's community leader. Coach is omitted — this site doesn't offer a coaching program. */
-  bio: "Atlanta REALTOR® with Keller Williams Realty Metro Atlanta, real estate investor, and coliving operator. Co-founder of the Women's Coliving Summit and She Leads Coliving.",
-  credential: "REALTOR®, Keller Williams Realty Metro Atlanta",
+  /** Role order Caitlyn asked to show: Realtor, then investor, then coach. */
+  bio: "Atlanta REALTOR® with Keller Williams Realty Metro Atlanta, real estate investor, and coach. 6+ years. Co-founder of the Women's Coliving Summit and She Leads Coliving.",
+  credential: "Realtor · Investor · Coach · 6+ years",
   byline: "REALTOR®, KW Metro Atlanta",
   photo: "/images/caitlyn-headshot.jpg",
   email: contact.email,
   fullBio: [
-    "I'm Caitlyn Verdugo, an Atlanta REALTOR® with Keller Williams Realty Metro Atlanta and a serial house hacker. I help buyers find homes that pay them back: rent-by-the-room, basement apartments, small multifamily, and ADUs.",
+    "I'm Caitlyn Verdugo, an Atlanta REALTOR® with Keller Williams Realty Metro Atlanta, an investor, and a coach. I've been at this for 6+ years. I help people buy and sell homes that pay them back: rent-by-the-room, basement apartments, small multifamily, and ADUs.",
     "As an investor, I operate 50+ coliving rooms across metro Atlanta. Coliving is a different model from house hacking — rooms rented in a shared home, often when the owner does not live there — and I can help with that, including PadSplit-style rentals, when you're ready. I co-founded the Women's Coliving Summit and She Leads Coliving.",
     "I started House Hacking Atlanta and the monthly meetup because no one place in Atlanta covered the real mechanics: financing, running the numbers, and the day-to-day of sharing a home. If you're past the first house hack, Coliving Cait is the brand for that next step. Most people start here: one property, one extra bedroom or unit, and the question of whether the numbers work.",
   ],
@@ -101,8 +121,7 @@ export const meetup = {
 export const womensGroup = {
   name: "Atlanta Women Investors",
   cadenceLabel: "Fourth Tuesday of every month",
-  // NEEDS CAITLYN: exact URL.
-  url: "",
+  url: "https://wreiconnected.com/atlanta",
 };
 
 /**
@@ -117,7 +136,7 @@ export const links = {
   instagram: "https://instagram.com/colivingcait",
   zillow: "https://www.zillow.com/profile/caitlynverdugo",
   womensColivingSummit: "https://www.womenscolivingsummit.com/about/",
-  atlantaWomenInvestors: "",
+  atlantaWomenInvestors: "https://wreiconnected.com/atlanta",
   roomsForRentAtl: "",
   facebookGroup: "https://facebook.com/groups/househackingatl",
 };

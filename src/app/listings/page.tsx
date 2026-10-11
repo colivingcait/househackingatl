@@ -11,6 +11,7 @@ export const metadata = pageMetadata({
   title: "See It In Practice",
   description:
     "A look at what house hacking looks like in practice around the Atlanta metro, courtesy of Rooms for Rent ATL.",
+  noIndex: true,
 });
 
 // NEEDS CAITLYN: more photos to round this out — 4 of 6 tiles are real,

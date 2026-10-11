@@ -3,7 +3,8 @@ import PageHero from "@/components/PageHero";
 import FadeIn from "@/components/FadeIn";
 import CtaButton from "@/components/CtaButton";
 import TestimonialsStrip from "@/components/TestimonialsStrip";
-import { author, contact, links } from "@/lib/site-config";
+import StatsStrip from "@/components/StatsStrip";
+import { author, contact, cta, links, meetup } from "@/lib/site-config";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
@@ -30,6 +31,11 @@ const elsewhere = [
     description: "Rooms and homes available now around the Atlanta metro.",
     href: links.roomsForRentAtl,
   },
+  {
+    name: "Eventbrite",
+    description: "The monthly House Hacking Atlanta meetup, hosted by Caitlyn.",
+    href: meetup.eventbriteOrganizerUrl,
+  },
 ];
 
 export default function AboutPage() {
@@ -37,7 +43,11 @@ export default function AboutPage() {
     <>
       <PageHero eyebrow="Who's behind this" title="About Caitlyn Verdugo" />
 
-      <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20">
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
+        <StatsStrip />
+      </section>
+
+      <section className="mx-auto max-w-3xl px-4 pb-16 sm:px-6 sm:pb-20">
         <FadeIn className="flex flex-col gap-6 sm:flex-row sm:items-start">
           {author.photo ? (
             <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-full">
@@ -65,7 +75,7 @@ export default function AboutPage() {
             </p>
             <div className="mt-5">
               <CtaButton href={links.book} variant="primary" external>
-                Book a discovery call
+                {cta.book}
               </CtaButton>
             </div>
           </div>
