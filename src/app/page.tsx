@@ -67,7 +67,7 @@ export default function Home() {
           <FadeIn delay={0.2}>
             <div className="mt-9">
               <CtaButton href={links.book} variant="primary" external>
-                {cta.bookHero}
+                {cta.book}
               </CtaButton>
             </div>
           </FadeIn>

@@ -26,8 +26,6 @@ export const siteConfig = {
 /** One label each, used everywhere that button appears. */
 export const cta = {
   book: "Book a call",
-  /** Homepage hero only. Every other booking button uses `book`. */
-  bookHero: "Book a free call",
   register: "Register",
   listings: "Get listings",
   group: "Join the Group",
