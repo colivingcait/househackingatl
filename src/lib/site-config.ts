@@ -121,7 +121,7 @@ export const meetup = {
 export const womensGroup = {
   name: "Atlanta Women Investors",
   cadenceLabel: "Fourth Tuesday of every month",
-  url: "https://wreiconnected.com/atlanta",
+  url: "https://www.atlantawomeninvestors.com",
 };
 
 /**
@@ -136,7 +136,7 @@ export const links = {
   instagram: "https://instagram.com/colivingcait",
   zillow: "https://www.zillow.com/profile/caitlynverdugo",
   womensColivingSummit: "https://www.womenscolivingsummit.com/about/",
-  atlantaWomenInvestors: "https://wreiconnected.com/atlanta",
+  atlantaWomenInvestors: womensGroup.url,
   roomsForRentAtl: "",
   facebookGroup: "https://facebook.com/groups/househackingatl",
 };
