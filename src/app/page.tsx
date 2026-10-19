@@ -49,7 +49,10 @@ export default function Home() {
           </FadeIn>
           <FadeIn delay={0.1}>
             <p className="mt-6 max-w-xl text-lg text-sage-100">
-              Learn house hacking with Atlanta house hacking Realtor and agent Caitlyn Verdugo of Keller Williams, plus free monthly meetups and a community of local investors.
+              House hacking means you live in one part of a property and rent the rest, so that rent covers most of your housing cost.
+            </p>
+            <p className="mt-3 max-w-xl text-sm leading-relaxed text-sage-200">
+              Free monthly meetups hosted by Atlanta house hacking Realtor Caitlyn Verdugo (Keller Williams).
             </p>
             <div className="mt-6 flex items-center gap-4">
               <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full ring-2 ring-white/80">
