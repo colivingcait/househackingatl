@@ -7,8 +7,21 @@ const DEFAULT_IMAGE = `${BASE}/images/og-default.jpg`;
 
 /** Same @id colivingcait.com uses, so the two sites are one Person. */
 export const PERSON_ID = "https://www.colivingcait.com/#caitlyn";
+/** RealEstateAgent shares PERSON_ID so Person and agent are one entity. */
+export const AGENT_ID = PERSON_ID;
+export const KW_ID = `${BASE}/#keller-williams-metro-atlanta`;
 export const ORG_ID = `${BASE}/#org`;
 export const WEBSITE_ID = `${BASE}/#website`;
+
+/** Keller Williams Metro Atlanta office. The only street address in schema. */
+const kwPostalAddress = {
+  "@type": "PostalAddress" as const,
+  streetAddress: brokerage.streetAddress,
+  addressLocality: brokerage.addressLocality,
+  addressRegion: brokerage.addressRegion,
+  postalCode: brokerage.postalCode,
+  addressCountry: brokerage.addressCountry,
+};
 
 function absoluteUrl(path: string): string {
   if (path === "/") return BASE;
@@ -101,10 +114,11 @@ export function faqPageSchema(qas: { question: string; answer: string }[]) {
  * person," which would invert the relationship. The meetup's founder
  * edge points at Caitlyn instead.
  * aggregateRating and review are valid on RealEstateAgent (a LocalBusiness),
- * not on Person alone, so Caitlyn is both types. Only reviews shown on the
- * page are included. The 5.0 / 18 count is the Zillow total.
+ * not on Person alone, so Caitlyn is both types on one @id. WebSite, the
+ * House Hacking Atlanta Organization, Events, and Articles point at that
+ * @id instead of repeating her. Only reviews shown on the page are included.
+ * The 5.0 / 18 count is the Zillow total.
  */
-/** Full Person + RealEstateAgent node. Same @id on every page that names Caitlyn. */
 export function caitlynAgentNode({ includeReviews = false }: { includeReviews?: boolean } = {}) {
   const reviews = includeReviews
     ? testimonialsForSchema().map((item) => ({
@@ -127,31 +141,26 @@ export function caitlynAgentNode({ includeReviews = false }: { includeReviews?: 
 
   return {
     "@type": ["Person", "RealEstateAgent"],
-    "@id": PERSON_ID,
+    "@id": AGENT_ID,
     name: author.name,
     alternateName: "Coliving Cait",
-    jobTitle: "REALTOR®",
+    jobTitle: "Realtor",
     description:
       "Atlanta REALTOR®, investor, and coach with Keller Williams Realty Metro Atlanta. 6+ years specializing in house hacking, rent-by-the-room, coliving, and PadSplit-ready properties.",
     image: absoluteUrl(author.photo),
-    url: "https://www.colivingcait.com/about",
-    email: contact.emailHref,
+    url: "https://househackingatl.com",
+    email: contact.email,
     telephone: contact.phoneE164,
+    address: kwPostalAddress,
     worksFor: {
-      "@type": "RealEstateAgent",
-      name: brokerage.name,
+      "@type": "Organization",
+      "@id": KW_ID,
+      name: "Keller Williams Metro Atlanta",
       telephone: brokerage.telephone,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: brokerage.streetAddress,
-        addressLocality: brokerage.addressLocality,
-        addressRegion: brokerage.addressRegion,
-        postalCode: brokerage.postalCode,
-        addressCountry: brokerage.addressCountry,
-      },
+      address: kwPostalAddress,
     },
     knowsAbout: [
-      "House hacking",
+      "house hacking",
       "Rent by the room",
       "Coliving",
       "PadSplit",
@@ -161,21 +170,30 @@ export function caitlynAgentNode({ includeReviews = false }: { includeReviews?: 
       "Atlanta real estate",
     ],
     areaServed: [
-      { "@type": "City", name: "Atlanta" },
-      { "@type": "City", name: "Decatur" },
+      {
+        "@type": "City",
+        name: "Atlanta",
+        containedInPlace: { "@type": "State", name: "GA" },
+      },
+      {
+        "@type": "City",
+        name: "Decatur",
+        containedInPlace: { "@type": "State", name: "GA" },
+      },
       { "@type": "Place", name: "East Atlanta" },
       { "@type": "AdministrativeArea", name: "DeKalb County, GA" },
     ],
     sameAs: [
+      links.zillow,
+      "https://colivingcait.com",
       links.colivingCait,
       links.atlantaWomenInvestors,
-      links.zillow,
       meetup.eventbriteOrganizerUrl,
       `${BASE}/about`,
       links.linkedin,
       links.instagram,
       links.womensColivingSummit,
-    ],
+    ].filter((url, index, urls) => Boolean(url) && urls.indexOf(url) === index),
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: zillowReviews.ratingValue,

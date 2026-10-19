@@ -17,9 +17,9 @@ export const siteConfig = {
   doorMotif: "Every door is an opportunity. 🚪",
   shortBlurb:
     "House hacking in the Atlanta metro — living in one part of your property and renting out another. Real numbers, real deals, real support. Live for less. Build more wealth. Every door is an opportunity.",
-  homeTitle: "House Hacking Atlanta — Live for less by renting out part of your home",
+  homeTitle: "Atlanta House Hacking Realtor – Caitlyn Verdugo, Keller Williams",
   homeDescription:
-    "House hacking in Atlanta means living in one part of your home and renting out the rest. Free monthly meetup, 83 guides, and a local community.",
+    "House hacking in Atlanta with Realtor and agent Caitlyn Verdugo of Keller Williams. Free monthly meetup for local investors.",
 };
 
 /** One label each, used everywhere that button appears. */
@@ -49,7 +49,7 @@ export const contact = {
 export const brokerage = {
   name: "Keller Williams Realty Metro Atlanta",
   telephone: "+1-404-564-5560",
-  streetAddress: "101 W Ponce de Leon Ave",
+  streetAddress: "101 W Ponce de Leon Ave, Suite 200",
   addressLocality: "Decatur",
   addressRegion: "GA",
   postalCode: "30030",
