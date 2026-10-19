@@ -1,13 +1,22 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
 import CtaButton from "@/components/CtaButton";
 import KitSignupForm from "@/components/KitSignupForm";
 import FadeIn from "@/components/FadeIn";
 import FaqSection from "@/components/FaqSection";
 import { houseHackModels } from "@/data/models";
 import { meetupSchedule } from "@/data/meetups";
-import { author, cta, links, meetup } from "@/lib/site-config";
+import { author, cta, links, meetup, siteConfig } from "@/lib/site-config";
+import { pageMetadata } from "@/lib/metadata";
 import { isUpcomingMeetup } from "@/lib/schema";
+
+export const metadata: Metadata = pageMetadata({
+  path: "/",
+  title: siteConfig.homeTitle,
+  description: siteConfig.homeDescription,
+  absoluteTitle: true,
+});
 
 const cardClass =
   "flex h-full flex-col rounded-2xl border border-pine-200 bg-white p-6 transition-shadow hover:shadow-md";
@@ -41,6 +50,9 @@ export default function Home() {
           <FadeIn delay={0.1}>
             <p className="mt-6 max-w-xl text-lg text-sage-100">
               House hacking means you live in one part of a property and rent the rest, so that rent covers most of your housing cost.
+            </p>
+            <p className="mt-3 max-w-xl text-sm leading-relaxed text-sage-200">
+              Free monthly meetups hosted by Atlanta house hacking Realtor Caitlyn Verdugo (Keller Williams).
             </p>
             <div className="mt-6 flex items-center gap-4">
               <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full ring-2 ring-white/80">
