@@ -38,7 +38,7 @@ export default function Home() {
           style={{ objectPosition: "62% 62%" }}
         />
         <div
-          className="absolute inset-0 bg-gradient-to-r from-sage-700/70 via-sage-600/40 to-sage-500/10"
+          className="absolute inset-0 bg-gradient-to-r from-sage-950/80 via-sage-950/75 to-sage-950/75 md:from-sage-950/80 md:via-sage-950/70 md:to-sage-900/10"
           aria-hidden="true"
         />
         <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-16 sm:px-6 sm:pb-20 sm:pt-24">
@@ -51,7 +51,7 @@ export default function Home() {
             <p className="mt-6 max-w-xl text-lg text-sage-100">
               House hacking means you live in one part of a property and rent the rest, so that rent covers most of your housing cost.
             </p>
-            <p className="mt-3 max-w-xl text-sm leading-relaxed text-sage-200">
+            <p className="mt-3 max-w-xl text-sm font-medium leading-relaxed text-white [text-shadow:0_1px_2px_rgb(0_0_0/0.45)]">
               Free monthly meetups hosted by Atlanta house hacking Realtor Caitlyn Verdugo (Keller Williams).
             </p>
             <div className="mt-6 flex items-center gap-4">
